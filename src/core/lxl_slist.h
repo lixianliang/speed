@@ -8,7 +8,7 @@
 #define LXL_SLIST_H_INCLUDE
 
 
-#include <lxl_config.h>
+//#include <lxl_config.h>
 
 
 typedef struct lxl_slist_s lxl_slist_t;

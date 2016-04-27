@@ -10,10 +10,10 @@
 
 #include <lxl_core.h>
 #include <lxl_config.h>
-#include <lxl_buf.h>
+/*#include <lxl_buf.h>
 #include <lxl_file.h>
 #include <lxl_array.h>
-#include <lxl_string.h>
+#include <lxl_string.h>*/
 
 
 #define LXL_CONF_NOARGS			0x00000001
@@ -95,7 +95,7 @@ typedef struct {
 
 struct lxl_conf_s {
 	char 	   	       *name;
-	lxl_array_t    	   *args;
+	lxl_array_t       *args;
 
 	lxl_cycle_t		   *cycle;
 	lxl_pool_t 	       *pool;
@@ -106,6 +106,12 @@ struct lxl_conf_s {
 	lxl_uint_t 		 	module_type;
 	lxl_uint_t 			cmd_type;
 };
+
+typedef char *(*lxl_conf_post_handler_pt) (lxl_conf_t *cf, void *data, void *conf);
+
+typedef struct {
+	lxl_conf_post_handler_pt post_handler;
+} lxl_conf_post_t;
 
 
 #define lxl_get_conf(conf_ctx, module)	conf_ctx[module.index]
@@ -122,6 +128,11 @@ struct lxl_conf_s {
 
 #define lxl_conf_init_uint_value(conf, default)					\
 	if (conf == LXL_CONF_UNSET_UINT) {							\
+		conf = default;											\
+	}
+
+#define lxl_conf_init_msec_value(conf, default)					\
+	if (conf == LXL_CONF_UNSET_MSEC) {							\
 		conf = default;											\
 	}
 

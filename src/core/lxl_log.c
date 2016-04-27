@@ -4,11 +4,13 @@
  */
 
 
-#include <lxl_times.h>
+/*#include <lxl_times.h>
 #include <lxl_cycle.h>
 #include <lxl_files.h>
 #include <lxl_process.h>
-#include <lxl_log.h>
+#include <lxl_log.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 #define LXL_ERROR_LOG_PATH		"logs/error.log"
@@ -391,6 +393,7 @@ lxl_log_stderr(int err, const char *fmt, ...)
 	write(STDERR_FILENO, msg, msg_len);
 }
 
+#if 0
 void 
 lxl_log_flush(void)
 {
@@ -399,6 +402,7 @@ lxl_log_flush(void)
     	lxl_log.buf_len = 0;
 	}
 }
+#endif
 
 static char *		
 lxl_error_log(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)

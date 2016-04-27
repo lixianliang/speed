@@ -10,22 +10,31 @@
 
 #include <lxl_config.h>
 #include <lxl_core.h>
-//#include <lxl_alloc.h>
-#include <lxl_palloc.h>
 
 
 typedef struct {
-	void 		*elts;
-	lxl_uint_t 	nelts;
-	lxl_uint_t 	nalloc;
-	size_t 		size;
-	lxl_pool_t 	*pool;
+	void 	    *elts;
+
+	lxl_uint_t 	 nelts;
+	lxl_uint_t 	 nalloc;
+	size_t 		 size;
+
+	lxl_pool_t  *pool;
 } lxl_array_t;
 
+typedef struct {
+	void 	    *elts;
 
-lxl_array_t *lxl_array_create(lxl_pool_t *p, lxl_uint_t n, size_t size);
+	lxl_uint_t 	 nelts;
+	lxl_uint_t 	 nalloc;
+	size_t 		 size;
+} lxl_array1_t;
 
-static inline lxl_int_t 
+
+lxl_array_t  *lxl_array_create(lxl_pool_t *p, lxl_uint_t n, size_t size);
+lxl_array1_t *lxl_array1_create(lxl_uint_t n, size_t size);
+
+static inline int 
 lxl_array_init(lxl_array_t *a, lxl_pool_t *p, lxl_uint_t n, size_t size)
 {
 	a->elts = lxl_palloc(p, size * n);
@@ -40,6 +49,7 @@ lxl_array_init(lxl_array_t *a, lxl_pool_t *p, lxl_uint_t n, size_t size)
 
 	return 0;
 }
+
 
 #define lxl_array_empty(a)								\
 	((a)->nelts == 0)
@@ -58,6 +68,7 @@ lxl_array_init(lxl_array_t *a, lxl_pool_t *p, lxl_uint_t n, size_t size)
 
 #define lxl_array_data(a, type, index)					\
 	(type *) ((u_char *) (a)->elts + (index) * (a)->size) 
+
 
 static inline void *
 lxl_array_push(lxl_array_t *a)
@@ -90,7 +101,8 @@ lxl_array_push(lxl_array_t *a)
 	return elt;
 }
 
-static inline lxl_int_t
+#if 0
+static inline int 
 lxl_array_del(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)
 {
 	void *e;
@@ -124,15 +136,135 @@ lxl_array_find(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)
 
 	return NULL;
 }
-/*
-static void 
-lxl_array_destroy(lxl_array_t *a)
+
+static inline lxl_int_t 
+lxl_array_find_index(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)
+{
+	lxl_uint_t i;
+
+	for(i = 0; i < a->nelts; ++i) {
+		if (cmp(elt, a->elts[i]) == 0) {
+			return (lxl_int_t) i;   /* ignore */
+		}
+	}
+
+	return -1;
+}
+#endif
+
+static inline int 
+lxl_array1_init(lxl_array1_t *a, lxl_uint_t n, size_t size)
+{
+	a->elts = lxl_alloc(size * n);
+	if (a->elts == NULL) {
+		return -1;
+	}
+
+	a->nelts = 0;
+	a->nalloc = n;
+	a->size = size;
+
+	return 0;
+}
+
+#define lxl_array1_empty(a)								\
+	((a)->nelts == 0)
+
+#define lxl_array1_full(a)								\
+	((a)->nelts == (a)->nalloc)
+
+#define lxl_array1_nelts(a)								\
+	(a)->nelts
+
+#define lxl_array1_clear(a)								\
+	(a)->nelts = 0
+
+#define lxl_array1_elts(a)								\
+	(a)->elts
+
+#define lxl_array1_data(a, type, index)					\
+	(type *) ((u_char *) (a)->elts + (index) * (a)->size) 
+
+
+static inline void *
+lxl_array1_push(lxl_array1_t *a)
+{
+	void *elt, *new;
+	size_t size;
+
+	if (lxl_array_full(a)) {
+		new = lxl_alloc(2 * size);
+		if (new == NULL) {
+			return NULL;
+		}
+
+		memcpy(new, a->elts, size);
+		lxl_free(a->elts);
+		a->elts = new;
+		a->nalloc *= 2;
+	}
+
+	elt = (u_char *) a->elts + a->nelts * a->size;
+	++a->nelts;
+
+	return elt;
+}
+
+static inline void
+lxl_array1_del(lxl_array1_t *a, lxl_uint_t i)
+{
+	void  *e;
+
+	e = (u_char *) a->elts + i * a->size;
+	memcpy(e , e + a->size, (a->nelts - i - 1) * a->size);	/* sort memcpy not use memmove */
+	--a->nelts;
+}
+
+#if 0
+static inline int 
+lxl_array1_del(lxl_array1_t *a, void *elt, lxl_cmp_pt cmp)
+{
+	void  *e;
+	lxl_uint_t i;
+		
+	for (i = 0; i < a->nelts; ++i) {
+		e = (u_char *) a->elts + i * a->size;
+		if (cmp(elt, e) == 0) {
+			memcpy(e, e + a->size, (a->nelts - i - 1) * a->size);
+			--a->nelts;
+			
+			return 0;
+		}
+	}
+
+	return -1;
+}
+
+static inline void  *
+lxl_array1_find(lxl_array1_t *a, void *elt, lxl_cmp_pt cmp)
+{
+	void *e;
+	lxl_uint_t i;
+
+	for(i = 0; i < a->nelts; ++i) {
+		e = (u_char *) a->elts + i * a->size;
+		if (cmp(elt, e) == 0) {
+			return e; 
+		}
+	}
+
+	return NULL;
+}
+#endif
+
+static inline void 
+lxl_array1_destroy(lxl_array1_t *a)
 {
 	a->nelts = 0;
 	a->nalloc = 0;
 	lxl_free(a->elts);
 }
-*/
+
 #if 0
 static inline lxl_int_t 
 lxl_array_find_index(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)

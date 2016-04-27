@@ -4,8 +4,11 @@
  */
 
 
-#include <lxl_alloc.h>
-#include <lxl_palloc.h>
+//#include <lxl_alloc.h>
+//#include <lxl_log.h>
+//#include <lxl_palloc.h>
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 static void *lxl_palloc_block(lxl_pool_t *pool, size_t size);
@@ -153,6 +156,7 @@ lxl_palloc_block(lxl_pool_t *pool, size_t size)
 	new->d.end = m + psize;
 	new->d.next = NULL;
 	new->d.failed = 0;
+
 	m += sizeof(lxl_pool_data_t);
 	m = lxl_align_ptr(m, LXL_POOL_ALIGNMENT);
 	new->d.last = m + size;

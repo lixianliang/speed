@@ -1,7 +1,7 @@
 
 CC = gcc
 #CFLAGS = -g3 -Wall -DLXL_DEBUG
-CFLAGS = -g -Wall 
+CFLAGS = -g3 -Wall -DLXL_DNS
 
 ALL_INCS = -I src/core -I src/event -I src/os/unix -I src/dns
 
@@ -15,7 +15,7 @@ CORE_DEPS = src/core/lxl_log.h \
 		src/core/lxl_hash.h \
 		src/core/lxl_list.h \
 		src/core/lxl_slist.h \
-		src/core/lxl_array.h \
+		src/core/lxl_parray.h \
 		src/core/lxl_stack.h \
 		src/core/lxl_rbtree.h \
 		src/core/lxl_string.h \
@@ -45,7 +45,7 @@ SPEED_SRC = src/core/speed.c \
 			src/core/lxl_file.c \
 			src/core/lxl_inet.c \
 			src/core/lxl_hash.c \
-			src/core/lxl_array.c \
+			src/core/lxl_parray.c \
 			src/core/lxl_rbtree.c \
 			src/core/lxl_times.c \
 			src/core/lxl_string.c \
@@ -64,7 +64,7 @@ SPEED_SRC = src/core/speed.c \
 			src/dns/lxl_dns_request.c \
 			src/dns/lxl_dns_parse.c	\
 			src/dns/lxl_dns_upstream.c \
-			src/dns/lxl_dns_package.c
+			src/dns/lxl_dns_package.c 
 
 all: objs/speed
 
@@ -77,7 +77,7 @@ objs/speed: objs/src/core/speed.o \
 	objs/src/core/lxl_times.o \
 	objs/src/core/lxl_string.o \
 	objs/src/core/lxl_hash.o \
-	objs/src/core/lxl_array.o \
+	objs/src/core/lxl_parray.o \
 	objs/src/core/lxl_rbtree.o \
 	objs/src/core/lxl_cycle.o \
 	objs/src/core/lxl_conf_file.o \
@@ -94,7 +94,7 @@ objs/speed: objs/src/core/speed.o \
 	objs/src/dns/lxl_dns_request.o \
 	objs/src/dns/lxl_dns_parse.o \
 	objs/src/dns/lxl_dns_upstream.o \
-	objs/src/dns/lxl_dns_package.o	
+	objs/src/dns/lxl_dns_package.o 
 
 	$(CC) -o objs/speed \
 	objs/src/core/speed.o \
@@ -106,7 +106,7 @@ objs/speed: objs/src/core/speed.o \
 	objs/src/core/lxl_times.o \
 	objs/src/core/lxl_string.o \
 	objs/src/core/lxl_hash.o \
-	objs/src/core/lxl_array.o \
+	objs/src/core/lxl_parray.o \
 	objs/src/core/lxl_rbtree.o \
 	objs/src/core/lxl_cycle.o \
 	objs/src/core/lxl_conf_file.o \
@@ -123,7 +123,7 @@ objs/speed: objs/src/core/speed.o \
 	objs/src/dns/lxl_dns_request.o \
 	objs/src/dns/lxl_dns_parse.o \
 	objs/src/dns/lxl_dns_upstream.o \
-	objs/src/dns/lxl_dns_package.o
+	objs/src/dns/lxl_dns_package.o 
 
 
 objs/src/core/speed.o: $(CORE_DEPS) src/core/speed.c
@@ -153,8 +153,8 @@ objs/src/core/lxl_string.o: $(CORE_DEPS) src/core/lxl_string.c
 objs/src/core/lxl_hash.o: $(CORE_DEPS) src/core/lxl_hash.c
 	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_hash.o src/core/lxl_hash.c
 
-objs/src/core/lxl_array.o: $(CORE_DEPS) src/core/lxl_array.c
-	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_array.o src/core/lxl_array.c
+objs/src/core/lxl_parray.o: $(CORE_DEPS) src/core/lxl_parray.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_parray.o src/core/lxl_parray.c
 
 objs/src/core/lxl_rbtree.o: $(CORE_DEPS) src/core/lxl_rbtree.c
 	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_rbtree.o src/core/lxl_rbtree.c
@@ -207,15 +207,10 @@ objs/src/dns/lxl_dns_package.o: $(CORE_DEPS) $(DNS_DEPS) src/dns/lxl_dns_package
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DNS_INCS) -o objs/src/dns/lxl_dns_package.o src/dns/lxl_dns_package.c 
 
 
-#speed: $(SPEED_SRC) $(CORE_DEPS)
-#	$(CC) $(CFLAGS) $(ALL_INCS) $(SPEED_SRC) -o $@
-#	cp $@ ~/bin;
-	
-
 test: lxl_log_test 
 
 LOG_SRC 	= src/core/lxl_log.c  src/core/lxl_times.c
-ARRAY_SRC 	= src/core/lxl_array.c src/core/lxl_log.c	src/core/lxl_palloc.c
+ARRAY_SRC 	= src/core/lxl_parray.c src/core/lxl_log.c	src/core/lxl_palloc.c
 LIST_SRC	= src/core/lxl_log.c 
 SLIST_SRC	= src/core/lxl_log.c 
 QUEUE_SRC 	= src/core/lxl_queue.c src/core/lxl_log.c 	src/core/lxl_palloc.c
@@ -226,7 +221,7 @@ HASH_SRC 	= src/core/lxl_log.c src/core/lxl_palloc.c 	src/core/lxl_hash.c
 lxl_log_test: test/core/lxl_log_test.c $(LOG_SRC)
 	$(CC) $(CFLAGS) $(ALL_INCS) $(LOG_SRC) $< -o objs/test/core/$@
 
-lxl_array_test: test/core/lxl_array_test.c $(ARRAY_SRC)
+lxl_parray_test: test/core/lxl_parray_test.c $(ARRAY_SRC)
 	 $(CC) $(CFLAGS) $(ALL_INCS) $(ARRAY_SRC) $< -o objs/test/core/$@
 
 lxl_list_test: test/core/lxl_list_test.c $(LIST_ARC)

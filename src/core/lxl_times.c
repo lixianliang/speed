@@ -6,7 +6,7 @@
 
 #include <lxl_config.h>
 //#include <lxl_log.h>
-#include <lxl_times.h>
+//#include <lxl_times.h>
 
 
 #define  LXL_CACHE_LOG_TIME_LEN	24

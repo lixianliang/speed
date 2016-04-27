@@ -4,7 +4,7 @@
  */
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -19,7 +19,9 @@
 
 //#include "lxl_log.h"
 #include "lxl_util.h"
-//#include "conf.h"
+//#include "conf.h"*/
+
+#include <lxl_config.h>
 
 
 int 

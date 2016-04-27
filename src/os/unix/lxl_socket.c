@@ -4,10 +4,14 @@
  */
 
 
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_event.h>
 #include <lxl_connection.h>
-#include <lxl_socket.h>
+#include <lxl_socket.h>*/
+
+#include <lxl_config.h>
+#include <lxl_core.h>
+#include <lxl_event.h>
 
 
 /*
@@ -356,13 +360,13 @@ lxl_recvfrom(lxl_connection_t *c, char *buf, size_t size)
 			return n;
 		} else {
 			if (errno == EAGAIN || errno == EWOULDBLOCK) {
-				lxl_log_debug(LXL_LOG_DEBUG_EVENT, errno, "recv() not ready");
+				lxl_log_debug(LXL_LOG_DEBUG_EVENT, errno, "recvfrom() not ready");
 				return LXL_EAGAIN;
 			} else if (errno == EINTR) {
-				lxl_log_debug(LXL_LOG_DEBUG_EVENT, errno, "recv() not ready");
+				lxl_log_debug(LXL_LOG_DEBUG_EVENT, errno, "recvfrom() not ready");
 				continue;
 			} else {
-				lxl_log_error(LXL_LOG_ALERT, errno, "recv() failed");
+				lxl_log_error(LXL_LOG_ALERT, errno, "recvfrom() failed");
 				return LXL_ERROR;
 			}
 		}

@@ -10,7 +10,6 @@
 
 #include <lxl_config.h>
 #include <lxl_core.h>
-#include <lxl_conf_file.h>
 
 
 #define LXL_LOG_EMERG		0
@@ -83,7 +82,9 @@ lxl_log_t *	lxl_log_init(lxl_uint_t error_level, lxl_uint_t debug_level, lxl_uin
 void 	lxl_log_core(lxl_uint_t loglevel, int err, const char *format, ...);
 void 	lxl_log_core_flush(lxl_uint_t loglevel, int err, const char *format, ...);
 void	lxl_log_stderr(int err, const char *fmt, ...);
+#if 0
 void	lxl_log_flush(void);
+#endif
 
 
 extern lxl_log_t  lxl_log;

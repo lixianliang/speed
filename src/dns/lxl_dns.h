@@ -13,7 +13,6 @@
 #include <lxl_inet.h>
 #include <lxl_hash.h>
 #include <lxl_dns_data.h>
-#include <lxl_connection.h>
 
 
 #define LXL_DNS_CLIENT_BUFFER_SIZE	512
@@ -40,7 +39,7 @@ typedef struct {
 typedef struct {
 	char 				sockaddr[LXL_SOCKADDRLEN];
 	socklen_t			socklen;
-	lxl_dns_conf_ctx_t  *ctx;
+	lxl_dns_conf_ctx_t *ctx;
 	unsigned 			wildcard:1;
 	
 	/* bind */
@@ -97,6 +96,7 @@ extern lxl_module_t			lxl_dns_core_module;
 extern lxl_hash_t 			lxl_dns_hash;
 extern lxl_dns_zone_t      *lxl_dns_root_zone;
 extern lxl_pool_t          *lxl_dns_pool;
+extern lxl_event_t			lxl_dns_event;
 
 
 #endif	/* LXL_DNS_H_INCLUDE */

@@ -18,6 +18,8 @@
 void lxl_time_init(void);
 void lxl_time_update(void);
 
+#define lxl_time()	lxl_current_sec;
+
 
 extern volatile lxl_uint_t lxl_current_sec;
 extern volatile lxl_uint_t lxl_current_msec;

@@ -16,6 +16,7 @@
 pid_t lxl_pid;
 
 
+int	 lxl_init_signals(void);
 void lxl_master_process_cycle(lxl_cycle_t *cycle);
 
 

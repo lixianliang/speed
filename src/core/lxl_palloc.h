@@ -67,7 +67,8 @@ void *lxl_palloc(lxl_pool_t *pool, size_t size);
 void *lxl_pnalloc(lxl_pool_t *pool, size_t size);
 void *lxl_pcalloc(lxl_pool_t *pool, size_t size);
 void *lxl_pmemalign(lxl_pool_t *pool, size_t size, size_t alignment);
-int lxl_pfree(lxl_pool_t *pool, void *p);
+
+int  lxl_pfree(lxl_pool_t *pool, void *p);
 lxl_pool_cleanup_t * lxl_pool_cleanup_add(lxl_pool_t *pool, size_t size);
 
 

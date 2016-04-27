@@ -12,8 +12,8 @@
 
 
 typedef struct {
-	size_t len;
-	char *data;
+	size_t  len;
+	char   *data;
 } lxl_str_t;
 
 
@@ -52,6 +52,15 @@ typedef struct {
 		&& s[4] == c4 && s[5] == c5	&& s[6] == c6 && s[7] == c7									\
 		&& s[8] == c8 && s[9] == c9 && s[10] == c10 && s[11] == c11								\
 		&& s[12] == c12 && s[13] == c13 && s[14] == c14 && s[15] == c15	
+
+/* ==> define */
+static inline void
+lxl_str_memcpy(lxl_str_t *d, char *s, size_t n)
+{
+	memcpy(d->data, s, n);
+	d->len = n;
+	d->data[n] = '\0';
+}
 
 /* must n xiang deng */
 static inline lxl_int_t 
@@ -94,18 +103,91 @@ lxl_strncasecmp(char *s1, char *s2, size_t n)
 	return 0;
 }
 
+static inline lxl_int_t
+lxl_atoi(char *line, size_t n)
+{
+	char ch;
+	lxl_int_t value;
+
+	if (n == 0) {
+		return -1;
+	}
+
+	for (value = 0; n--; line++) {
+		ch = *line;
+		if (ch < '0' || ch > '9') {
+			return -1;
+		}
+
+		value = value * 10 + (ch - '0');
+	}
+
+	if (value < 0) {
+		return -1;
+	} else {
+		return value;
+	}
+}
+
+static inline lxl_int_t
+lxl_hextoi(char *line, size_t n)
+{
+	char c, ch;
+	lxl_int_t value;
+
+	if (n == 0) {
+		return -1;
+	}
+
+	for (value = 0; n--; line++) {
+		ch = *line;
+		if (ch >= '0' && ch <= '9') {
+			value = value * 16 + (ch - '0');
+			continue;
+		}
+
+		c = ch | 0x20;
+		if (c >= 'a' && c <= 'f') {
+			value = value * 16 + (c - 'a' + 10);
+			continue;
+		}
+
+		return -1;
+	}
+
+	if (value < 0) {
+		return -1;
+	} else {
+		return value;
+	}
+}
+
 /*
-	{}  or {}; 
+	{}  or {}; not good memcpy
 */
-#define lxl_memcpy(d, s, n)						\
-	{											\
-		size_t lxl_memcpy_n = (n);				\
-		char *lxl_memcpy_d = (char *) (d);		\
-		char *lxl_memcpy_s = (char *) (s);		\
-		while (lxl_memcpy_n--) {				\
-			*lxl_memcpy_d++ = *lxl_memcpy_s++;	\
-		}										\
+#define lxl_memcpy(d, s, n)							\
+	{												\
+		size_t lxl_memcpy_n = (n);					\
+		char *lxl_memcpy_d = (char *) (d);			\
+		char *lxl_memcpy_s = (char *) (s);			\
+		while (lxl_memcpy_n--) {					\
+			*lxl_memcpy_d++ = *lxl_memcpy_s++;		\
+		}											\
 	}				
+
+#define lxl_memcpy_2byte(d, s)                     	\
+    {                                               \
+         *((uint16_t *) (d)) = *((uint16_t *) (s)); \
+    }
+#define lxl_memcpy_4byte(d, s)                     	\
+    {                                               \
+         *((uint32_t *) (d)) = *((uint32_t *) (s)); \
+    }
+
+#define lxl_memcpy_8byte(d, s)                     	\
+    {                                               \
+         *((uint64_t *) (d)) = *((uint64_t *) (s));	\
+    }
 
 
 /*char *		strstrall(str_t *parent, str_t *child);*/

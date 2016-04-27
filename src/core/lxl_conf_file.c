@@ -4,10 +4,12 @@
  */
 
 
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_alloc.h>
 #include <lxl_files.h>
-#include <lxl_conf_file.h>
+#include <lxl_conf_file.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 #define LXL_CONF_BUFFER	4096
@@ -73,6 +75,7 @@ lxl_conf_parse(lxl_conf_t *cf, lxl_str_t *filename)
 		cf->conf_file->file.name.len = filename->len;
 		cf->conf_file->file.name.data = filename->data;
 		cf->conf_file->file.offset = 0;
+		cf->conf_file->file.sys_offset = 0;
 
 		type = parse_file;
 	} else {

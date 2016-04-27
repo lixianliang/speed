@@ -10,10 +10,10 @@
 
 #include <lxl_config.h>
 #include <lxl_core.h>
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_string.h>
 #include <lxl_rbtree.h>
-#include <lxl_connection.h>
+#include <lxl_connection.h>*/
 
 
 #define LXL_USE_LEVEL_EVENT		0x00000001
@@ -48,22 +48,23 @@
 typedef void (*lxl_event_handler_pt) (lxl_event_t *ev);
 
 struct lxl_event_s {
-	void 			*data;				/* point to c */
+	void 				 *data;			/* point to c */
 
-	unsigned 		write:1;
-	unsigned 		accept:1;
-	/*unsigned    instance:1;*/
-	unsigned 		active:1;
-	unsigned 		ready:1;
-	unsigned		eof:1;
-	unsigned 		error:1;
-	unsigned 		closed:1;
-	unsigned 		timedout:1;
-	unsigned 		timer_set:1;
+	unsigned 			  write:1;
+	unsigned 			  accept:1;
+	/*unsigned    		  instance:1;*/
+	unsigned 			  active:1;
+	unsigned 			  ready:1;
+	unsigned			  eof:1;
+	unsigned 			  error:1;
+	unsigned 			  closed:1;
+	unsigned 		 	  timedout:1;
+	unsigned 			  timer_set:1;
+	unsigned 			  use:1;		/* dfs timer use */
 
-	lxl_list_t			list;
-	lxl_rbtree_node_t 	timer;
-	lxl_event_handler_pt handler;
+	lxl_list_t			  list;
+	lxl_rbtree_node_t 	  timer;
+	lxl_event_handler_pt  handler;
 };
 
 /*typedef struct {
@@ -109,15 +110,16 @@ extern lxl_module_t lxl_events_module;
 
 
 //lxl_int_t 	lxl_event_process_init(lxl_cycle_t *cycle);
-void		lxl_process_events_and_timers(lxl_cycle_t *cycle);
-lxl_int_t	lxl_handler_read_event(lxl_event_t *rev);
-lxl_int_t   lxl_handler_write_event(lxl_event_t *wev);
+void lxl_process_events_and_timers(lxl_cycle_t *cycle);
+int	 lxl_handle_read_event(lxl_event_t *rev);
+int  lxl_handle_write_event(lxl_event_t *wev, size_t lowat);
 
-void 		lxl_event_accept(lxl_event_t *ev);
-void 		lxl_event_accept_udp(lxl_event_t *ev);
+void lxl_event_accept(lxl_event_t *ev);
+void lxl_event_accept_udp(lxl_event_t *ev);
 
-lxl_int_t  	lxl_event_connect_peer(lxl_connection_t **c, struct sockaddr *sa, socklen_t len);
-lxl_int_t 	lxl_event_connect_peer_udp(lxl_connection_t **c);
+
+#include <lxl_event_timer.h>
+#include <lxl_event_connect.h>
 
 
 #endif /* LXL_EVENT_H_INCLUDE */

@@ -4,10 +4,11 @@
  */
 
 
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_palloc.h>
-#include <lxl_inet.h>
-
+#include <lxl_inet.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 static int	lxl_parse_inet_url(lxl_pool_t *pool, lxl_url_t *u);

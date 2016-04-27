@@ -11,6 +11,9 @@
 #include <lxl_times.h>
 #include <lxl_conf_file.h>
 #include <lxl_alloc.h>
+#include <lxl_connection.h>
+#include <lxl_event.h>
+#include <lxl_event_timer.h>
 #include <lxl_dns.h>
 #include <lxl_dns_data.h>
 
@@ -25,6 +28,7 @@ static char *	lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf
 static int		lxl_dns_core_init(lxl_cycle_t *cycle);
 static int 		lxl_dns_load_named_root(char *file);
 static int 		lxl_dns_parse_root_rr(lxl_int_t argc, char (*argv)[64], lxl_uint_t line, void *args);
+static void  	lxl_dns_data_rebuild_handler(lxl_event_t *ev);
 
 
 lxl_pool_t 	   			   *lxl_dns_pool;
@@ -128,11 +132,11 @@ lxl_dns_core_create_main_conf(lxl_conf_t *cf)
 		return NULL;
 	}
 
-	if (lxl_array_init(&cmcf->servers, cf->pool, 4, sizeof(lxl_dns_core_srv_conf_t)) != 0) {
+	if (lxl_array_init(&cmcf->servers, cf->pool, 1, sizeof(lxl_dns_core_srv_conf_t)) != 0) {
 		return NULL;
 	}
 
-	if (lxl_array_init(&cmcf->listens, cf->pool, 4, sizeof(lxl_dns_listen_t)) != 0) {
+	if (lxl_array_init(&cmcf->listens, cf->pool, 1, sizeof(lxl_dns_listen_t)) != 0) {
 		return NULL;
 	}
 
@@ -208,7 +212,6 @@ lxl_dns_core_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 
 	main_ctx = cf->ctx;
 	ctx->main_conf = main_ctx->main_conf;
-
 	ctx->srv_conf = lxl_pcalloc(cf->pool, lxl_dns_max_module * sizeof(void *));
 	if (ctx->srv_conf == NULL) {
 		return LXL_CONF_ERROR;
@@ -265,7 +268,6 @@ lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 	value = lxl_array_elts(cf->args);
 	u.url = value[1];
 	u.listen = 1;
-
 	if (lxl_parse_url(cf->pool, &u) != 0) {
 		if (u.err) {
 			lxl_conf_log_error(LXL_LOG_EMERG, cf, 0, "%s in \"%s\" of the \"listen\" directive", u.err, u.url.data);
@@ -282,7 +284,6 @@ lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 		off = offsetof(struct sockaddr_in, sin_addr);
 		sin = (struct sockaddr_in *) sa;
 		port = sin->sin_port;
-		
 		if (memcmp(ls[i].sockaddr + off, u.sockaddr + off, 4) != 0) {
 			continue;
 		}
@@ -292,7 +293,6 @@ lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 		}
 
 		lxl_conf_log_error(LXL_LOG_EMERG, cf, 0, "duplicate \"%s\" address and port again", &u.url);
-		
 		return LXL_CONF_ERROR;
 	}
 	
@@ -313,6 +313,8 @@ lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 int 
 lxl_dns_core_init(lxl_cycle_t *cycle)
 {
+	lxl_connection_t *c;
+
 	lxl_dns_pool = lxl_create_pool(LXL_DEFAULT_POOL_SIZE);
 	if (lxl_dns_pool == NULL) {
 		return -1;
@@ -333,13 +335,31 @@ lxl_dns_core_init(lxl_cycle_t *cycle)
 	lxl_dns_root_zone->update_sec = lxl_current_sec;
 
 	lxl_log_error(LXL_LOG_INFO, 0, "dns load named root path conf/named.root");
-	lxl_dns_load_named_root("conf/named.root");
+	if (lxl_dns_load_named_root("conf/named.root") == -1) {
+		lxl_log_error(LXL_LOG_ERROR, 0, "dns load named root path conf/named.root failed");
+		return -1;
+	}
 
 	lxl_log_error(LXL_LOG_INFO, 0, "dns add root zone");
 	if (lxl_dns_zone_add(LXL_DNS_ROOT_LABEL, LXL_DNS_ROOT_LEN, lxl_dns_root_zone) == -1) {
 		lxl_log_error(LXL_LOG_ERROR, 0, "dns add root zone failed");
 		return -1;
 	}
+
+	c = lxl_get_connection(-1);
+	if (c == NULL) {
+		return -1;
+	}
+
+	memset(&lxl_dns_event, 0x00, sizeof(lxl_event_t));
+	lxl_dns_event.data = c;
+	lxl_dns_event.handler = lxl_dns_data_rebuild_handler;
+	lxl_add_timer(&lxl_dns_event, 86400*1000);
+
+#if 0
+	char *t;
+	memcpy(t, "lxl coredump test", 1000);
+#endif
 
 	return 0;
 }
@@ -380,7 +400,11 @@ lxl_dns_load_named_root(char *file)
 				continue;
 			}
 			
-			lxl_dns_parse_root_rr(argc, argv, line, NULL);
+			if (lxl_dns_parse_root_rr(argc, argv, line, NULL) == -1) {
+				lxl_log_error(LXL_LOG_ERROR, 0, "dns parse root rr failed");
+				fclose(fp);
+				return -1;
+			}
 		}
 	}
 
@@ -452,4 +476,13 @@ lxl_dns_parse_root_rr(lxl_int_t argc, char (*argv)[64], lxl_uint_t line, void *a
 
 	lxl_free(rdata);
 	return 1; 
+}
+
+static void 	 
+lxl_dns_data_rebuild_handler(lxl_event_t *ev)
+{
+	lxl_dns_data_dump();
+	/* lxl_dns_data_rebuild(); */
+	ev->timedout = 0;
+	lxl_add_timer(ev, 86400*1000);
 }

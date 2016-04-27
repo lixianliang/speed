@@ -6,6 +6,7 @@
 
 #include <lxl_log.h>
 #include <lxl_array.h>
+#include <lxl_connection.h>
 #include <lxl_dns.h>
 #include <lxl_dns_data.h>
 #include <lxl_dns_request.h>

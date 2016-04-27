@@ -12,6 +12,7 @@
 #include <lxl_core.h>
 #include <lxl_array.h>
 #include <lxl_stack.h>
+#include <lxl_event_connect.h>
 #include <lxl_dns.h>
 #include <lxl_dns_request.h>
 
@@ -31,7 +32,7 @@ typedef struct {
 	lxl_uint_t 					qname_flags;
 	lxl_dns_question_part_t 	question_part;
 	lxl_uint_t 					qlen;
-	char 						*qname;
+	char 					   *qname;
 } lxl_dns_upstream_question_t;
 
 typedef void (*lxl_dns_upstream_handler_pt) (lxl_dns_request_t *r, lxl_dns_upstream_t *up);
@@ -40,7 +41,7 @@ struct lxl_dns_upstream_s {
 	lxl_dns_upstream_handler_pt	read_event_handler;
 	lxl_dns_upstream_handler_pt write_event_handler;
 
-	lxl_connection_t 		*connection;
+	lxl_peer_connection_t 	   peer;
 
 	//char data[256];	// 255+1
 	size_t 					request_n;
@@ -49,13 +50,13 @@ struct lxl_dns_upstream_s {
 	lxl_dns_question_part_t question_part;
 
 	lxl_uint_t 				qname_flags;	/* cname ns */
-	char 					*qname;
-	char 					*qcname;
+	char 				   *qname;
+	char 				   *qcname;
 	lxl_uint_t 				qlen;
 	lxl_uint_t 				qclen;
 	lxl_stack_t 			question_stack;
 	
-	lxl_dns_rrset_t 		*ns_rrset;
+	lxl_dns_rrset_t 	   *ns_rrset;
 	/*char 					*author_name;
 	lxl_uint_t				author_name_len;
 	uint16_t 				alen;
@@ -68,10 +69,10 @@ struct lxl_dns_upstream_s {
 };
 
 
-lxl_int_t lxl_dns_upstream_init(lxl_dns_request_t *r, char *qname, lxl_uint_t qlen);
-lxl_int_t lxl_dns_upstream_init_request(lxl_dns_request_t *r);
-lxl_int_t lxl_dns_upstream_resolver_author(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
-void 	  lxl_dns_upstream_next(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
+int 	lxl_dns_upstream_init(lxl_dns_request_t *r, char *qname, lxl_uint_t qlen);
+int 	lxl_dns_upstream_init_request(lxl_dns_request_t *r);
+int  	lxl_dns_upstream_resolver_author(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
+void	lxl_dns_upstream_next(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
 
 
 #endif	/* LXL_DNS_UPSTREAM_H_INCLUDE */

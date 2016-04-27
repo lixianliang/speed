@@ -4,7 +4,10 @@
  */
 
 
-#include <lxl_event_timer.h>
+#include <lxl_config.h>
+#include <lxl_core.h>
+#include <lxl_event.h>
+//#include <lxl_event_timer.h>
 
 
 lxl_rbtree_t 		lxl_event_timer_rbtree;
@@ -26,12 +29,7 @@ lxl_event_find_timer(void)
 	node = lxl_rbtree_min(root, sentinel);
 	timer = (lxl_int_t) (node->key - lxl_current_msec);
 
-	/* return (lxl_uint_t) (timer > 0 ? timer : 0); */
-	if (timer < 0) {
-		return (lxl_uint_t) LXL_TIMER_LAZY_DELAY;
-	} 
-
-	return (lxl_uint_t) lxl_max(timer, LXL_TIMER_LAZY_DELAY);
+	return (lxl_uint_t) (timer > 0 ? timer : 0);
 }
 
 void 

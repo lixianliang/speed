@@ -23,6 +23,7 @@
 
 extern lxl_module_t lxl_epoll_module;
 
+static int	lxl_send_lowat(lxl_connection_t *c, size_t lowat);
 
 static void	lxl_enable_accept_events(lxl_cycle_t *cycle);
 static void lxl_disable_accept_events(lxl_cycle_t *cycle);
@@ -162,10 +163,10 @@ lxl_process_events_and_timers(lxl_cycle_t *cycle)
 	}
 }
 
-lxl_int_t
-lxl_handler_read_event(lxl_event_t *rev)
+int
+lxl_handle_read_event(lxl_event_t *rev)
 {
-	if (lxl_event_flags & LXL_USE_CLEAR_EVENT) {
+	/*if (lxl_event_flags & LXL_USE_CLEAR_EVENT) {
 		if (!rev->active && !rev->ready) {
 			return lxl_add_event(rev, LXL_READ_EVENT, LXL_CLEAR_EVENT);
 		}
@@ -177,7 +178,50 @@ lxl_handler_read_event(lxl_event_t *rev)
 		}
 
 		return 0;
+	}*/
+
+	if (!rev->active && !rev->ready) {
+		return lxl_add_event(rev, LXL_READ_EVENT, LXL_CLEAR_EVENT);
 	}
+
+	return 0;
+}
+
+int 
+lxl_handle_write_event(lxl_event_t *wev, size_t lowat)
+{
+	lxl_connection_t *c;
+
+	if (lowat) {
+		c = wev->data;
+		if (lxl_send_lowat(c, lowat) == -1) {
+			return -1;
+		}
+	}
+	
+	if (!wev->active && !wev->ready) {
+		return lxl_add_event(wev, LXL_WRITE_EVENT, LXL_CLEAR_EVENT);
+	}
+	
+	return 0;
+}
+
+static int
+lxl_send_lowat(lxl_connection_t *c, size_t lowat)
+{
+	int sndlowat;
+
+	if (c->sndlowat || lowat == 0) {
+		return 0;
+	}
+
+	sndlowat = (int) lowat;
+	if (setsockopt(c->fd, SOL_SOCKET, SO_SNDLOWAT, &sndlowat, sizeof(int)) == -1) {
+		lxl_log_error(LXL_LOG_ERROR, errno, "setsockopt(SO_SNDLOWAT) failed");
+		return -1;
+	}
+
+	c->sndlowat = 1;
 
 	return 0;
 }
@@ -185,18 +229,17 @@ lxl_handler_read_event(lxl_event_t *rev)
 void
 lxl_event_accept(lxl_event_t *ev)
 {
-	int fd;
-	char ip[INET6_ADDRSTRLEN];
-	socklen_t socklen;
-	struct sockaddr sockaddr;
-	struct sockaddr_in *sin;
-	lxl_listening_t *ls;
-	lxl_connection_t *c, *lc;
+	int 				 fd;
+	char 				 ip[INET6_ADDRSTRLEN];
+	socklen_t 			 socklen;
+	struct sockaddr 	 sockaddr;
+	struct sockaddr_in  *sin;
+	lxl_listening_t 	*ls;
+	lxl_connection_t 	*c, *lc;
 	
 	lc = ev->data;
 	ls = lc->listening;
 	ev->ready = 0;	// ?
-	//ls = lc->listening;
 	for (; ;) {
 		// accept4();
 		//socklen = sizeof(struct sockaddr);
@@ -223,9 +266,10 @@ lxl_event_accept(lxl_event_t *ev)
 			}
 	
 			c->udp = 0;
-			c->closefd = 1;
+			//c->closefd = 1;
 			c->recv = lxl_recv;
 			c->send = lxl_send;
+			c->listening = ls;
 			c->write->ready = 1;
 			
 			sin = (struct sockaddr_in *) &sockaddr;
@@ -284,14 +328,17 @@ lxl_event_accept_udp(lxl_event_t *ev)
 				return;
 			}
 
-			c->buffer->len = n;
-			memcpy(c->buffer->data, buffer, n);
+			memcpy(c->buffer->pos, buffer, n);
+			c->buffer->last += n;
 			c->udp = 1;
-			c->closefd = 0;
+			//c->closefd = 0;
+			c->fd_noclose = 1;
 			c->sockaddr = sockaddr;
 			c->socklen = socklen;
 			//c->recv = lxl_recvfrom;	
 			c->send = lxl_sendto;	/* udp only send */
+			c->listening = ls;
+			// c->write->ready = 1;
 
 			sin = (struct sockaddr_in *) &sockaddr;
 			lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "recvfrom() %s fd:%d nbyte:%ld", 
@@ -369,48 +416,6 @@ lxl_close_accepted_connection(lxl_connection_t *c, lxl_uint_t flags)
 	if (c->pool) {
 		lxl_destroy_pool(c->pool);
 	}
-}
-
-lxl_int_t 
-lxl_event_connect_peer(lxl_connection_t **c, struct sockaddr *sa, socklen_t len)
-{
-	lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "event connect peer");
-
-	return 0;
-}
-
-lxl_int_t
-lxl_event_connect_peer_udp(lxl_connection_t **c)
-{
-	int fd;
-	lxl_connection_t *connection;
-
-	lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "event udp connect peer");
-	fd = socket(AF_INET, SOCK_DGRAM, 0);
-	if (fd == -1) {
-		lxl_log_error(LXL_LOG_ERROR, errno, "socket() failed");
-		return -1;
-	}
-
-	lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "socket %d", fd);
-	connection = lxl_get_connection(fd);
-	if (connection == NULL) {
-		lxl_log_error(LXL_LOG_WARN, 0, "get connection() failed");
-		close(fd);
-		return -1;
-	}
-	
-	// nonblock
-	connection->udp = 1;
-	connection->closefd = 1;
-	connection->fd = fd;
-	//connection->sockaddr = *sa;
-	//connection->socklen = len;
-	connection->recv = lxl_recvfrom;
-	connection->send = lxl_sendto;
-	*c = connection;
-
-	return 0;
 }
 
 static char *
@@ -544,11 +549,11 @@ lxl_event_process_init(lxl_cycle_t *cycle)
 		c->read->accept = 1;
 		if (ls[i].type == SOCK_STREAM) {
 			c->udp = 0;
-			c->closefd = 1;
+			//c->closefd = 1;
 			c->read->handler = lxl_event_accept;	/* tcp or udp */
 		} else {
 			c->udp = 1;
-			c->closefd = 1;
+			//c->closefd = 1;
 			c->read->handler = lxl_event_accept_udp;
 			/*c->recv = lxl_recvfrom;
 			c->send = lxl_sendto;*/
@@ -647,6 +652,7 @@ lxl_event_connections(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 	lxl_event_conf_t *ecf = (lxl_event_conf_t *) conf;
 	
 	lxl_str_t *value;
+	
 
 	if (ecf->connections != LXL_CONF_UNSET_UINT) {
 		return "is duplicate";

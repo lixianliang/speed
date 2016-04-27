@@ -19,8 +19,6 @@
 static char *lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf);
 static int	 lxl_dns_optimize_servers(lxl_conf_t *cf, lxl_array_t *listens, lxl_int_t tcp);
 
-static void  lxl_dns_data_rebuild_handler(lxl_event_t *ev);
-
 
 lxl_hash_t 					lxl_dns_hash;
 lxl_dns_zone_t             *lxl_dns_root_zone;
@@ -61,17 +59,7 @@ lxl_module_t lxl_dns_module = {
 static char *
 lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 {
-	/* l hour
-	memset(&lxl_dns_event, 0x00, sizeof(lxl_event_t));
-	lxl_dns_event.data = c;
-	lxl_dns_event.handler = lxl_dns_data_rebuild_handler;
-	lxl_add_timer(&lxl_dns_event, 86400*1000);
-	//lxl_add_timer(&lxl_dns_event, 120*1000);
-
-	lxl_dns_root_zone = NULL;
-	lxl_log_error(LXL_LOG_INFO, 0, "dns start succeed");
-
-	return 0;*/
+	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "dns block");
 
 	char *rv;
 	lxl_uint_t i, j, mi, nelts;
@@ -121,13 +109,11 @@ lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 
 		module = lxl_modules[i]->ctx;
 		mi = lxl_modules[i]->ctx_index;
-
 		if (module->create_main_conf) {
 			ctx->main_conf[mi] = module->create_main_conf(cf);
 			if (ctx->main_conf[mi] == NULL) {
 				return LXL_CONF_ERROR;
 			}
-			ctx->main_conf[lxl_modules[i]->ctx_index] = module->create_main_conf(cf);
 		}
 
 		if (module->create_srv_conf) {
@@ -151,7 +137,6 @@ lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 
 	cmcf = ctx->main_conf[lxl_dns_core_module.ctx_index];
 	cscfp = lxl_array_elts(&cmcf->servers);
-
 	for (i = 0; lxl_modules[i]; ++i) {
 		if (lxl_modules[i]->type != LXL_DNS_MODULE) {
 			continue;
@@ -159,10 +144,9 @@ lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 
 		module = lxl_modules[i]->ctx;
 		mi = lxl_modules[i]->ctx_index;
-
 		/* init dns{} mail_conf's */
 		if (module->init_main_conf) {
-			rv = module->init_main_conf(cf, ctx->main_conf[lxl_modules[i]->ctx_index]);
+			rv = module->init_main_conf(cf, ctx->main_conf[mi]);
 			if (rv != LXL_CONF_OK) {
 				*cf = pcf;
 				return rv;
@@ -188,8 +172,6 @@ lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)
 	if (lxl_dns_optimize_servers(cf, &cmcf->listens, cmcf->tcp) != 0) {
 		return LXL_CONF_ERROR;
 	}
-
-	lxl_dns_data_rebuild_handler(NULL);
 
 	return LXL_CONF_OK;
 }
@@ -225,16 +207,4 @@ lxl_dns_optimize_servers(lxl_conf_t *cf, lxl_array_t *listens, lxl_int_t tcp)
 	}
 	
 	return 0;
-}
-
-static void 	 
-lxl_dns_data_rebuild_handler(lxl_event_t *ev)
-{
-	return;
-
-	lxl_dns_data_dump();
-	lxl_dns_data_rebuild();
-	ev->timedout = 0;
-	//lxl_add_timer(ev, 10800*1000);
-	lxl_add_timer(ev, 86400*1000);
 }

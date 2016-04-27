@@ -42,7 +42,7 @@ typedef struct lxl_listening_s {
 	size_t				client_buffer_size; */
 
 	lxl_connection_handler_pt handler;
-	void 			   *servers;
+	void 			   *servers;		/* lxl_dfss_port_t */
 
 	lxl_connection_t   *connection;
 
@@ -60,7 +60,7 @@ struct lxl_connection_s {
 
 	lxl_listening_t    *listening;
 	socklen_t 			socklen;
-	struct sockaddr 	sockaddr;
+	struct sockaddr     sockaddr;
 	// lxl_str_t   addr_text ip string
 	lxl_pool_t 		   *pool;
 	lxl_buf_t 		   *buffer;		/* replace lxl_buf_t buffer */
@@ -69,8 +69,18 @@ struct lxl_connection_s {
 
     int 				fd;
 	unsigned			udp:1;
-	unsigned 			closefd:1;
+//	unsigned 			closefd:1;
+	unsigned 			fd_noclose:1;
 	unsigned 			timedout:1;
+	unsigned 			error:1;
+	//unsigned 			idle:1;
+	//unsigned 			reuseable;
+	//unsigned 			close:1;
+	
+	unsigned 			sendfile:1;
+	unsigned			sndlowat:1;
+	//unsigned 			tcp_nodelay:2;
+	//unsigned 			tcp_nopush:2;
 };
 
 

@@ -20,8 +20,8 @@
 extern lxl_hash_t lxl_dns_hash;
 
 
-static void lxl_dns_empty_handler(lxl_event_t *wev);
 static void lxl_dns_wait_request_handler(lxl_event_t *rev);
+static void lxl_dns_empty_handler(lxl_event_t *ev);
 static void lxl_dns_process_request_line(lxl_event_t *rev);
 
 static lxl_dns_request_t * lxl_dns_create_request(lxl_connection_t *c);
@@ -47,18 +47,10 @@ lxl_dns_init_connection(lxl_connection_t *c)
 	/* add timer dns 3s */
 	lxl_add_timer(rev, LXL_DNS_CLIENT_TIMEOUT);
 	// reuseable connection
-	if (lxl_handler_read_event(c->read) != 0) {
+	if (lxl_handle_read_event(c->read) != 0) {
 		lxl_dns_close_connection(c);
 		return;
 	}
-}
-
-static void 
-lxl_dns_empty_handler(lxl_event_t *wev)
-{
-	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "dns empty handler");
-
-	return;
 }
 
 static void 
@@ -115,7 +107,7 @@ lxl_dns_wait_request_handler(lxl_event_t *rev)
 				lxl_add_timer(rev, LXL_DNS_CLIENT_TIMEOUT);
 			}
 
-			if (lxl_handler_read_event(rev) != 0) {
+			if (lxl_handle_read_event(rev) != 0) {
 				lxl_dns_close_connection(c);
 				return;
 			}
@@ -155,6 +147,14 @@ lxl_dns_wait_request_handler(lxl_event_t *rev)
 }
 
 static void 
+lxl_dns_empty_handler(lxl_event_t *ev)
+{
+	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "dns empty handler");
+
+	return;
+}
+
+static void 
 lxl_dns_process_request_line(lxl_event_t *rev)
 {
 	ssize_t n;
@@ -188,7 +188,7 @@ lxl_dns_process_request_line(lxl_event_t *rev)
 					lxl_add_timer(rev, 3000);
 				}
 
-				if (lxl_handler_read_event(rev) != 0) {
+				if (lxl_handle_read_event(rev) != 0) {
 					lxl_dns_close_connection(c);
 					return;
 				}*/
@@ -218,6 +218,7 @@ done:
 
 	if (lxl_dns_parse_request(r, c->buffer->data + 2) == -1) {
 		lxl_dns_finalize_request(r, r->rcode);
+		return;
 	}
 
 	lxl_dns_process_request(r);
@@ -235,7 +236,7 @@ lxl_dns_create_request(lxl_connection_t *c)
 		return NULL;
 	}
 
-
+	/* r->pool kaolu qudiao */
 	r->pool = c->pool;
 	r->connection = c;
 	r->tc = 0;
@@ -420,6 +421,9 @@ lxl_dns_writer_udp(lxl_dns_request_t *r)
 	} else {
 		lxl_log_error(LXL_LOG_INFO, 0, "%s send %ld success", r->rid, n);
 	}
+
+	if (n == -1) {
+	}
 }
 
 void 
@@ -441,14 +445,14 @@ void
 lxl_dns_close_request(lxl_dns_request_t *r)
 {
 	lxl_log_debug(LXL_LOG_DEBUG, 0, "%s dns close request", r->rid);
-	lxl_dns_free_request(r);
+	/* lxl_dns_free_request(r); */
 	lxl_dns_close_connection(r->connection);
 }
 
 void 
 lxl_dns_free_request(lxl_dns_request_t *r)
 {
-	//lxl_destroy_pool(r->connection->pool);
+	return;
 }
 
 void

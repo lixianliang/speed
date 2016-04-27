@@ -4,13 +4,14 @@
  */
 
 
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_times.h>
 #include <lxl_connection.h>
 #include <lxl_conf_file.h>
 #include <lxl_socket.h>
-//#include <lxl_dns.h>
-#include <lxl_cycle.h>
+#include <lxl_cycle.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 #define LXL_DNS_PORT	1053

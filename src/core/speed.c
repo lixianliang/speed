@@ -4,15 +4,19 @@
  */
 
 
-#include <lxl_config.h>
+/*#include <lxl_config.h>
 #include <lxl_log.h>
 #include <lxl_core.h>
 #include <lxl_times.h>
 #include <lxl_palloc.h>
 #include <lxl_cycle.h>
 #include <lxl_conf_file.h>
+#include <lxl_os.h>
 #include <lxl_files.h>
-#include <lxl_process.h>
+#include <lxl_process.h>*/
+
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 static int	 lxl_get_options(int argc, char *argv[]);
@@ -84,6 +88,16 @@ extern lxl_module_t lxl_event_core_module;
 extern lxl_module_t lxl_epoll_module;
 extern lxl_module_t lxl_dns_module;
 extern lxl_module_t lxl_dns_core_module;
+extern lxl_module_t lxl_dfss_module;
+extern lxl_module_t lxl_dfss_core_module;
+extern lxl_module_t lxl_dfss_upstream_module;
+extern lxl_module_t lxl_dfss_tracker_module;
+extern lxl_module_t lxl_dfss_storage_module;
+extern lxl_module_t lxl_dfst_module;
+extern lxl_module_t lxl_dfst_core_module;
+extern lxl_module_t lxl_dfst_upstream_module;
+extern lxl_module_t lxl_dfst_tracker_module;
+extern lxl_module_t lxl_dfst_storage_module;
 
 lxl_module_t *lxl_modules[] = {
 	&lxl_core_module,
@@ -91,8 +105,24 @@ lxl_module_t *lxl_modules[] = {
 	&lxl_events_module,
 	&lxl_event_core_module,
 	&lxl_epoll_module,
+#if LXL_DNS
 	&lxl_dns_module,
 	&lxl_dns_core_module,
+#endif 
+#if LXL_DFSS
+	&lxl_dfss_module,
+	&lxl_dfss_core_module,
+	&lxl_dfss_upstream_module,
+	&lxl_dfss_tracker_module,
+	&lxl_dfss_storage_module,
+#endif
+#if LXL_DFST
+	&lxl_dfst_module,
+	&lxl_dfst_core_module,
+	&lxl_dfst_upstream_module,
+	&lxl_dfst_tracker_module,
+	&lxl_dfst_storage_module,
+#endif
 	NULL
 };
 
@@ -156,10 +186,13 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
+	if (lxl_os_init() == -1) {
+		return -1;
+	}
+
 	lxl_max_module = 0;
 	for (i = 0; lxl_modules[i]; ++i) {
-		lxl_modules[i]->index = i;
-		++lxl_max_module;
+		lxl_modules[i]->index = lxl_max_module++;
 	}
 
 	cycle = lxl_init_cycle(&init_cycle);
@@ -170,6 +203,10 @@ int main(int argc, char *argv[])
 	lxl_cycle = cycle;
 
 	ccf = (lxl_core_conf_t *) lxl_get_conf(cycle->conf_ctx, lxl_core_module);
+
+	if (lxl_init_signals() != 0) {
+		return 1;
+	}
 
 	if (ccf->daemon) {
 		if (lxl_daemon() != 0) {

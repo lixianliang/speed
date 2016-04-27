@@ -10,16 +10,16 @@
 
 #include <lxl_core.h>
 #include <lxl_config.h>
-#include <lxl_string.h>
+//#include <lxl_string.h>
 
 
 struct lxl_file_s {
-	int 		fd;
-	lxl_str_t 	name;
-	struct stat info;
+	int 		 fd;
+	lxl_str_t 	 name;
+	struct stat  info;
 
-	off_t 		offset;
-	off_t 		sys_offset;
+	off_t 		 offset;
+	off_t 		 sys_offset;
 	//unsigned 
 };
 

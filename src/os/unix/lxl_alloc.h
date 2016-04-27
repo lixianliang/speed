@@ -10,10 +10,15 @@
 
 
 #include <lxl_config.h>
-#include <lxl_log.h>
+#include <lxl_core.h>
+//#include <lxl_log.h>
+
+void * lxl_alloc(size_t size);
+void * lxl_calloc(size_t n, size_t size);
+void * lxl_memalign(size_t alignment, size_t size);
 
 
-static inline void *
+/*static inline void *
 lxl_alloc(size_t size) 
 {
 	void *p;
@@ -21,7 +26,7 @@ lxl_alloc(size_t size)
 	p = malloc(size);
 	if (p == NULL) {
 		lxl_log_error(LXL_LOG_EMERG, errno, "malloc(%lu) failed", size);
-		p = NULL;
+		//p = NULL;
 	}
 
 	lxl_log_debug(LXL_LOG_DEBUG_ALLOC, 0, "malloc(%lu) %p", size, p); 
@@ -58,7 +63,7 @@ lxl_memalign(size_t alignment, size_t size)
 	lxl_log_debug(LXL_LOG_DEBUG_ALLOC, 0, "memalign(%lu, %lu) %p", alignment, size, p); 
 
 	return p;
-}
+}*/
 
 /*static inline void *
 lxl_memalign(size_t alignment, size_t size)

@@ -9,15 +9,21 @@
 #define LXL_FILES_H_INCLUDE
 
 
-#include <lxl_core.h>
 #include <lxl_config.h>
+//#include <lxl_core.h>
 
 
 #define LXL_MAX_PATH        	1024
 
 
+// lxl_lread_file
 ssize_t lxl_read_file(lxl_file_t *file, char *buf, size_t size, off_t offset);
+ssize_t lxl_read_file1(lxl_file_t *file, char *buf, size_t size);
 #define lxl_read_file_n			"read"
+
+ssize_t lxl_write_file(lxl_file_t *file, char *buf, size_t size);
+ssize_t lxl_write_file_offset(lxl_file_t *file, char *buf, size_t size, off_t offset);
+#define lxl_write_file_n 		"write"
 
 #define lxl_file_info(file, sb)	stat(file, sb)
 #define lxl_file_info_n			"stat()"

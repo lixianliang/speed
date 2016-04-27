@@ -4,9 +4,11 @@
  */
 
 
-#include <lxl_palloc.h>
+/*#include <lxl_palloc.h>
 #include <lxl_files.h>
-#include <lxl_file.h>
+#include <lxl_file.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 int 

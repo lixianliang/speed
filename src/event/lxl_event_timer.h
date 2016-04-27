@@ -10,9 +10,9 @@
 
 #include <lxl_config.h>
 #include <lxl_core.h>
-#include <lxl_log.h>
+/*#include <lxl_log.h>
 #include <lxl_times.h>
-#include <lxl_rbtree.h>
+#include <lxl_rbtree.h>*/
 #include <lxl_event.h>
 
 

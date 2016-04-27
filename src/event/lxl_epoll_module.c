@@ -6,11 +6,11 @@
 
 #include <lxl_config.h>
 #include <lxl_core.h>
-#include <lxl_cycle.h>
+/*#include <lxl_cycle.h>
 #include <lxl_string.h>
 #include <lxl_times.h>
 #include <lxl_connection.h>
-#include <lxl_alloc.h>
+#include <lxl_alloc.h>*/
 #include <lxl_event.h>
 
 
@@ -199,11 +199,17 @@ lxl_epoll_add_connection(lxl_connection_t *c)
 {
 	struct  epoll_event ee;
 
-	ee.events = EPOLLIN | EPOLLOUT | EPOLLET; /* fei bianliang */
+	ee.events = EPOLLIN|EPOLLOUT|EPOLLET; /* fei bianliang */
+	//ee.events = EPOLLIN|EPOLLOUT|EPOLLET|EPOLLRDHUP; 
 	ee.data.ptr = (void *) c;
+
+	lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "epoll add connection: fd:%d ev:%08X", c->fd, ee.events);
+
 	if (epoll_ctl(epfd, EPOLL_CTL_ADD, c->fd, &ee) == -1) {
+		lxl_log_error(LXL_LOG_ALERT, errno, "epoll_ctl(EPOLL_CTL_ADD, %d) failed", c->fd);
 		return -1;
 	}
+
 	c->read->active = 1;
 	c->write->active = 1;
 
@@ -223,10 +229,13 @@ lxl_epoll_del_connection(lxl_connection_t *c, lxl_uint_t flags)
 		return 0;
 	}
 
+	lxl_log_debug(LXL_LOG_DEBUG_EVENT, 0, "epoll del connection: fd:%d", c->fd);
+
 	op = EPOLL_CTL_DEL;
 	ee.events = 0;
 	ee.data.ptr = NULL; /* del ? */
 	if (epoll_ctl(epfd, op, c->fd, &ee) == -1) {
+		lxl_log_error(LXL_LOG_ALERT, errno, "epoll_ctl(%d, %d) failed", op, c->fd);
 		return -1;
 	}
 	c->read->active = 0;
@@ -272,6 +281,7 @@ lxl_epoll_process_events(lxl_uint_t timer)
 				/* handle error */
 			} else if ((revents & EPOLLIN) && rev->active) {
 				/* rev->ready = 1;*/
+				rev->ready = 1;
 				rev->handler(rev);
 			} else if ((revents & EPOLLOUT) && wev->active) {
 				wev->handler(wev);

@@ -8,9 +8,6 @@
 #define LXL_STACK_H_INCLUDE
 
 
-#include <lxl_config.h>
-
-
 typedef struct lxl_stack_s lxl_stack_t;
 
 struct lxl_stack_s {

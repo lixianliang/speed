@@ -4,21 +4,24 @@
  */
 
 
-#include <lxl_inet.h>
+/*#include <lxl_inet.h>
 #include <lxl_socket.h>
 #include <lxl_event.h>
 #include <lxl_event_timer.h>
-#include <lxl_connection.h>
+#include <lxl_connection.h>*/
+#include <lxl_config.h>
+#include <lxl_core.h>
+#include <lxl_event.h>
 
 
 lxl_listening_t *
 lxl_create_listening(lxl_conf_t *cf, void *sockaddr, socklen_t socklen, int type)
 {
-	size_t len;
-	lxl_listening_t *ls;
-	struct sockaddr *sa;
-	struct sockaddr_in *sin;
-	char text[LXL_SOCKADDR_STRLEN] = { 0 };
+	size_t 				 len;
+	lxl_listening_t 	*ls;
+	struct sockaddr 	*sa;
+	struct sockaddr_in  *sin;
+	char    			 text[LXL_SOCKADDR_STRLEN] = { 0 };
 
 	ls = lxl_array_push(&cf->cycle->listening);
 	if (ls == NULL) {
@@ -60,9 +63,9 @@ lxl_create_listening(lxl_conf_t *cf, void *sockaddr, socklen_t socklen, int type
 int 
 lxl_open_listening_sockets(lxl_cycle_t *cycle)
 {
-	int fd, reuseaddr;
-	lxl_uint_t i, tries, nelts, failed;
-	lxl_listening_t *ls;
+	int 			  s, reuseaddr;
+	lxl_uint_t 		  i, tries, nelts, failed;
+	lxl_listening_t  *ls;
 
 	// tcp or udp
 	reuseaddr = 1;
@@ -75,27 +78,27 @@ lxl_open_listening_sockets(lxl_cycle_t *cycle)
 				continue;
 			}
 
-			fd = socket(ls[i].sockaddr->sa_family, ls[i].type, 0);
-			if (fd == -1) {
+			s = socket(ls[i].sockaddr->sa_family, ls[i].type, 0);
+			if (s == -1) {
 				lxl_log_error(LXL_LOG_EMERG, errno, "socket() %s failed", ls[i].addr_text);
 				return -1;
 			}
 			
-			if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (const void *) &reuseaddr, sizeof(int)) == -1) {
+			if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, (const void *) &reuseaddr, sizeof(int)) == -1) {
 				lxl_log_error(LXL_LOG_EMERG, errno, "setsockopt(SO_REUEADDR) %s failed", ls[i].addr_text);
 				goto failed;
 			}
 
-			if (lxl_nonblocking(fd) == -1) {
+			if (lxl_nonblocking(s) == -1) {
 				lxl_log_error(LXL_LOG_EMERG, errno, lxl_nonblocking_n " %s failed", ls[i].addr_text);
 				goto failed;
 			}
 
-			lxl_log_debug(LXL_LOG_DEBUG_CORE, 0, "bind() to %s#%d", ls[i].addr_text);
-			if (bind(fd, ls[i].sockaddr, ls[i].socklen) == -1) {
+			lxl_log_debug(LXL_LOG_DEBUG_CORE, 0, "bind() to %s#%d, type %u", ls[i].addr_text, s, ls[i].type);
+			if (bind(s, ls[i].sockaddr, ls[i].socklen) == -1) {
 				lxl_log_error(LXL_LOG_EMERG, errno, "bind() to %s failed", ls[i].addr_text);
 
-				if (close(fd) == -1) {
+				if (close(s) == -1) {
 					lxl_log_error(LXL_LOG_EMERG, errno, "close() %s failed", ls[i].addr_text);
 				}
 
@@ -109,14 +112,14 @@ lxl_open_listening_sockets(lxl_cycle_t *cycle)
 			}
 
 			if (ls[i].type == SOCK_STREAM) {
-				if(listen(fd, ls[i].backlog) == -1) {
+				if(listen(s, ls[i].backlog) == -1) {
 					lxl_log_error(LXL_LOG_EMERG, errno, "listen() to %s, backlog %d failed", ls[i].addr_text, ls[i].backlog);
 					goto failed;
 				}
 			}
 
 			ls[i].listen = 1;
-			ls[i].fd = fd;
+			ls[i].fd = s;
 		}
 
 		if (!failed) {
@@ -136,7 +139,7 @@ lxl_open_listening_sockets(lxl_cycle_t *cycle)
 
 failed:
 
-	if (close(fd) == -1) {
+	if (close(s) == -1) {
 		lxl_log_error(LXL_LOG_EMERG, errno, "close() %s failed", ls[i].addr_text);
 	}
 
@@ -240,14 +243,21 @@ lxl_close_connection(lxl_connection_t *c)
 	c->write->closed = 1;
 	
 	lxl_free_connection(c);
-	
-	if (c->closefd) {
-//		fd = c->fd;
-//		c->fd = -1;
+
+	if (c->fd_noclose) {
+		lxl_log_debug(LXL_LOG_DEBUG_CORE, 0, "close socket %d no close", c->fd);
+	} else {
 		if (close(c->fd) ==-1) {
 			lxl_log_error(LXL_LOG_ALERT, errno, "close socket %d failed", c->fd);
 		}
 	}
+	
+/*	if (c->closefd) {
+		if (close(c->fd) ==-1) {
+			lxl_log_error(LXL_LOG_ALERT, errno, "close socket %d failed", c->fd);
+		}
+	} else {
+	}*/
 
 	c->fd = -1;
 }

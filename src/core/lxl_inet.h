@@ -10,7 +10,7 @@
 
 #include <lxl_core.h>
 #include <lxl_config.h>
-#include <lxl_string.h>
+//#include <lxl_string.h>
 
 
 /*	255.255.255.255 15+1 */
@@ -21,6 +21,12 @@
 #define LXL_SOCKADDR_STRLEN		54		
 #define LXL_SOCKADDRLEN			sizeof(struct sockaddr_in6)
 
+
+typedef struct {
+	struct sockaddr		*sockaddr;
+	socklen_t			 socklen;
+	char			     name[24]; 	/* 255.255.255.255:65535 */
+} lxl_addr_t;
 
 typedef struct {
 	lxl_str_t 	url;
@@ -37,7 +43,7 @@ typedef struct {
 	
 	socklen_t	socklen;
 	char		sockaddr[LXL_SOCKADDRLEN];
-	char 		*err;
+	char 	   *err;
 } lxl_url_t;
 
 

@@ -4,7 +4,7 @@
  */
 
 
-#include <lxl_string.h>
+#include <lxl_config.h>
 
 
 #if 0

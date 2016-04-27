@@ -8,11 +8,13 @@
 #define LXL_UTIL_H_INCLUDE
 
 
-#include <errno.h>
+/*#include <errno.h>
 #include <sys/types.h>
 
 #include "lxl_log.h"
-//#include "conf.h"
+//#include "conf.h"*/
+
+#include <lxl_config.h>
 
 
 int		lxl_daemon(void);

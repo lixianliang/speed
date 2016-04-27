@@ -4,13 +4,14 @@
  */
 
 
-#include <lxl_queue.h>
+#include <lxl_config.h>
+#include <lxl_core.h>
 
 
 lxl_queue_t *
 lxl_queue_create(lxl_pool_t *p, lxl_uint_t n, size_t size)
 {
-	lxl_queue_t *q;
+	lxl_queue_t  *q;
 	
 	q = lxl_palloc(p, sizeof(lxl_queue_t));
 	if (q == NULL) {
@@ -24,6 +25,23 @@ lxl_queue_create(lxl_pool_t *p, lxl_uint_t n, size_t size)
 	return q;
 }
 
+lxl_queue1_t *
+lxl_queue1_create(lxl_uint_t n, size_t size)
+{
+	lxl_queue1_t  *q;
+
+	q = lxl_alloc(sizeof(lxl_queue1_t));
+	if (q == NULL) {
+		return NULL;
+	}
+
+	if (lxl_queue1_init(q, n, size) != 0) {
+		return NULL;
+	}
+
+	return q;
+}
+#if 0
 void *
 lxl_queue_in(lxl_queue_t *q)
 {
@@ -92,3 +110,4 @@ lxl_queue_in(lxl_queue_t *q)
 
 	return elt;
 }
+#endif 

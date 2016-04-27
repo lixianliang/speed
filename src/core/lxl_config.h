@@ -19,11 +19,17 @@
 #include <malloc.h>			/* memalign */
 #include <unistd.h>
 #include <fcntl.h>
+#include <signal.h>
+#include <dirent.h>
 #include <arpa/inet.h>
+#include <net/if.h>
 #include <sys/types.h>
+#include <sys/vfs.h>
 #include <sys/un.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <sys/wait.h>
+#include <sys/prctl.h>
 #include <sys/ioctl.h>
 #include <sys/epoll.h>
 #include <sys/socket.h>
@@ -40,7 +46,7 @@ typedef long				lxl_int_t;
 typedef unsigned long		lxl_uint_t;
 typedef lxl_uint_t			lxl_msec_t;
 
-typedef lxl_int_t (*lxl_cmp_pt) (void *elt1, void *elt2);
+typedef int	(*lxl_cmp_pt) (void *elt1, void *elt2);
 
 
 #define LXL_MAX_UINT32_VALUE	(uint32_t) 0xffffffff
@@ -53,6 +59,10 @@ typedef lxl_int_t (*lxl_cmp_pt) (void *elt1, void *elt2);
 #endif
 
 #define LXL_LISTEN_BACKLOG		511
+
+#define LXL_KB_SIZE				1024
+#define LXL_MB_SIZE				1048576
+#define LXL_GB_SIZE				1073741824
 
 
 #endif	/* LXL_CONFIG_H_INCLUDE */

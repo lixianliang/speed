@@ -36,19 +36,19 @@ extern lxl_hash_t 	lxl_dns_hash;
 extern lxl_pool_t  *lxl_dns_pool;
 
 
-static void 	 lxl_dns_upstream_handler(lxl_event_t *rev);
-static void 	 lxl_dns_upstream_process_response(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
-static void 	 lxl_dns_upstream_finalize_request(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_uint_t rcode);
-static size_t 	 lxl_dns_upstream_parse_name(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len);
-static size_t 	 lxl_dns_upstream_parse_rdata(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len);
+static void 	lxl_dns_upstream_handler(lxl_event_t *rev);
+static void 	lxl_dns_upstream_process_response(lxl_dns_request_t *r, lxl_dns_upstream_t *u);
+static void 	lxl_dns_upstream_finalize_request(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_uint_t rcode);
+static size_t 	lxl_dns_upstream_parse_name(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len);
+static size_t 	lxl_dns_upstream_parse_rdata(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len);
 
-static lxl_int_t lxl_dns_upstream_resolver_rrset(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
-static lxl_int_t lxl_dns_upstream_resolver_author2(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
-static lxl_int_t lxl_dns_upstream_resolver_author_ip(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone, lxl_dns_rrset_t *rrset, uint16_t flags);
-static lxl_int_t lxl_dns_upstream_resolver_author_ip2(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
+static int lxl_dns_upstream_resolver_rrset(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
+static int lxl_dns_upstream_resolver_author2(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
+static int lxl_dns_upstream_resolver_author_ip(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone, lxl_dns_rrset_t *rrset, uint16_t flags);
+static int lxl_dns_upstream_resolver_author_ip2(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone);
 
 
-lxl_int_t 
+int
 lxl_dns_upstream_init(lxl_dns_request_t *r, char *qname, lxl_uint_t qlen) 
 {
 	lxl_connection_t *c;
@@ -60,12 +60,12 @@ lxl_dns_upstream_init(lxl_dns_request_t *r, char *qname, lxl_uint_t qlen)
 		return -1;
 	}
 
-	if (lxl_event_connect_peer_udp(&u->connection) == -1) {
+	if (lxl_event_udp_connect_peer(&u->peer) == -1) {
 		return -1;
 	}
 
 	
-	c = u->connection;
+	c = u->peer.connection;
 	c->buffer = lxl_create_temp_buf(r->pool, LXL_DNS_CLIENT_BUFFER_SIZE);
 	if (c->buffer == NULL) {
 		return -1;
@@ -116,14 +116,14 @@ lxl_dns_upstream_next(lxl_dns_request_t *r, lxl_dns_upstream_t *u)
 					nelts, u->author_ip_curr_index, inet_ntoa(sockaddr.sin_addr));
 	
 	++u->author_ip_curr_index;
-	c = u->connection;
+	c = u->peer.connection;
 	c->sockaddr = *((struct sockaddr *) &sockaddr);
 	c->socklen = sizeof(struct sockaddr_in);
 	/* lxl_dns_upstream_reinit_request() */
 	lxl_dns_upstream_init_request(r);
 }
 
-lxl_int_t
+int
 lxl_dns_upstream_init_request(lxl_dns_request_t *r)
 {
 	ssize_t n;
@@ -134,7 +134,7 @@ lxl_dns_upstream_init_request(lxl_dns_request_t *r)
 
 	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "%s dns upstream init request", r->rid);
 	u = r->upstream;
-	c = u->connection;
+	c = u->peer.connection;
 	b = c->buffer;
 
 	memcpy(b->data, &u->header, 12);
@@ -152,6 +152,7 @@ lxl_dns_upstream_init_request(lxl_dns_request_t *r)
 	}
 
 	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "dns upstream request: qname:%s type:%04x send:%ld", u->qname, u->question_part.qtype, n);
+
 	if (!c->read->active) {
 		if (lxl_add_event(c->read, LXL_READ_EVENT, LXL_CLEAR_EVENT) == -1) {
 		//if (lxl_add_event(c->read, LXL_READ_EVENT, LXL_LEVEL_EVENT) == -1) {
@@ -160,7 +161,7 @@ lxl_dns_upstream_init_request(lxl_dns_request_t *r)
 	}
 
 	// nginx 3s, dig 5s duigui dayu 3s
-	c->read->timedout = 0;
+	c->read->timedout = 0;	/* ? */
 	lxl_add_timer(c->read, LXL_DNS_AUTHORITY_READ_TIMEOUT);
 
 	return 0;
@@ -180,7 +181,7 @@ lxl_dns_upstream_handler(lxl_event_t *rev)
 	c = rev->data;
 	r = c->data;
 	u = r->upstream;
-	c = u->connection;
+	c = u->peer.connection;
 	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "%s dns upstream handler request %s", r->rid, u->qname);
 
 	/*if (rev->write) {
@@ -213,7 +214,7 @@ lxl_dns_upstream_process_response(lxl_dns_request_t *r, lxl_dns_upstream_t *u)
 	lxl_dns_rdata_t *rdata;
 	lxl_dns_upstream_question_t *question;
 
-	c = u->connection;
+	c = u->peer.connection;
 	b = c->buffer;
 	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "%s dns upstream process response: qname:%s type:0x%04x flags:0x%04x", 
 					r->rid, u->qname, u->question_part.qtype, u->qname_flags);
@@ -495,7 +496,7 @@ lxl_dns_upstream_process_response(lxl_dns_request_t *r, lxl_dns_upstream_t *u)
 			}
 
 			lxl_log_error(LXL_LOG_INFO, 0, "%s sendto success %ld", r->rid, n);
-			lxl_close_connection(u->connection);
+			lxl_close_connection(u->peer.connection);
 			lxl_dns_close_request(r);
 			return;
 		} else if (ret == 0) {
@@ -579,7 +580,7 @@ static void
 lxl_dns_upstream_finalize_request(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_uint_t rcode)
 {
 	lxl_log_debug(LXL_LOG_DEBUG_DNS, 0, "%s dns upstream finalize request qname %s", r->rid, u->qname);
-	lxl_close_connection(u->connection);
+	lxl_close_connection(u->peer.connection);
 	lxl_dns_finalize_request(r, rcode);
 }
 
@@ -595,7 +596,7 @@ lxl_dns_upstream_parse_name(lxl_dns_upstream_t *u, char *data, char *buffer, siz
 	
 	n = nlen = 0;
 	flags = 1;
-	b = u->connection->buffer;
+	b = u->peer.connection->buffer;
 	response_n = b->len;
 	data_ptr = data;
 	do {
@@ -657,7 +658,7 @@ lxl_dns_upstream_parse_rdata(lxl_dns_upstream_t *u, char *data, char *buffer, si
 	lxl_buf_t *b;
 	
 	nlen = 0;
-	b = u->connection->buffer;
+	b = u->peer.connection->buffer;
 	response_n = b->len;
 	data_ptr = data;
 	do {
@@ -701,7 +702,7 @@ lxl_dns_upstream_parse_rdata(lxl_dns_upstream_t *u, char *data, char *buffer, si
 	return 0;
 }
 
-static lxl_int_t 
+static int 
 lxl_dns_upstream_resolver_rrset(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)
 {
 	uint16_t nlen, type;
@@ -820,7 +821,7 @@ lxl_dns_upstream_resolver_rrset(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl
 	return 0;
 }
 
-lxl_int_t 
+int 
 lxl_dns_upstream_resolver_author(lxl_dns_request_t *r, lxl_dns_upstream_t *u)
 {
 	char label, *aname;
@@ -913,7 +914,7 @@ lxl_dns_upstream_resolver_author(lxl_dns_request_t *r, lxl_dns_upstream_t *u)
 	return -1;
 }
 
-static lxl_int_t 
+static int 
 lxl_dns_upstream_resolver_author2(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)
 {
 	lxl_stack_t *stack;
@@ -992,7 +993,7 @@ lxl_dns_upstream_resolver_author2(lxl_dns_request_t *r, lxl_dns_upstream_t *u, l
 	return lxl_dns_upstream_resolver_author(r, u);
 }
 
-static lxl_int_t 
+static int 
 lxl_dns_upstream_resolver_author_ip(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone, lxl_dns_rrset_t *ns_rrset, uint16_t flags) 
 {
 	uint32_t *ipv4;
@@ -1032,7 +1033,7 @@ lxl_dns_upstream_resolver_author_ip(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone,
 	return (lxl_int_t) nelts;
 }
 
-static lxl_int_t 
+static int 
 lxl_dns_upstream_resolver_author_ip2(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)
 {
 	uint32_t *ipv4;

@@ -9,10 +9,12 @@
 
 
 #include <lxl_config.h>
+#include <lxl_core.h>
 
 
-typedef lxl_uint_t lxl_rbtree_key_t;
-typedef struct lxl_rbtree_node_s lxl_rbtree_node_t;
+typedef lxl_uint_t  lxl_rbtree_key_t;
+
+typedef struct lxl_rbtree_node_s  lxl_rbtree_node_t;
 
 struct lxl_rbtree_node_s {
 	unsigned char color;
