@@ -1,0 +1,485 @@
+
+1. 先实现简单的dfs 
+2. client tracker storager	/
+
+3. 修改 timer 300ms
+
+4. 一个服务帮一个cpu + 一个盘
+5. 配置暂时 支持多个server
+6. 先不要考虑优化的细节 先把架子做出来
+
+7. 4  + 1 cmd + 1 status  > 4G 应用分片 或  到时改成8byte
+yun pan 最终也是分片的 大文件 不可能从一个地方下载
+
+8.部分请求 tracker 与 storage用udp来实现 没必要还是放在一起
+
+9. lxl_memcpy 可以用对于 2byte 4byte 8byte用
+
+10. nginx 里面会复用header的buf
+
+11. dfs header 只用6byte去读  === header是固定的   === 没事 header buf服用
+
+12. read 用readv ===> read_chain
+	write yong write ===> write_chain
+	sendfile  ===> downlod   === 2G -1大小 
+	===> 提供sendfile 选项
+
+gridfs ===> nginx 两个服务放到一块  共用目录 ===> 让nginx直接开sendfile good ===> 只要写tracker server
+===> 或者开发一个nginx 模块	
+提供两个方式  ===> gridfs
+想了下 还是要是新storage ===> 还是有nginx proxy
+
+dfs 不需要proxy   nginx就已代替
+
+=== 5.17
+header  和 body分开    不分开
+优点   少一次malloc,每一次连接不会浪费(这个到部重要)   要malloc
+缺点	recv有点浪费6byte ===> 多一次recv						===> 1k
+===> 这样好了 很好的控制好c->pool的大小    两个方面都符合 不行c->pool 一开始不应该有多余的内存空间
+===>  考虑又考虑 6byte header读取 多一次recv \\ 好处少malloc 和 内存   header body清晰
+最终比较的是 malloc 和 recv谁的代价大
+palloc 都从connection->pool 中来   读取body的buf也是一样 === 类似于 mail没有http那样复杂
+
+ngx_http_send_special
+ngx_http_read_client_request_body
+
+ngx_int_t ngx_http_discard_request_body(ngx_http_request_t *r);
+void ngx_http_discarded_request_body_handler(ngx_http_request_t *r);
+void ngx_http_block_reading(ngx_http_request_t *r);
+void ngx_http_test_reading(ngx_http_request_t *r);
+
+=== 5.20 
+storage 支持上传多个文件 
+http proxy 做文件大小控制 比如文件超过50M 就重新 选一台storage
+最好上传文件前 将所有文件 总大小信息传给tracker body_n 包含所有信息 === 文件上传前需要收集所有文件大小和信息 === 检查是否有空间信息
+4byte + 4byte + 4byte
+总大小 小于某个阀值的 + 20%内 就只上传一个storage upload也可以同理
+=== tracker怎么处理   单个和多个  === 要是proxy接受无空间  请求另外的storage 
+
+===
+proxy 支持两种配置   1. 单个单个传  
+	多个合并上传
+	2. 支持多文件上传到一个storage(文件大小  文件个数都有阀值 + 20% 范围浮动) 就着定了 开始吧
+	3. 若最小文件 > 50m ===> 单个上传  若最大文件小于阀值  ===> 多个  === 这个必须有
+	4. 文件个数 > 阀值  批量分开			这些都是可选开关
+	5. 组合大小 也是有 阀值(4G) ?  规则是不是有点多  === 
+=== 文件上传最好从小到大 开始传
+=== client 也可以分组上传 === 对应多个http proxy === 对的 这个是对http proxy的负载 
+ 
+tracker需要处理 === 那台机器有可剩与空间(多个)  若没有一台机器有空间告诉 proxy 单个传 === 
+=== 重新请求 tracker获得storage?
+若最小的file size都不能满足 > 没有满足	=== 感觉传总大小就可以??? 4byte  对 4G
+
+=== 应用层 用户应该有空间  个数的限制
+=== proxy 优化  storage的ip先可以不关闭  万一===从tracker得到的ip是一样呢
+
+http proxy 提供两种
+1. 单一式   上传 一个 返回一个fid	// 禁止 故意?一个连接 一个文件
+2. 批量式 先上传要上传的文件信息  === 最后get 所有文件状态 fid	 （json or xml)
+
+===================
+后面想了下 
+客户端 上传的文件不定
+client 单个上传   ===> 成功
+client 上传方式 一个连接 || 多个连接 || 多个proxy 单个连接 || 多个proxy多个连接  === 根据用户ip 选最适合的idc上传
+upload download proxy 分开？
+
+策略放在http proxy
+1. 单个上传						=== 不同的请求		len 4byte
+2. 多个文件可持续传一个storage    文件大小 20M? + 20%   文件个数100? ===做多往一个storage 传2.4G
+这个参数视文件服务器类型而定    大文件类型  小文件类型
+
+tracker 选择的策略  === 单个文件   非单个文件不知道多少 文件个数?
+1. 轮询 
+2. 最闲				=== 这里有点复杂
+3. 空间最大
+
+对于fastdfs好问题
+1. storage server 采用异步备份策略， 若刚上传文件成功后 服务器挂了，对于其他文件不可见
+支持写策略配置， 如需要写N份才成功 N=3
+2. 跟新一个文件，是先删除后上传  还是直接更新
+
+speed dfs的解决方式 
+proxy 支持一份文件写三台不同的机器
+http proxy 提供x-header 写方式成功自定义头  默认一份   ===> tracker提供ip 机器的个数为N=3  proxy 配置 单个传了  给出ip+port 
+=== 怎么会滚  1 succ 2 fail   2 succ 1 fail === retry 3此? === 删除  这个是对于多份的  3这个数字都不要配 硬规定
+=== proxy有点复杂呀
+=== tracker 可以做一个udp server？ 3s 没返回    === 还是tcp  有跨机房 === 必须要可靠 === 文件同步
+
+==== 5.21
+storage 写文件 小的 全读完  === 大的边写边读
+
+=== dfs  上传可以 强制存三分才成功？
+是否需要考虑  gzip   === http 已压缩
+
+上传的分数 request里面来
+单份上传  === 小于 1 > <3个ip   === 防止有失败  重新取原来的 === 还是可以	body_n % 4 == 0 boad_n / 4 > 1
+多个文件传一个ip  === 切换  先用已有的ip === 要是连接没成功 upload失败 try = 3  就不去tracker取了  磁盘没空间
+or tracker 直接不返回 对于要写多份 而ip不够的
+三份上传  === 小于 3 > <9个ip  3组     9个不同ip  一个ip对应一个机器   === body_n %4 == 0  body_n / 4 >= 3   === 不支持写多份
+===   程序起来  就读取硬盘的大小  === 这样时时记录 disk的空间   === tracker不知道 ???  ===   多进程也不好弄
+监控程序  80% 发警告    消耗较大 把时间间隔调大
+=== 不支持三份  ===   单个发    tracker 指定备份为3  === http proxy 可指定   === 多份先不管  要多台机器来弄
+
+===
+结合看代码  ngx http里面的writev 最多也是2 header.buf + body.buf == 就这一次
+dfs  header.buf固定 === 一次没必要用writev === 直接
+
+===
+一步情况下的文件同步可不实时刷硬盘?
+
+=== 
+path 16 or 256   程序配置
+
+create_dir 可先不用 access
+
+pwrite pread 用于多线程操作同一个文件  ===  多进程  不要考虑这个
+
+ftruncate  来设置文件预留大小  
+若设置为100 但写90 === 那只是分配一定空间给用
+
+===
+nginx http proxy 可以配置ssd盘  做cache
+
+df -i		inode 个数
+du -ks
+fdisk -l    逻辑块4k  === 512 * 8   512扇区大小
+
+不要用多级目录 /会增加文件大小   === 256 or  4096  
+
+目录会存文件 结构  === 4096  一个逻辑块大小
+
+一般4k  ===  大文件服务器1M(1m浪费的可能性) > 64m   === 减少文件io次数
+文件合并  === 减少文件个数  ===> 文件查找时间    === 也有问题 程序自己也有个地方需要存起来
+程序自己hash === 快于系统?
+
+合并小文件 === 减少文件数量， 减少文件寻址 open时间 合并到
+将文件和索引  fid + offsize 写入chunk file
+=== 我对于chunk file的理解 想法
+对于系统>多少个文件后 进行合并 === 和fastdfs想法不一样
+4k  ===> 合并文件16m >64 ===> 大文件机器  1m ===> 合并文件为4G > 64m的就没必要合并了 
+==== <= 1m   === 可以合并64m   合并是对于已同步好的文件
+程序重启只有可以加载chunk文件和它的索引  64m 文件更新的话会有空间浪费
+可以简化  chunk合并的过程    === 按需合并   chunk文件和可以在此合并 压缩已删除的空间
+
+tracker 里面确定返回方式
+一次连接一次访问 tracker  === 符合要求的全返回 storage server的ip port 按优先级排序好返回
+
+临时文件加个  *filename
+
+===
+文件最后两个字节用做  有重复文件or文件状态
+uint32_t % 16 
+
+
+r->content_handler = clcf->handler
+这里挂载的是各种后端server
+
+=== 先实现upload
+再实现download
+SO_RCVLOWAT SO_SNDLOWAT  === 这个后面可做优化  === 最少6字节  | 这个特别是在写的时候很有用
+
+只有write的时候可以设置 可以很好的把控  read不行 列入最后只有1byte 然后这是为10 就会永远不会有event返回了
+对于hacker用户 1s 发1byte 给定header总超时 和 body总超时
+
+fsync(fd)  === 最后这个文件刷盘
+close(fd)
+
+body的timeout是根据body大小来的?
+
+
+=== 
+dfs 没有那么复杂 不要read_handler_event
+blocked 可以看下mail
+
+===
+文件名需要   机器重起的时候检查文件名 === 知道其文件的状态信息  === 这个看怎么设计了  两个字节？ 数字转16进值 很好转的
+
+group内文件名区分     dfs加个request_seed  + 没台机器都在组内有一个序号 === 1字节+1字节(qtype)
+
+自己配置都有一个序列 id  先要去tracker去 注册，成功了才会节后请求 === tracker才认为有效
+
+=== request 超时可以放回给客户端
+
+malloc出现段错误 说明之前指针就有问题了 === file->name.data 这里
+pcalllo you wenti 
+
+===
+accept 的平均分布   accpt 100 or 1000
+
+download fangzai filename里面
+
+dfs 基本是一写多读  === aio有用吗对于 进程来说
+linux aio 必须用directio   对于写文件作用不大 文件本生就写到硬盘上
+=== 有sendfile解决了读  === 不用考虑异步读写?
+fio io 测试工具
+sendfile 和 linux aio不能同时用     sendfile会阻塞  linux aio没有0拷贝
+
+6.1 ===
+1. 文件同步
+2. 拉 还是 push   === push ba 
+3. proxy 多个备份 传不好， fid不好确定  而且proxy压力太大
+4. 感觉storage有点复杂了
+5. 从tracker上来的就是同步去 拉
+6. 不同的请求不能在同一个连接里面 
+
+===
+又想到同步也可以只有 push
+一台tracker做同步即可
+storage === tracker 通信 ===告诉所有文件
+tracker 告诉他那些文件学要push给它们 === 最好是 一个一个文件来 === 返回中记录puhs的ip  一种自己选ip 一下在push过
+同步一次push一个吧  === 这样对于错误好处理  而且又利于各机器平衡
+=== 这样不需要和tracke交互了
+=== tracker 与 storage都长连接   tracker与proxy也长连接
+这个看怎么弄后面  先看nginx怎么弄的
+
+===
+dfs storage只支持单进程 可对应多个目录
+
+===
+dfs tracker 5 分钟拿一次增量fid === /  顺便进行 同步
+tracker hash 存fid ===》 ip port
+storage hash chunk文件 位置 快速  ==== 文件之间 === 512 block为还是4196 === 还是紧密相连吧
+
+storage 同步一个一个来 === tracker 请求 ===》 另外storage push === 必须慢 但保证文件分散
+http proxy 就不需要 文件个数限制 大小限制了 === 只要文件 > 64m(存大文件的机器or group) 分到其他地方   后面同步的时候会分散的
+fid id 顺序换过来
+
+===
+id 256 group id 256 一个大的集群里有6万台机器 
+group00 == http proxy  === 这样来分大的集群  | 去掉虚拟路径  多块硬盘要用异步
+
+ngx_http_upstream_process_upgraded
+里面有recv send  last pos 的用法
+
+=== 6.10
+有keepalive还是要短连接 === keepalive连接不够   先实现短连接吧
+nginx 的header_in
+r->header_in = hc->nbusy ? hc->busy[0] : c->buffer;
+if (u->buffer.start == NULL) {
+1563         u->buffer.start = ngx_palloc(r->pool, u->conf->buffer_size);
+
+=== 6.12
+storage 增量的fid 只需要告诉一个tracker即可  
+proxy ===> not find fid 没有找着 tracker可以代找?  === 还是proxy找 处理还未同步到的情况
+
+=== 6.19
+先完成 tracker storage ===> 单server配置 core_module的编写
+
+
+=== 6.23
+网络断了 dfs_tracker正常，这种需要处理
+
+r->content_handler = clcf->handler;
+
+=== 7.17
+1. 重新疏理storage逻辑
+
+=== 8.1
+1. 现在tracker的配置没有对应上upstream
+
+=== 8.7
+1. 编程原则， array 尽量用init 看恒定的比列   || array在1/3的情况会有，代价是多40byte，少调用一次lxl_create_array   用指针少32byte 优点array指针和值放在一块
+2. storage 里面的server都需要用完就释放  round_robin里面也是?
+
+=== 8.8
+1. 对于同步的时候 部分失败 === 后续人物给tracker删除  === 每个tracker通知  (通知tracker马上处理)
+让后storage会接受 多次的删除通知  这个没关系 
+2. tracker
+3. 弱成功同步失败怎么解决?
+
+=== 8.14
+1. send_response send_header 
+2. speical_response 
+3. lxl_handle_read_event lxl_handle_write_evnet 出错直接close_request or  close_connection
+
+=== 9.11
+1. 加入 类似http rquest_uri_large == download用 ===> special response
+2. bad_request 传输一般中断了
+
+=== 9.17
+fastdfs 有心跳设置  判断storage active offline  online 状态
+fastdfs 定是向tracker同步磁盘 文件
+
+为什么将upload file信息放入单独的 event 同步
+        week upload也是类似的方式
+
+优点upload 逻辑处理更加简洁
+缺点 没时实时将upload file信息传给tracker  (弥补方法  proxy 记录最新upload机器ip port 设置失效日期为1小时)  请求在tracker没查到就用这个
+
+tracker 的请求类型
+upload  
+
+tracker report_handler限制最大为4k tracker read简单点 但需要支持一个连接多此请求
+
+=== 9.26
+1. 在读取头的时候，顺便body也读出来 ===  recv少调用  buf设置多大合适
+这个只在时tracker里面适用，不适合在storage模块
+why?当读取header的buf设置为1024，算已经很大了 只有body len最后一个buf少于1024才会节省一次read读取,对于storage来说都是file的upload download sync
+tracker header+body 一般都不是很长 一般buf设置为256已足够了
+r->header_in = hc->nbusy ? hc->busy[0] : c->buffer;
+
+=== 10.11
+1. proxy storage 通知tracker需要 > 1台tracker
+到时upstream connect 把ip port 拿出来单独连 // 再下一个ip   // 看下nginx mail的http module怎么弄的
+report tracker 不成功的都需要一个后续处理  存在内存 定时处理 timer >= 3 不处理了(网络问题)
+
+2. register 要想保证容错性比较麻烦 去掉这个状态 直接用report代替  group + ip + port做为 唯一性
+
+=== 10.20
+想好的三点逻辑
+1. 解决report fid 多次请求 === dfss tracker ===> dfst header添加keepalive字段
+2. tracker 重起 ===> file记录ip port 程序启加载ip port相关fid  然后才能接受服务
+3. stroage 重起。 一个对比 恢复坏盘的数据 report fid 给tracker  === 再问本ip port upload的fid 并且只有一个 == 解决storage挂掉，并还没sync fid的情况
+4. storage sync fid 拉数据 storage 恢复数据  storage的某块盘坏了，数据丢了 需要恢复 (全量对比)
+5. 新添加storage 去代替另一个net 不同的storage (dup ip port) 就可以了
+6. report fid 必须马上做，对于没有成功的，成功为(有一台tracker成功);  放到report fid那个list里面， 下次一块传[]
+马上传是 report fid如果网络没问题，是不需要太多时间的 === 加入ngxin前端机器有多台，记录upload的storage是没用的 
+proxy就是个代理，不能有其他的功能
+7. 现在只要解决   sync fid 没来的及的问题了  ===   sync fid 传一个写一次 每个进程一个文件 sysn_fid_log.pid 第一写一次
+没那里出错，没记录，并且谁来解决 === 哈哈哈
+=== 某些硬件故障可以用软件来解决，一些难以来解决
+
+=== 10.27
+1. 失败的report fid单独放到 event上  一次一次去report  同时也write file
+2. delete file  proxy选取一台tracker获得file storage === proxy去delete // storage 主动通知tracker (delete fid)
+3. 在开放一个接口  判断某个fid的状态   // proxy ==> tracker ===> storage 是否真正存在
+
+=== 10.28
+tracker 在进行sync fid时 === 只能进行不优雅的关闭了  prematurely(过的早关闭) 这种放式
+body_n == 0 不进入read body_n 阶段
+keepalive 两边都用起来  若req keepalive为0 res必须为0
+
+=== 11.4
+sendto 不回返回0  sendto的 write 一直是ready(ngx)
+
+=== 11.6
+需要添加idc_id  
+开放服务需要添加user_id  fid里面要体现，只有user_id 读相应的内容，保证数据的安全性
+
+=== 11.12
+user_id   不加了 
+虽然理论上别人可能 会同放 fid 来下载别人的文件 但这个fid 很难猜中
+感觉还是要加user_id 通过这个user_id 防止别来破解
+万一user_id 发生改变?
+
+先不考虑 s3那种复杂的服务
+内部版本的dfs
+ip port 一直保持网络字节 那么中间就不需要转换了
+
+===
+可以偏向考虑 断网不同
+机器挂掉 === 因素小
+
+=== 11.16
+udp 为64 =  ip 20 + udp 12 意味着应用最少要发32 不然就是浪费
+
+=== 11.18
+stat proxy 到storage 请求  fid不含body_n的信息
+
+storage 定是收集 fid == 路径的关系 1h   === 考虑到多盘多进程
+00 01 这些还是去不掉 就这样吧
+尽量保持 storage的 dir 平衡
+s3 download 只有单个操作 upload delete可以多个操作
+
+storage 先知考虑 单进程 多盘的情况  ===>   多线程
+
+可单独调用 lxl_close_connection
+
+=== 11.23
+lxl_dfst_request_body_t  的buf 为什么用lxl_buf_t buffer 大部分时候buffer都是head_buffer就能搞定 buffer 只要赋值就可以
+r->handler ===> r->phase_handler
+
+=== 11.24
+storage 两部分对比 
+需要 push  pull  === 读完所有在说
+recovery  配置选项
+去掉 group 信息 //   upload 和 upload_strong 两者取一?
+文件分片? nginx module ?
+upload 只有一个  ====  写两份返回成功 ===> 继续写
+文件恢复有什么好的方法 storage recovery
+
+tracker 
+report 先写自己 若失败 就不需要回滚 其他的 tracker了
+
+一般工业界认为比较安全的备份数应该是3份，如：Hadoop和Dynamo
+
+做这样一个估算，假设一台pc机平均三年就会有一次失效，不可用。那么当一个一千台机器的集群，基本上每天都有机器坏掉
+
+考虑多idc部署的情况  多idc
+idc 与 idc 可用光纤来连接   加快idc之间的数据同步 (同城idc)
+
+dns 解析  ===> 多个nginx
+OSS存储可能位于多个机房，但一个bucket只位于一个机房(三份冗余存储)
+
+两份写在 本机房 + 1份写到其他idc  
+多个idc主要作用多个idc 可用    
+写两feng
+ping taobao.com  1.43ms
+ping baidu.com   34ms
+一个数量级
+
+===
+mysql 支持dump 和 binlog
+
+tracker 两个都要支持 dump 和 binlog    dump.log 最新的
+
+文件损坏or
+磁盘故障 对于整个文件存的话   应该只出现磁盘故障
+report fid tracker === 开始自动恢复    storage 去 push
+
+idle 很小说明系统很忙
+
+load和io也有很大关系，io很忙的机器，基本idle很高，其load也是非常高的
+idle loadavg5(1, 5, 15)/cpu个数   这两个参数都传过去
+所以“Load值=CPU核数”，这是最理想的状态，没有任何竞争，一个任务分配一个核。
+
+在Linux系统中，通过top命令可以查看CPU是否忙碌。其中一个数值是"idle"，用百分比来衡量；另一个是load，用数值来衡量。
+由于数据是每隔5秒钟检查一次活跃的进程数，然后根据这个数值算出来的。如果这个数除以CPU的核数，结果高于5的时候就表明系统在超负荷运转了。
+
+=== 11.27
+1. 支持multi idc    备份在统一idc 
+2. 支持multi idc    备份分布在不同的idc (idc 最少是4个)
+3. nginx proxy 配置idc  ngx proxy 走本地idc
+dfst 需要有multi idc 配置
+dfss 可以自适应
+
+dfst 提供向其他dfst询问的方法， 但不将寻来的数据写本dfst
+比如 dfst 在处理delete时 恰好有个rid 请求delete fid写回到本dfst了 === 导致数据又回来了
+
+需要有工具async push 未同步的数据
+
+handler === 参数改成  (r rc)
+
+=== 12.2
+添加zone概念
+
+支持读取复制 别的地方还没有复制到    处理在复制范围内，但已到这里读取了
+部署的时候可以来个  国内部署版本   国际部署版本
+
+不支持oppend 
+其他分布式支持oppend 是因为数据按sstable来分布的
+
+重写应用需要 (先写 再删)
+
+Colossus可以自动分区Metadata。使用Reed-Solomon算法来复制，可以将原先的3份减小到1.5份，提高写的性能，降低延迟。客户端来复制数据。
+做了硬盘各种redio?
+
+tracker server 是否需要分组  以zone id 为区域 === 这个感觉复杂了
+
+=== 12.3
+经过几天的思考 要做的
+1. 副本多idc分布 (至少两份)
+2. 副本源idc分布两份 + 同一zone idc 一份(至少3份)
+3. 采用就近访问原则 (同一idc 大大减少网络延迟) 会引申另外一个问题 万一本地idc load cpu高也会去读(这个tracker 需要要有个阀值判断 cpu 相差是否很大)
+   ip 都给过去
+4. 访问复制 这个不可取   觉得这是cdn所做的事情  而且加大系统的复杂度
+5. 异步复制的问题  还没复制完就来了一个 删除错误?   === 工具订正把 (tracker)删除的fid 定常时间去推 (1月一次)
+
+
+不同zone的相当于 原始数据互不干扰
+add delete 只是在当前zone操作    别zone只是download的时候 暂时缓存一下route信息
+
+=== 
+不同area的交互只有查询 需要添加一个类型  dfs_find  
+fid ===> 添加areaid  用于文件的识别

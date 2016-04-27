@@ -1,0 +1,1787 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+CR	core/lxl_core.h	62;"	d
+CRLF	core/lxl_core.h	63;"	d
+DEFAULT_CONNECTIONS	event/lxl_event.c	21;"	d	file:
+LF	core/lxl_core.h	61;"	d
+LXL_ALLOC_H_INCLUDE	os/unix/lxl_alloc.h	9;"	d
+LXL_ARRAY_H_INCLUDE	core/lxl_array.h	8;"	d
+LXL_BLOCKING	os/unix/lxl_socket.h	14;"	d
+LXL_BUF_H_INCLUDE	core/lxl_buf.h	8;"	d
+LXL_BUSY	core/lxl_core.h	18;"	d
+LXL_CACHE_LOG_TIME_LEN	core/lxl_times.c	12;"	d	file:
+LXL_CLEAR_EVENT	event/lxl_event.h	26;"	d
+LXL_CLOSE_EVENT	event/lxl_event.h	28;"	d
+LXL_CONFIG_H_INCLUDE	core/lxl_config.h	8;"	d
+LXL_CONF_1MORE	core/lxl_conf_file.h	34;"	d
+LXL_CONF_2MORE	core/lxl_conf_file.h	35;"	d
+LXL_CONF_ANY	core/lxl_conf_file.h	33;"	d
+LXL_CONF_BLOCK	core/lxl_conf_file.h	31;"	d
+LXL_CONF_BLOCK_DONE	core/lxl_conf_file.h	53;"	d
+LXL_CONF_BLOCK_START	core/lxl_conf_file.h	52;"	d
+LXL_CONF_BUFFER	core/lxl_conf_file.c	15;"	d	file:
+LXL_CONF_ERROR	core/lxl_conf_file.h	50;"	d
+LXL_CONF_FILE_DONE	core/lxl_conf_file.h	54;"	d
+LXL_CONF_FILE_INCLUDE	core/lxl_conf_file.h	8;"	d
+LXL_CONF_FLAG	core/lxl_conf_file.h	32;"	d
+LXL_CONF_MAX_ARGS	core/lxl_conf_file.h	37;"	d
+LXL_CONF_NOARGS	core/lxl_conf_file.h	19;"	d
+LXL_CONF_OK	core/lxl_conf_file.h	49;"	d
+LXL_CONF_PATH	core/lxl_core.h	12;"	d
+LXL_CONF_TAKE1	core/lxl_conf_file.h	20;"	d
+LXL_CONF_TAKE12	core/lxl_conf_file.h	28;"	d
+LXL_CONF_TAKE123	core/lxl_conf_file.h	29;"	d
+LXL_CONF_TAKE2	core/lxl_conf_file.h	21;"	d
+LXL_CONF_TAKE3	core/lxl_conf_file.h	22;"	d
+LXL_CONF_TAKE4	core/lxl_conf_file.h	23;"	d
+LXL_CONF_TAKE5	core/lxl_conf_file.h	24;"	d
+LXL_CONF_TAKE6	core/lxl_conf_file.h	25;"	d
+LXL_CONF_TAKE7	core/lxl_conf_file.h	26;"	d
+LXL_CONF_UNSET	core/lxl_conf_file.h	43;"	d
+LXL_CONF_UNSET_MSEC	core/lxl_conf_file.h	47;"	d
+LXL_CONF_UNSET_PTR	core/lxl_conf_file.h	44;"	d
+LXL_CONF_UNSET_SIZE	core/lxl_conf_file.h	46;"	d
+LXL_CONF_UNSET_UINT	core/lxl_conf_file.h	45;"	d
+LXL_CONNECTION_CLOSE_SOCKET	core/lxl_connection.h	19;"	d
+LXL_CONNECTION_H_INCLUDE	core/lxl_connection.h	8;"	d
+LXL_CONNECTION_NOT_CLOSE_SOCKET	core/lxl_connection.h	18;"	d
+LXL_CORE_H_INCLUDE	core/lxl_core.h	8;"	d
+LXL_CORE_MODULE	core/lxl_conf_file.h	56;"	d
+LXL_CYCLE_H_INCLUDE	core/lxl_cycle.h	8;"	d
+LXL_DECLINED	core/lxl_core.h	20;"	d
+LXL_DEFAULT_POOL_SIZE	core/lxl_palloc.h	17;"	d
+LXL_DFSS_CHUNK_SETINEL	dfs/storage/lxl_dfss.h	28;"	d
+LXL_DFSS_CORE_MODULE_H_INCLUDE	dfs/storage/lxl_dfss_core_module.h	8;"	d
+LXL_DFSS_DATA_PATH	dfs/storage/lxl_dfss_core_module.c	12;"	d	file:
+LXL_DFSS_DIR_COUNT	dfs/storage/lxl_dfss.h	27;"	d
+LXL_DFSS_H_INCLUDE	dfs/storage/lxl_dfss.h	8;"	d
+LXL_DFSS_LOADAVG_FILE	dfs/storage/lxl_dfss_core_module.c	17;"	d	file:
+LXL_DFSS_MAIN_CONF	dfs/storage/lxl_dfss_core_module.h	17;"	d
+LXL_DFSS_MAIN_CONF_OFFSET	dfs/storage/lxl_dfss_core_module.h	21;"	d
+LXL_DFSS_MODULE	dfs/storage/lxl_dfss_core_module.h	16;"	d
+LXL_DFSS_REQUEST_H_INCLUDE	dfs/storage/lxl_dfss_request.h	8;"	d
+LXL_DFSS_SRV_CONF	dfs/storage/lxl_dfss_core_module.h	18;"	d
+LXL_DFSS_SRV_CONF_OFFSET	dfs/storage/lxl_dfss_core_module.h	22;"	d
+LXL_DFSS_STAT_FILE	dfs/storage/lxl_dfss_core_module.c	16;"	d	file:
+LXL_DFSS_SYNCLOG_FILE_PREFIX	dfs/storage/lxl_dfss_core_module.c	14;"	d	file:
+LXL_DFSS_SYSNLOG_PATH	dfs/storage/lxl_dfss_core_module.c	13;"	d	file:
+LXL_DFSS_UPSTREAM_CREATE	dfs/storage/lxl_dfss_upstream.h	23;"	d
+LXL_DFSS_UPSTREAM_FT_ERROR	dfs/storage/lxl_dfss_upstream.h	17;"	d
+LXL_DFSS_UPSTREAM_FT_NOLIVE	dfs/storage/lxl_dfss_upstream.h	19;"	d
+LXL_DFSS_UPSTREAM_FT_TIMEOUT	dfs/storage/lxl_dfss_upstream.h	18;"	d
+LXL_DFSS_UPSTREAM_FT_TRY_OVER	dfs/storage/lxl_dfss_upstream.h	21;"	d
+LXL_DFSS_UPSTREAM_H_INCLUDE	dfs/storage/lxl_dfss_upstream.h	8;"	d
+LXL_DFSS_UPSTREAM_ROUND_ROBIN_H_INCLUDE	dfs/storage/lxl_dfss_upstream_round_robin.h	8;"	d
+LXL_DFSS_UPSTREAM_STORAGE	dfs/storage/lxl_dfss_upstream.h	24;"	d
+LXL_DFSS_UPS_CONF	dfs/storage/lxl_dfss_core_module.h	19;"	d
+LXL_DFST_BINLOG	dfs/tracker/lxl_dfst_idc.h	14;"	d
+LXL_DFST_CORE_MODULE_H_INCLUDE	dfs/tracker/lxl_dfst_core_module.h	8;"	d
+LXL_DFST_H_INCLUDE	dfs/tracker/lxl_dfst.h	8;"	d
+LXL_DFST_IDC_H_INCLUDE	dfs/tracker/lxl_dfst_idc.h	8;"	d
+LXL_DFST_MAIN_CONF	dfs/tracker/lxl_dfst_core_module.h	17;"	d
+LXL_DFST_MAIN_CONF_OFFSSET	dfs/tracker/lxl_dfst_core_module.h	21;"	d
+LXL_DFST_MODULE	dfs/tracker/lxl_dfst_core_module.h	16;"	d
+LXL_DFST_REPORT_STATE_UDP_LEN	dfs/tracker/lxl_dfst_request.c	12;"	d	file:
+LXL_DFST_REQUEST_H_INCLUDE	dfs/tracker/lxl_dfst_request.h	8;"	d
+LXL_DFST_SRV_CONF	dfs/tracker/lxl_dfst_core_module.h	18;"	d
+LXL_DFST_SRV_CONF_OFFSET	dfs/tracker/lxl_dfst_core_module.h	22;"	d
+LXL_DFST_UPSTREAM_CREATE	dfs/tracker/lxl_dfst_upstream.h	24;"	d
+LXL_DFST_UPSTREAM_FT_ERROR	dfs/tracker/lxl_dfst_upstream.h	16;"	d
+LXL_DFST_UPSTREAM_FT_INVALID_PACKAGE	dfs/tracker/lxl_dfst_upstream.h	20;"	d
+LXL_DFST_UPSTREAM_FT_INVALID_RESPONSE	dfs/tracker/lxl_dfst_upstream.h	19;"	d
+LXL_DFST_UPSTREAM_FT_NOLIVE	dfs/tracker/lxl_dfst_upstream.h	18;"	d
+LXL_DFST_UPSTREAM_FT_TIMEOUT	dfs/tracker/lxl_dfst_upstream.h	17;"	d
+LXL_DFST_UPSTREAM_FT_TRY_OVER	dfs/tracker/lxl_dfst_upstream.h	22;"	d
+LXL_DFST_UPSTREAM_H_INCLUDE	dfs/tracker/lxl_dfst_upstream.h	8;"	d
+LXL_DFST_UPSTREAM_ROUND_ROBIN_H_INCLUDE	dfs/tracker/lxl_dfst_upstream_round_robin.h	8;"	d
+LXL_DFST_UPSTREAM_STORAGE	dfs/tracker/lxl_dfst_upstream.h	26;"	d
+LXL_DFST_UPSTREAM_TRACKER	dfs/tracker/lxl_dfst_upstream.h	25;"	d
+LXL_DFST_UPS_CONF	dfs/tracker/lxl_dfst_core_module.h	19;"	d
+LXL_DFS_BAD_GATEWAY	dfs/lxl_dfs.h	51;"	d
+LXL_DFS_BAD_REQUEST	dfs/lxl_dfs.h	39;"	d
+LXL_DFS_CLIENT_CLOSE_REQUEST	dfs/lxl_dfs.h	47;"	d
+LXL_DFS_DELETE	dfs/lxl_dfs.h	18;"	d
+LXL_DFS_DOWNLOAD	dfs/lxl_dfs.h	17;"	d
+LXL_DFS_H_INCLUDE	dfs/lxl_dfs.h	8;"	d
+LXL_DFS_MIN_UDP_LENGTH	dfs/lxl_dfs.h	66;"	d
+LXL_DFS_NOT_FIND	dfs/lxl_dfs.h	41;"	d
+LXL_DFS_NOT_FIND_FID	dfs/lxl_dfs.h	46;"	d
+LXL_DFS_NOT_FIND_GROUP	dfs/lxl_dfs.h	43;"	d
+LXL_DFS_NOT_FIND_IDC	dfs/lxl_dfs.h	44;"	d
+LXL_DFS_NOT_FIND_STORAGE	dfs/lxl_dfs.h	45;"	d
+LXL_DFS_NOT_IMPLEMENTED	dfs/lxl_dfs.h	50;"	d
+LXL_DFS_OK	dfs/lxl_dfs.h	37;"	d
+LXL_DFS_REPORT_STATE_UDP_LEN	dfs/lxl_dfs.h	65;"	d
+LXL_DFS_REQUEST_TIMEOUT	dfs/lxl_dfs.h	42;"	d
+LXL_DFS_SERVER_ERROR	dfs/lxl_dfs.h	49;"	d
+LXL_DFS_STORAGE_OFFLINE	dfs/lxl_dfs.h	24;"	d
+LXL_DFS_STORAGE_ONLINE	dfs/lxl_dfs.h	25;"	d
+LXL_DFS_STORAGE_REPORT_FID	dfs/lxl_dfs.h	33;"	d
+LXL_DFS_STORAGE_REPORT_STATE	dfs/lxl_dfs.h	32;"	d
+LXL_DFS_STORAGE_REPORT_SYNC_FID	dfs/lxl_dfs.h	34;"	d
+LXL_DFS_STORAGE_SYNC_PULL	dfs/lxl_dfs.h	28;"	d
+LXL_DFS_STORAGE_SYNC_PUSH	dfs/lxl_dfs.h	27;"	d
+LXL_DFS_UPLOAD	dfs/lxl_dfs.h	16;"	d
+LXL_DFS_UPLOAD_SC	dfs/lxl_dfs.h	19;"	d
+LXL_DIRECT_CONF	core/lxl_conf_file.h	39;"	d
+LXL_DISABLE_EVENT	event/lxl_event.h	29;"	d
+LXL_DNS_A	dns/lxl_dns_data.h	15;"	d
+LXL_DNS_AAAA	dns/lxl_dns_data.h	22;"	d
+LXL_DNS_ANY	dns/lxl_dns_data.h	23;"	d
+LXL_DNS_AUTHORITY_READ_TIMEOUT	dns/lxl_dns_upstream.c	25;"	d	file:
+LXL_DNS_AUTHORITY_TIMEOUT	dns/lxl_dns.h	20;"	d
+LXL_DNS_CHECK_TTL	dns/lxl_dns_data.h	64;"	d
+LXL_DNS_CLIENT_BUFFER_SIZE	dns/lxl_dns.h	18;"	d
+LXL_DNS_CLIENT_TIMEOUT	dns/lxl_dns.h	19;"	d
+LXL_DNS_CNAME	dns/lxl_dns_data.h	17;"	d
+LXL_DNS_DATA_H_INCLUDE	dns/lxl_dns_data.h	8;"	d
+LXL_DNS_GET_AA	dns/lxl_dns_request.h	31;"	d
+LXL_DNS_GET_OFFSET	dns/lxl_dns_upstream.c	31;"	d	file:
+LXL_DNS_GET_RD	dns/lxl_dns_request.h	32;"	d
+LXL_DNS_GET_ROCDE	dns/lxl_dns_request.h	33;"	d
+LXL_DNS_H_INCLUDE	dns/lxl_dns.h	8;"	d
+LXL_DNS_IN	dns/lxl_dns_request.h	17;"	d
+LXL_DNS_INVALID_TYPE	dns/lxl_dns_data.h	24;"	d
+LXL_DNS_IS_OFFSET_PTR	dns/lxl_dns_upstream.c	29;"	d	file:
+LXL_DNS_LABLE_MAXSIZE	dns/lxl_dns_parse.c	15;"	d	file:
+LXL_DNS_MAIN_CONF	dns/lxl_dns.h	23;"	d
+LXL_DNS_MAIN_CONF_OFFSET	dns/lxl_dns.h	26;"	d
+LXL_DNS_MAX_TTL	dns/lxl_dns_data.h	46;"	d
+LXL_DNS_MIN_TTL	dns/lxl_dns_data.h	45;"	d
+LXL_DNS_MODULE	dns/lxl_dns.h	22;"	d
+LXL_DNS_MX	dns/lxl_dns_data.h	20;"	d
+LXL_DNS_NAME_MAXSIZE	dns/lxl_dns_parse.c	16;"	d	file:
+LXL_DNS_NS	dns/lxl_dns_data.h	16;"	d
+LXL_DNS_PORT	core/lxl_cycle.c	17;"	d	file:
+LXL_DNS_PTR	dns/lxl_dns_data.h	19;"	d
+LXL_DNS_RCODE_FORMERR	dns/lxl_dns_request.h	25;"	d
+LXL_DNS_RCODE_NAMEERR	dns/lxl_dns_request.h	27;"	d
+LXL_DNS_RCODE_NOTIMP	dns/lxl_dns_request.h	28;"	d
+LXL_DNS_RCODE_OK	dns/lxl_dns_request.h	24;"	d
+LXL_DNS_RCODE_REFUSED	dns/lxl_dns_request.h	29;"	d
+LXL_DNS_RCODE_SERVFAIL	dns/lxl_dns_request.h	26;"	d
+LXL_DNS_REQUEST_H_INCLUDE	dns/lxl_dns_request.h	8;"	d
+LXL_DNS_ROOT_DOT	dns/lxl_dns_data.h	49;"	d
+LXL_DNS_ROOT_LABEL	dns/lxl_dns_data.h	50;"	d
+LXL_DNS_ROOT_LEN	dns/lxl_dns_data.h	51;"	d
+LXL_DNS_RRSET_EXPIRES_FIND	dns/lxl_dns_data.h	57;"	d
+LXL_DNS_RRSET_NONE_TYPE	dns/lxl_dns_data.h	61;"	d
+LXL_DNS_RRSET_NORMAL_FIND	dns/lxl_dns_data.h	56;"	d
+LXL_DNS_RRSET_NORMAL_TYPE	dns/lxl_dns_data.h	59;"	d
+LXL_DNS_RRSET_SOA_TYPE	dns/lxl_dns_data.h	60;"	d
+LXL_DNS_RR_NORMAL_TYPE	dns/lxl_dns_data.h	53;"	d
+LXL_DNS_RR_UPDATE_TYPE	dns/lxl_dns_data.h	54;"	d
+LXL_DNS_SET_QR_R	dns/lxl_dns_request.h	35;"	d
+LXL_DNS_SET_RA	dns/lxl_dns_request.h	37;"	d
+LXL_DNS_SET_RCODE	dns/lxl_dns_request.h	39;"	d
+LXL_DNS_SET_RD	dns/lxl_dns_request.h	38;"	d
+LXL_DNS_SET_TC	dns/lxl_dns_request.h	36;"	d
+LXL_DNS_SOA	dns/lxl_dns_data.h	18;"	d
+LXL_DNS_SRV_CONF	dns/lxl_dns.h	24;"	d
+LXL_DNS_SRV_CONF_OFFSET	dns/lxl_dns.h	27;"	d
+LXL_DNS_STR_A	dns/lxl_dns_data.h	26;"	d
+LXL_DNS_STR_AAAA	dns/lxl_dns_data.h	33;"	d
+LXL_DNS_STR_AAAA_LEN	dns/lxl_dns_data.h	43;"	d
+LXL_DNS_STR_A_LEN	dns/lxl_dns_data.h	36;"	d
+LXL_DNS_STR_CNAME	dns/lxl_dns_data.h	28;"	d
+LXL_DNS_STR_CNAME_LEN	dns/lxl_dns_data.h	38;"	d
+LXL_DNS_STR_INVALID_TYPE	dns/lxl_dns_data.h	34;"	d
+LXL_DNS_STR_MX	dns/lxl_dns_data.h	31;"	d
+LXL_DNS_STR_MX_LEN	dns/lxl_dns_data.h	41;"	d
+LXL_DNS_STR_NS	dns/lxl_dns_data.h	27;"	d
+LXL_DNS_STR_NS_LEN	dns/lxl_dns_data.h	37;"	d
+LXL_DNS_STR_PTR	dns/lxl_dns_data.h	30;"	d
+LXL_DNS_STR_PTR_LEN	dns/lxl_dns_data.h	40;"	d
+LXL_DNS_STR_SOA	dns/lxl_dns_data.h	29;"	d
+LXL_DNS_STR_SOA_LEN	dns/lxl_dns_data.h	39;"	d
+LXL_DNS_STR_TXT	dns/lxl_dns_data.h	32;"	d
+LXL_DNS_STR_TXT_LEN	dns/lxl_dns_data.h	42;"	d
+LXL_DNS_TC	dns/lxl_dns_request.h	22;"	d
+LXL_DNS_TXT	dns/lxl_dns_data.h	21;"	d
+LXL_DNS_UDP_MSG_MAXSIZE	dns/lxl_dns_parse.c	18;"	d	file:
+LXL_DNS_UDP_MSG_MINSIZE	dns/lxl_dns_parse.c	17;"	d	file:
+LXL_DNS_UPSTREAM_H_INCLUDE	dns/lxl_dns_upstream.h	8;"	d
+LXL_DNS_UPSTREAM_NORMAL_QNAME	dns/lxl_dns_upstream.h	25;"	d
+LXL_DNS_UPSTREAM_NS_QNAME	dns/lxl_dns_upstream.h	26;"	d
+LXL_DNS_UPSTREAM_PORT	dns/lxl_dns_upstream.c	22;"	d	file:
+LXL_DNS_UPSTREAM_ROOT_QNAME	dns/lxl_dns_upstream.h	27;"	d
+LXL_DONE	core/lxl_core.h	19;"	d
+LXL_EAGAIN	core/lxl_core.h	17;"	d
+LXL_ERROR	core/lxl_core.h	16;"	d
+LXL_ERROR_LOG_PATH	core/lxl_log.c	16;"	d	file:
+LXL_EVENT_CONF	event/lxl_event.h	45;"	d
+LXL_EVENT_CONNECT_INCLUDE	event/lxl_event_connect.h	8;"	d
+LXL_EVENT_H_INCLUDE	event/lxl_event.h	8;"	d
+LXL_EVENT_MODULE	event/lxl_event.h	44;"	d
+LXL_EVENT_TIMER_H_INCLUDE	event/lxl_event_timer.h	8;"	d
+LXL_FILES_H_INCLUDE	os/unix/lxl_files.h	9;"	d
+LXL_FILE_H_INCLUDE	core/lxl_file.h	8;"	d
+LXL_GB_SIZE	core/lxl_config.h	65;"	d
+LXL_HASH_H_INCLUDE	core/lxl_dns_hash.h	8;"	d
+LXL_HASH_H_INCLUDE	core/lxl_hash.h	8;"	d
+LXL_HAVE_EPOLL	core/lxl_config.h	40;"	d
+LXL_INET6_ADDRSTRLEN	core/lxl_inet.h	19;"	d
+LXL_INET_ADDRSTRLEN	core/lxl_inet.h	17;"	d
+LXL_INET_INCLUDE	core/lxl_inet.h	8;"	d
+LXL_KB_SIZE	core/lxl_config.h	63;"	d
+LXL_LEVEL_EVENT	event/lxl_event.h	25;"	d
+LXL_LISTENQ	os/unix/lxl_socket.h	16;"	d
+LXL_LISTEN_BACKLOG	core/lxl_config.h	61;"	d
+LXL_LIST_H_INCLUDE	core/lxl_list.h	8;"	d
+LXL_LOG_ALERT	core/lxl_log.h	16;"	d
+LXL_LOG_ALERT_STR	core/lxl_log.c	19;"	d	file:
+LXL_LOG_BUFFER	core/lxl_log.h	30;"	d
+LXL_LOG_BUFFER_STR	core/lxl_log.c	34;"	d	file:
+LXL_LOG_DEBUG	core/lxl_log.h	20;"	d
+LXL_LOG_DEBUG_ALL	core/lxl_log.h	28;"	d
+LXL_LOG_DEBUG_ALLOC	core/lxl_log.h	23;"	d
+LXL_LOG_DEBUG_ALLOC_STR	core/lxl_log.c	26;"	d	file:
+LXL_LOG_DEBUG_ALL_STR	core/lxl_log.c	31;"	d	file:
+LXL_LOG_DEBUG_CORE	core/lxl_log.h	22;"	d
+LXL_LOG_DEBUG_CORE_STR	core/lxl_log.c	25;"	d	file:
+LXL_LOG_DEBUG_DFS	core/lxl_log.h	27;"	d
+LXL_LOG_DEBUG_DFS_STR	core/lxl_log.c	30;"	d	file:
+LXL_LOG_DEBUG_DNS	core/lxl_log.h	25;"	d
+LXL_LOG_DEBUG_DNS_STR	core/lxl_log.c	28;"	d	file:
+LXL_LOG_DEBUG_EVENT	core/lxl_log.h	24;"	d
+LXL_LOG_DEBUG_EVENT_STR	core/lxl_log.c	27;"	d	file:
+LXL_LOG_DEBUG_MAIL	core/lxl_log.h	26;"	d
+LXL_LOG_DEBUG_MAIL_STR	core/lxl_log.c	29;"	d	file:
+LXL_LOG_DEBUG_STR	core/lxl_log.c	23;"	d	file:
+LXL_LOG_EMERG	core/lxl_log.h	15;"	d
+LXL_LOG_EMERG_STR	core/lxl_log.c	18;"	d	file:
+LXL_LOG_ERROR	core/lxl_log.h	17;"	d
+LXL_LOG_ERROR_STR	core/lxl_log.c	20;"	d	file:
+LXL_LOG_FLUSH	core/lxl_log.h	31;"	d
+LXL_LOG_FLUSH_STR	core/lxl_log.c	33;"	d	file:
+LXL_LOG_H_INCLUDE	core/lxl_log.h	8;"	d
+LXL_LOG_INFO	core/lxl_log.h	19;"	d
+LXL_LOG_INFO_STR	core/lxl_log.c	22;"	d	file:
+LXL_LOG_WARN	core/lxl_log.h	18;"	d
+LXL_LOG_WARN_STR	core/lxl_log.c	21;"	d	file:
+LXL_MAIN_CONF	core/lxl_conf_file.h	41;"	d
+LXL_MAXHOSTNAMELEN	core/lxl_config.h	56;"	d
+LXL_MAXHOSTNAMELEN	core/lxl_config.h	58;"	d
+LXL_MAX_ALLOC_FROM_POOL	core/lxl_palloc.h	16;"	d
+LXL_MAX_BUF_STR	core/lxl_log.h	38;"	d
+LXL_MAX_CONF_ERRSTR	core/lxl_conf_file.c	415;"	d	file:
+LXL_MAX_CONF_PATH	core/lxl_conf_file.h	58;"	d
+LXL_MAX_ERR_STR	core/lxl_log.h	34;"	d
+LXL_MAX_FMT_STR	core/lxl_log.h	36;"	d
+LXL_MAX_FTIME_STR	core/lxl_log.h	35;"	d
+LXL_MAX_INT32_VALUE	core/lxl_config.h	53;"	d
+LXL_MAX_MSG_STR	core/lxl_log.h	37;"	d
+LXL_MAX_PATH	os/unix/lxl_files.h	16;"	d
+LXL_MAX_TIME_STR	core/lxl_log.h	33;"	d
+LXL_MAX_UINT32_VALUE	core/lxl_config.h	52;"	d
+LXL_MB_SIZE	core/lxl_config.h	64;"	d
+LXL_MIN_POLL_SIZE	core/lxl_palloc.h	18;"	d
+LXL_NONBLOCKING	os/unix/lxl_socket.h	15;"	d
+LXL_OK	core/lxl_core.h	15;"	d
+LXL_OS_H_INCLUDE	os/unix/lxl_os.h	8;"	d
+LXL_PALLOC_H_INCLUDE	core/lxl_palloc.h	8;"	d
+LXL_PEER_FAILED	event/lxl_event_connect.h	17;"	d
+LXL_PEER_NEXT	event/lxl_event_connect.h	16;"	d
+LXL_POOL_ALIGNMENT	core/lxl_palloc.h	15;"	d
+LXL_PREFIX	core/lxl_core.h	11;"	d
+LXL_PROCESS_H_INCLUDE	os/unix/lxl_process.h	9;"	d
+LXL_QUEUE_H_INCLUDE	core/lxl_queue.h	8;"	d
+LXL_RBTREE_H_INCLUDE	core/lxl_rbtree.h	8;"	d
+LXL_READ_EVENT	event/lxl_event.h	23;"	d
+LXL_SLIST_H_INCLUDE	core/lxl_slist.h	8;"	d
+LXL_SOCKADDRLEN	core/lxl_inet.h	22;"	d
+LXL_SOCKADDR_STRLEN	core/lxl_inet.h	21;"	d
+LXL_SOCKET_H_INCLUDE	os/unix/lxl_socket.h	7;"	d
+LXL_STACK_H_INCLUDE	core/lxl_stack.h	8;"	d
+LXL_STRING_H_INCLUDE	core/lxl_string.h	8;"	d
+LXL_TIMER_LAZY_DELAY	event/lxl_event_timer.h	19;"	d
+LXL_TIMES_H_INCLUDE	core/lxl_times.h	8;"	d
+LXL_UDP	core/lxl_cycle.h	17;"	d
+LXL_UDP_SIZE	event/lxl_event.c	299;"	d	file:
+LXL_USE_CLEAR_EVENT	event/lxl_event.h	20;"	d
+LXL_USE_LEVEL_EVENT	event/lxl_event.h	19;"	d
+LXL_UTIL_H_INCLUDE	os/unix/lxl_util.h	8;"	d
+LXL_WRITE_EVENT	event/lxl_event.h	24;"	d
+accept	event/lxl_event.h	/^	unsigned 			  accept:1;$/;"	m	struct:lxl_event_s
+accept_mutex	event/lxl_event.h	/^	lxl_int_t  accept_mutex;$/;"	m	struct:__anon85
+accessed	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	time_t 			  accessed;$/;"	m	struct:__anon41
+accessed	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	time_t			  accessed;$/;"	m	struct:__anon53
+actions	event/lxl_event.h	/^	lxl_event_actions_t actions;$/;"	m	struct:__anon86
+active	event/lxl_event.h	/^	unsigned 			  active:1;$/;"	m	struct:lxl_event_s
+add	event/lxl_event.h	/^	int 	(*add) (lxl_event_t *ev, uint32_t event, lxl_uint_t flags);$/;"	m	struct:__anon84
+add_conn	event/lxl_event.h	/^	int 	(*add_conn) (lxl_connection_t *c);$/;"	m	struct:__anon84
+addition_rrset_array	dns/lxl_dns_request.h	/^	lxl_array_t 				addition_rrset_array;$/;"	m	struct:lxl_dns_request_s
+addr	dfs/storage/lxl_dfss_core_module.h	/^	in_addr_t			  	   addr;$/;"	m	struct:__anon34
+addr	dfs/storage/lxl_dfss_core_module.h	/^	lxl_addr_t  addr;$/;"	m	struct:__anon31
+addr	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_in_addr_t	  	   addr;$/;"	m	struct:__anon35
+addr	dfs/tracker/lxl_dfst_core_module.h	/^	in_addr_t			  addr;$/;"	m	struct:__anon62
+addr	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_in_addr_t  addr;$/;"	m	struct:__anon63
+addr_text	core/lxl_connection.h	/^	char			   *addr_text;$/;"	m	struct:lxl_listening_s
+addrs	dfs/storage/lxl_dfss_request.h	/^	lxl_queue_t					addrs;			\/* lxl_dfss_addr_t *\/$/;"	m	struct:lxl_dfss_request_s
+addrs	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_queue_t 				  addrs;	\/* tracker lxl_addr_t *\/$/;"	m	struct:lxl_dfst_upstream_s
+alloc	core/lxl_palloc.h	/^	void *alloc;$/;"	m	struct:lxl_pool_large_s
+ancount	dns/lxl_dns_request.h	/^	uint16_t 					ancount;$/;"	m	struct:lxl_dns_request_s
+ancount	dns/lxl_dns_request.h	/^	uint16_t ancount;$/;"	m	struct:__anon70
+answer_rrset_array	dns/lxl_dns_request.h	/^	lxl_array_t 				answer_rrset_array;$/;"	m	struct:lxl_dns_request_s
+arcount	dns/lxl_dns_request.h	/^	uint16_t 					arcount;$/;"	m	struct:lxl_dns_request_s
+arcount	dns/lxl_dns_request.h	/^	uint16_t arcount;$/;"	m	struct:__anon70
+args	core/lxl_conf_file.h	/^	lxl_array_t       *args;$/;"	m	struct:lxl_conf_s
+argument_number	core/lxl_conf_file.c	/^static lxl_uint_t argument_number[] = {$/;"	v	file:
+author_ip_array	dns/lxl_dns_upstream.h	/^	lxl_array_t 	 		author_ip_array;$/;"	m	struct:lxl_dns_upstream_s
+author_ip_curr_index	dns/lxl_dns_upstream.h	/^	lxl_uint_t				author_ip_curr_index;$/;"	m	struct:lxl_dns_upstream_s
+author_rrset	dns/lxl_dns_request.h	/^	lxl_dns_rrset_t 			*author_rrset;$/;"	m	struct:lxl_dns_request_s
+backlog	core/lxl_connection.h	/^	int 				backlog;$/;"	m	struct:lxl_listening_s
+body	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_request_body_t	   *body;$/;"	m	struct:lxl_dfss_request_s
+body	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_request_body_t	  		*body;$/;"	m	struct:lxl_dfst_request_s
+body_handler	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_body_handler_pt 		 body_handler;$/;"	m	struct:__anon39
+body_handler	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_body_handler_pt  body_handler;$/;"	m	struct:lxl_dfss_upstream_s
+body_handler	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_body_handler_pt  		 body_handler;$/;"	m	struct:__anon58
+body_n	dfs/lxl_dfs.h	/^	uint32_t	 body_n;		\/* udp protocol body_n is id *\/$/;"	m	struct:__anon20
+body_n	dfs/lxl_dfs.h	/^	uint32_t 	 body_n;$/;"	m	struct:__anon21
+bound	core/lxl_connection.h	/^	unsigned 			bound:1;$/;"	m	struct:lxl_listening_s
+buckets	core/lxl_dns_hash.h	/^	lxl_hash_elt_t **buckets;  	\/* bucke == NULL *\/$/;"	m	struct:__anon18
+buckets	core/lxl_hash.h	/^	lxl_hash_elt_t  **buckets; 	\/* bucke == NULL *\/$/;"	m	struct:__anon4
+buckets	core/lxl_hash.h	/^	lxl_hash_elt_t  **buckets; 	\/* bucke == NULL *\/$/;"	m	struct:__anon5
+buf	core/lxl_log.h	/^	char		buf[LXL_MAX_BUF_STR];$/;"	m	struct:lxl_log_s
+buf	dfs/storage/lxl_dfss_request.h	/^	lxl_buf_t 						*buf;$/;"	m	struct:__anon39
+buf	dfs/tracker/lxl_dfst_request.h	/^	lxl_buf_t  						*buf;	\/* buffer *\/$/;"	m	struct:__anon58
+buf_len	core/lxl_log.h	/^	size_t 		buf_len;$/;"	m	struct:lxl_log_s
+buffer	core/lxl_conf_file.h	/^	lxl_buf_t *buffer;$/;"	m	struct:__anon8
+buffer	core/lxl_connection.h	/^	lxl_buf_t 		   *buffer;		\/* replace lxl_buf_t buffer *\/$/;"	m	struct:lxl_connection_s
+buffer	dfs/storage/lxl_dfss_upstream.h	/^	lxl_buf_t					  	   buffer;$/;"	m	struct:lxl_dfss_upstream_s
+buffer_size	core/lxl_cycle.h	/^	size_t 			   buffer_size;$/;"	m	struct:lxl_cycle_s
+buffers	core/lxl_cycle.h	/^	void			  *buffers;$/;"	m	struct:lxl_cycle_s
+checked	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	time_t 			  checked;$/;"	m	struct:__anon41
+checked	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	time_t			  checked;$/;"	m	struct:__anon53
+cleanup	core/lxl_palloc.h	/^	lxl_pool_cleanup_t *cleanup;$/;"	m	struct:lxl_pool_s
+client_buffer_size	dns/lxl_dns.h	/^	size_t		client_buffer_size;$/;"	m	struct:__anon82
+client_timeout	dns/lxl_dns.h	/^	lxl_uint_t	client_timeout;$/;"	m	struct:__anon82
+closed	event/lxl_event.h	/^	unsigned 			  closed:1;$/;"	m	struct:lxl_event_s
+cmd_type	core/lxl_conf_file.h	/^	lxl_uint_t 			cmd_type;$/;"	m	struct:lxl_conf_s
+color	core/lxl_rbtree.h	/^	unsigned char color;$/;"	m	struct:lxl_rbtree_node_s
+commands	core/lxl_conf_file.h	/^	lxl_command_t  *commands;$/;"	m	struct:lxl_module_s
+complete	dfs/storage/lxl_dfss_request.h	/^	unsigned 					complete:1;$/;"	m	struct:lxl_dfss_request_s
+conf	core/lxl_conf_file.h	/^	lxl_uint_t	conf;$/;"	m	struct:lxl_command_s
+conf	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_conf_t   	 	  *conf;$/;"	m	struct:lxl_dfss_upstream_s
+conf	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_conf_t	 *conf;$/;"	m	struct:lxl_dfst_upstream_s
+conf_ctx	core/lxl_cycle.h	/^	void		   ****conf_ctx;$/;"	m	struct:lxl_cycle_s
+conf_file	core/lxl_conf_file.h	/^	lxl_conf_file_t    *conf_file;$/;"	m	struct:lxl_conf_s
+conf_file	core/lxl_cycle.h	/^	lxl_str_t 		   conf_file;$/;"	m	struct:lxl_cycle_s
+connect_timeout	dfs/storage/lxl_dfss_upstream.h	/^	lxl_msec_t					   connect_timeout;$/;"	m	struct:__anon48
+connect_timeout	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_msec_t					   connect_timeout;$/;"	m	struct:__anon52
+connection	core/lxl_connection.h	/^	lxl_connection_t   *connection;$/;"	m	struct:lxl_listening_s
+connection	dfs/storage/lxl_dfss_request.h	/^	lxl_connection_t 		   *connection;$/;"	m	struct:lxl_dfss_request_s
+connection	dfs/tracker/lxl_dfst_request.h	/^	lxl_connection_t 		 	    *connection;$/;"	m	struct:lxl_dfst_request_s
+connection	dns/lxl_dns_request.h	/^	lxl_connection_t 			*connection;$/;"	m	struct:lxl_dns_request_s
+connection	event/lxl_event_connect.h	/^	lxl_connection_t 	   *connection;$/;"	m	struct:lxl_peer_connection_s
+connection_n	core/lxl_cycle.h	/^	lxl_uint_t 		   connection_n;$/;"	m	struct:lxl_cycle_s
+connection_pool_size	dns/lxl_dns.h	/^	size_t		connection_pool_size;$/;"	m	struct:__anon82
+connections	core/lxl_cycle.h	/^	lxl_connection_t  *connections;$/;"	m	struct:lxl_cycle_s
+connections	event/lxl_event.h	/^	lxl_uint_t connections; $/;"	m	struct:__anon85
+cpu_affinity	core/lxl_cycle.h	/^	lxl_uint_t 		*cpu_affinity;$/;"	m	struct:__anon17
+cpu_affinity_n	core/lxl_cycle.h	/^	lxl_uint_t  	 cpu_affinity_n;$/;"	m	struct:__anon17
+cpu_idle	dfs/lxl_dfs.h	/^	uint16_t	 cpu_idle;$/;"	m	struct:__anon24
+cpu_idle	dfs/tracker/lxl_dfst_idc.h	/^	uint16_t	  cpu_idle;$/;"	m	struct:__anon68
+create_conf	core/lxl_conf_file.h	/^	void 	   *(*create_conf) (lxl_cycle_t *cycle);$/;"	m	struct:__anon7
+create_conf	event/lxl_event.h	/^	void 			*(*create_conf) (lxl_cycle_t *cycle);$/;"	m	struct:__anon86
+create_main_conf	dfs/storage/lxl_dfss_core_module.h	/^	void 	*(*create_main_conf)	(lxl_conf_t *cf);$/;"	m	struct:__anon38
+create_main_conf	dfs/tracker/lxl_dfst_core_module.h	/^	void 	*(*create_main_conf)	(lxl_conf_t *cf);$/;"	m	struct:__anon66
+create_main_conf	dns/lxl_dns.h	/^	void 	*(*create_main_conf)	(lxl_conf_t *cf);$/;"	m	struct:__anon83
+create_srv_conf	dfs/storage/lxl_dfss_core_module.h	/^	void 	*(*create_srv_conf)		(lxl_conf_t *cf);$/;"	m	struct:__anon38
+create_srv_conf	dfs/tracker/lxl_dfst_core_module.h	/^	void	*(*create_srv_conf)		(lxl_conf_t *cf);$/;"	m	struct:__anon66
+create_srv_conf	dns/lxl_dns.h	/^	void	*(*create_srv_conf)		(lxl_conf_t *cf);$/;"	m	struct:__anon83
+ctx	core/lxl_conf_file.h	/^	void		   *ctx;$/;"	m	struct:lxl_module_s
+ctx	core/lxl_conf_file.h	/^	void 	   	   	   *ctx;$/;"	m	struct:lxl_conf_s
+ctx	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_conf_ctx_t	 	  *ctx;$/;"	m	struct:__anon34
+ctx	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_conf_ctx_t	      *ctx;$/;"	m	struct:__anon33
+ctx	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_conf_ctx_t 	  *ctx;$/;"	m	struct:__anon36
+ctx	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_conf_ctx_t  *ctx;$/;"	m	struct:__anon61
+ctx	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_conf_ctx_t  *ctx;$/;"	m	struct:__anon62
+ctx	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_conf_ctx_t  *ctx;$/;"	m	struct:__anon64
+ctx	dns/lxl_dns.h	/^	lxl_dns_conf_ctx_t	*ctx;	\/* server_ctx *\/$/;"	m	struct:__anon82
+ctx	dns/lxl_dns.h	/^	lxl_dns_conf_ctx_t *ctx;$/;"	m	struct:__anon80
+ctx_index	core/lxl_conf_file.h	/^	lxl_uint_t 		ctx_index;$/;"	m	struct:lxl_module_s
+current	core/lxl_palloc.h	/^	lxl_pool_t *current;$/;"	m	struct:lxl_pool_s
+current	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t 					   current;$/;"	m	struct:__anon43
+current	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t					   current;$/;"	m	struct:__anon55
+cycle	core/lxl_conf_file.h	/^	lxl_cycle_t		   *cycle;$/;"	m	struct:lxl_conf_s
+d	core/lxl_palloc.h	/^	lxl_pool_data_t d;$/;"	m	struct:lxl_pool_s
+daemon	core/lxl_cycle.h	/^	lxl_int_t		  daemon;$/;"	m	struct:__anon17
+data	core/lxl_connection.h	/^	void 			   *data;						\/* next to c *\/	$/;"	m	struct:lxl_connection_s
+data	core/lxl_palloc.h	/^	void *data;$/;"	m	struct:lxl_pool_cleanup_s
+data	core/lxl_string.h	/^	char   *data;$/;"	m	struct:__anon2
+data	dfs/storage/lxl_dfss_upstream.h	/^	void 						   *data;$/;"	m	struct:__anon46
+data	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t 					   data;$/;"	m	struct:__anon43
+data	dfs/tracker/lxl_dfst_upstream.h	/^	void						   *data;$/;"	m	struct:__anon50
+data	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t					   data;	$/;"	m	struct:__anon55
+data	event/lxl_event.h	/^	void 				 *data;			\/* point to c *\/$/;"	m	struct:lxl_event_s
+data	event/lxl_event_connect.h	/^	void 				   *data;$/;"	m	struct:lxl_peer_connection_s
+debug_level	core/lxl_log.h	/^	lxl_uint_t  debug_level;$/;"	m	struct:__anon10
+debug_level	core/lxl_log.h	/^	lxl_uint_t  debug_level;$/;"	m	struct:lxl_log_s
+default_port	core/lxl_inet.h	/^	in_port_t	default_port;	$/;"	m	struct:__anon12
+default_port	dfs/storage/lxl_dfss_upstream.h	/^	in_port_t 				  default_port;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+default_port	dfs/tracker/lxl_dfst_upstream.h	/^	in_port_t				  default_port;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+del	event/lxl_event.h	/^	int 	(*del) (lxl_event_t *ev, uint32_t event);$/;"	m	struct:__anon84
+del_conn	event/lxl_event.h	/^	int 	(*del_conn) (lxl_connection_t *c, lxl_uint_t flags);$/;"	m	struct:__anon84
+disk_free_mb	dfs/lxl_dfs.h	/^	uint32_t	 disk_free_mb;$/;"	m	struct:__anon24
+disk_free_mb	dfs/tracker/lxl_dfst_idc.h	/^	uint32_t	  disk_free_mb;		\/* m *\/$/;"	m	struct:__anon68
+done	event/lxl_event.h	/^	void	(*done) (void);$/;"	m	struct:__anon84
+down	dfs/storage/lxl_dfss_upstream.h	/^	lxl_uint_t  down;$/;"	m	struct:__anon47
+down	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t		  down;$/;"	m	struct:__anon41
+down	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_uint_t	down;$/;"	m	struct:__anon51
+down	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t		  down;$/;"	m	struct:__anon53
+elts	core/lxl_array.h	/^	void 	    *elts;$/;"	m	struct:__anon14
+elts	core/lxl_array.h	/^	void 	    *elts;$/;"	m	struct:__anon15
+elts	core/lxl_queue.h	/^	void 	   *elts;$/;"	m	struct:__anon16
+end	core/lxl_buf.h	/^	char 	   *end;$/;"	m	struct:__anon13
+end	core/lxl_palloc.h	/^	u_char *end;$/;"	m	struct:__anon3
+end	dns/lxl_dns_request.h	/^	char 						*end;$/;"	m	struct:lxl_dns_request_s
+eof	event/lxl_event.h	/^	unsigned			  eof:1;$/;"	m	struct:lxl_event_s
+epfd	event/lxl_epoll_module.c	/^static int 			epfd = -1;$/;"	v	file:
+epoll_name	event/lxl_epoll_module.c	/^static lxl_str_t 	epoll_name = lxl_string("epoll");$/;"	v	file:
+err	core/lxl_inet.h	/^	char 	   *err;$/;"	m	struct:__anon12
+error	core/lxl_connection.h	/^	unsigned 			error:1;$/;"	m	struct:lxl_connection_s
+error	event/lxl_event.h	/^	unsigned 			  error:1;$/;"	m	struct:lxl_event_s
+error_level	core/lxl_log.h	/^	lxl_uint_t	error_level;$/;"	m	struct:__anon10
+error_level	core/lxl_log.h	/^	lxl_uint_t 	error_level;$/;"	m	struct:lxl_log_s
+event_core_name	event/lxl_event.c	/^static lxl_str_t event_core_name = lxl_string("event_core");$/;"	v	file:
+event_list	event/lxl_epoll_module.c	/^static struct epoll_event *event_list;$/;"	v	typeref:struct:epoll_event	file:
+events	event/lxl_epoll_module.c	/^	lxl_uint_t events;$/;"	m	struct:__anon87	file:
+expires_sec	dns/lxl_dns_data.h	/^	lxl_uint_t 		expires_sec;$/;"	m	struct:__anon75
+expires_sec	dns/lxl_dns_data.h	/^	lxl_uint_t 		expires_sec;$/;"	m	struct:__anon77
+fail_timeout	dfs/storage/lxl_dfss_upstream.h	/^	time_t 		fail_timeout;$/;"	m	struct:__anon47
+fail_timeout	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	time_t			  fail_timeout;$/;"	m	struct:__anon41
+fail_timeout	dfs/tracker/lxl_dfst_upstream.h	/^	time_t		fail_timeout;$/;"	m	struct:__anon51
+fail_timeout	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	time_t			  fail_timeout;$/;"	m	struct:__anon53
+failed	core/lxl_palloc.h	/^	unsigned failed;$/;"	m	struct:__anon3
+fails	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t		  fails;$/;"	m	struct:__anon41
+fails	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t		  fails;$/;"	m	struct:__anon53
+family	core/lxl_inet.h	/^	int 		family;$/;"	m	struct:__anon12
+fd	core/lxl_connection.h	/^	int 				fd;$/;"	m	struct:lxl_listening_s
+fd	core/lxl_connection.h	/^    int 				fd;$/;"	m	struct:lxl_connection_s
+fd	core/lxl_file.h	/^	int 		 fd;$/;"	m	struct:lxl_file_s
+fd	core/lxl_log.h	/^	int			fd;$/;"	m	struct:lxl_log_s
+fd_noclose	core/lxl_connection.h	/^	unsigned 			fd_noclose:1;$/;"	m	struct:lxl_connection_s
+fid	dfs/lxl_dfs.h	/^	lxl_str_t	 fid;$/;"	m	struct:__anon25
+fid	dfs/lxl_dfs.h	/^	lxl_str_t 	 fid;$/;"	m	struct:__anon28
+fid	dfs/storage/lxl_dfss_request.h	/^	lxl_str_t						 fid;$/;"	m	struct:__anon39
+fid	dfs/tracker/lxl_dfst_request.h	/^		lxl_str_t				   	 fid;$/;"	m	union:lxl_dfst_request_s::__anon59
+fid_info	dfs/tracker/lxl_dfst_request.h	/^		lxl_dfs_fid_info_t			 fid_info;$/;"	m	union:lxl_dfst_request_s::__anon59
+file	core/lxl_conf_file.h	/^	lxl_file_t file;$/;"	m	struct:__anon8
+file	core/lxl_log.h	/^	char		file[LXL_MAX_CONF_PATH];$/;"	m	struct:lxl_log_s
+file	core/lxl_log.h	/^	lxl_str_t	file;$/;"	m	struct:__anon10
+file	dfs/storage/lxl_dfss_request.h	/^	lxl_file_t  					 file;$/;"	m	struct:__anon39
+first_process_buf	dfs/tracker/lxl_dfst_request.h	/^	unsigned 						 first_process_buf;$/;"	m	struct:__anon58
+first_qtype	dfs/storage/lxl_dfss_request.h	/^	unsigned 					first_qtype:1;$/;"	m	struct:lxl_dfss_request_s
+flags	dfs/storage/lxl_dfss_upstream.h	/^	lxl_uint_t				  flags;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+flags	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_uint_t				  flags;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+flags	dns/lxl_dns_request.h	/^	uint16_t flags;$/;"	m	struct:__anon70
+flen	dfs/lxl_dfs.h	/^	uint16_t	 flen;		$/;"	m	struct:__anon20
+flen	dfs/lxl_dfs.h	/^	uint16_t	 flen;$/;"	m	struct:__anon21
+free	event/lxl_event_connect.h	/^	lxl_event_free_peer_pt	free;$/;"	m	struct:lxl_peer_connection_s
+free_connection_n	core/lxl_cycle.h	/^	lxl_uint_t 		   free_connection_n;$/;"	m	struct:lxl_cycle_s
+free_connections	core/lxl_cycle.h	/^	lxl_connection_t  *free_connections;$/;"	m	struct:lxl_cycle_s
+front	core/lxl_queue.h	/^	lxl_uint_t front;$/;"	m	struct:__anon16
+get	event/lxl_event_connect.h	/^	lxl_event_get_peer_pt	get;$/;"	m	struct:lxl_peer_connection_s
+handler	core/lxl_connection.h	/^	lxl_connection_handler_pt handler;$/;"	m	struct:lxl_listening_s
+handler	core/lxl_palloc.h	/^	lxl_pool_cleanup_pt handler;$/;"	m	struct:lxl_pool_cleanup_s
+handler	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_handler_pt			handler;$/;"	m	struct:lxl_dfss_request_s
+handler	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_handler_pt				 handler;$/;"	m	struct:lxl_dfst_request_s
+handler	event/lxl_event.h	/^	lxl_event_handler_pt  handler;$/;"	m	struct:lxl_event_s
+handler	os/unix/lxl_process.c	/^	void   (*handler) (int signo);$/;"	m	struct:__anon88	file:
+header	dns/lxl_dns_request.h	/^	lxl_dns_header_t 			*header;$/;"	m	struct:lxl_dns_request_s
+header	dns/lxl_dns_upstream.h	/^	lxl_dns_header_t 		header;$/;"	m	struct:lxl_dns_upstream_s
+header_buf	dfs/storage/lxl_dfss_request.h	/^	lxl_buf_t				   *header_buf;$/;"	m	struct:lxl_dfss_request_s
+header_buf	dfs/storage/lxl_dfss_upstream.h	/^	lxl_buf_t					      *header_buf;$/;"	m	struct:lxl_dfss_upstream_s
+header_buf	dfs/tracker/lxl_dfst_request.h	/^	lxl_buf_t				  		*header_buf;$/;"	m	struct:lxl_dfst_request_s
+host	core/lxl_inet.h	/^	lxl_str_t 	host;$/;"	m	struct:__anon12
+host	dfs/storage/lxl_dfss_upstream.h	/^	lxl_str_t				  host;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+host	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_str_t				  host;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+hostname	core/lxl_cycle.h	/^	char 			  *hostname;$/;"	m	struct:lxl_cycle_s
+id	dfs/tracker/lxl_dfst_idc.h	/^	uint16_t	  id;$/;"	m	struct:__anon67
+id	dns/lxl_dns_request.h	/^	uint16_t id;$/;"	m	struct:__anon70
+idc	dfs/tracker/lxl_dfst_request.h	/^		lxl_dfs_idc_t				 idc;$/;"	m	union:lxl_dfst_request_s::__anon59
+idc_id	dfs/lxl_dfs.h	/^	uint16_t  	 idc_id;$/;"	m	struct:__anon24
+idc_id	dfs/lxl_dfs.h	/^	uint16_t     idc_id;$/;"	m	struct:__anon27
+idc_id	dfs/lxl_dfs.h	/^  	uint16_t	 idc_id;$/;"	m	struct:__anon22
+idc_id	dfs/lxl_dfs.h	/^  	uint16_t	 idc_id;$/;"	m	struct:__anon23
+idc_id	dfs/lxl_dfs.h	/^  	uint16_t     idc_id;$/;"	m	struct:__anon25
+idc_id	dfs/storage/lxl_dfss_core_module.h	/^	uint16_t  	idc_id;$/;"	m	struct:__anon31
+index	core/lxl_conf_file.h	/^	lxl_uint_t		index;$/;"	m	struct:lxl_module_s
+info	core/lxl_file.h	/^	struct stat  info;$/;"	m	struct:lxl_file_s	typeref:struct:lxl_file_s::stat
+init	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_init_peer_pt	init;$/;"	m	struct:__anon46
+init	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_init_peer_pt	init;$/;"	m	struct:__anon50
+init	event/lxl_event.h	/^	int 	(*init) (lxl_cycle_t *cycle);$/;"	m	struct:__anon84
+init_conf	core/lxl_conf_file.h	/^	char       *(*init_conf) (lxl_cycle_t *cycle, void *conf);$/;"	m	struct:__anon7
+init_conf	event/lxl_event.h	/^	char 			*(*init_conf)	(lxl_cycle_t *cycle, void *conf);$/;"	m	struct:__anon86
+init_main_conf	dfs/storage/lxl_dfss_core_module.h	/^	char 	*(*init_main_conf)		(lxl_conf_t *cf, void *conf);$/;"	m	struct:__anon38
+init_main_conf	dfs/tracker/lxl_dfst_core_module.h	/^	char	*(*init_main_conf)		(lxl_conf_t *cf, void *conf);$/;"	m	struct:__anon66
+init_main_conf	dns/lxl_dns.h	/^	char	*(*init_main_conf)		(lxl_conf_t *cf, void *conf);$/;"	m	struct:__anon83
+init_module	core/lxl_conf_file.h	/^	int 			(*init_module)(lxl_cycle_t *cycle);$/;"	m	struct:lxl_module_s
+init_process	core/lxl_conf_file.h	/^	int				(*init_process)(lxl_cycle_t *cycle);$/;"	m	struct:lxl_module_s
+init_srv_conf	dfs/storage/lxl_dfss_core_module.h	/^	char 	*(*init_srv_conf)		(lxl_conf_t *cf, void *conf);$/;"	m	struct:__anon38
+init_srv_conf	dfs/tracker/lxl_dfst_core_module.h	/^	char 	*(*init_srv_conf)		(lxl_conf_t *cf, void *conf);$/;"	m	struct:__anon66
+init_upstream	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_init_pt		init_upstream;$/;"	m	struct:__anon46
+init_upstream	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_init_pt		init_upstream;$/;"	m	struct:__anon50
+insert	core/lxl_rbtree.h	/^	lxl_rbtree_insert_pt insert;$/;"	m	struct:__anon1
+ip	dfs/lxl_dfs.h	/^	uint32_t	 ip;$/;"	m	struct:__anon23
+ip	dfs/lxl_dfs.h	/^	uint32_t	 ip;$/;"	m	struct:__anon24
+ip	dfs/lxl_dfs.h	/^	uint32_t	 ip;$/;"	m	struct:__anon26
+ip	dfs/lxl_dfs.h	/^	uint32_t	 ip;$/;"	m	struct:__anon27
+ip	dfs/lxl_dfs.h	/^	uint32_t 	 ip;$/;"	m	struct:__anon25
+ip	dfs/tracker/lxl_dfst_idc.h	/^	uint32_t      ip;$/;"	m	struct:__anon68
+keepalive	dfs/storage/lxl_dfss_request.h	/^	unsigned 					keepalive:1;$/;"	m	struct:lxl_dfss_request_s
+key	core/lxl_dns_hash.h	/^	lxl_hash_key_pt key;$/;"	m	struct:__anon18
+key	core/lxl_hash.h	/^	lxl_hash_key_pt   key;$/;"	m	struct:__anon4
+key	core/lxl_hash.h	/^	lxl_hash_key_pt   key;$/;"	m	struct:__anon5
+key	core/lxl_rbtree.h	/^	lxl_uint_t key;$/;"	m	struct:lxl_rbtree_node_s
+large	core/lxl_palloc.h	/^	lxl_pool_large_t *large;$/;"	m	struct:lxl_pool_s
+last	core/lxl_buf.h	/^	char 	   *last;$/;"	m	struct:__anon13
+last	core/lxl_palloc.h	/^	u_char *last;$/;"	m	struct:__anon3
+left	core/lxl_rbtree.h	/^	lxl_rbtree_node_t *left;$/;"	m	struct:lxl_rbtree_node_s
+len	core/lxl_dns_hash.h	/^	lxl_uint_t len;	$/;"	m	struct:lxl_hash_elt_s
+len	core/lxl_hash.h	/^	lxl_uint_t 	      len;	$/;"	m	struct:lxl_hash_elt_s
+len	core/lxl_string.h	/^	size_t  len;$/;"	m	struct:__anon2
+line	core/lxl_conf_file.h	/^	lxl_uint_t line;$/;"	m	struct:__anon8
+list	core/lxl_connection.h	/^	lxl_list_t 			list;$/;"	m	struct:lxl_connection_s
+list	dfs/lxl_dfs.h	/^	lxl_list_t   list;$/;"	m	struct:__anon28
+list	dns/lxl_dns_data.h	/^	lxl_list_t 		list;$/;"	m	struct:__anon77
+list	dns/lxl_dns_data.h	/^	lxl_list_t 	list;$/;"	m	struct:__anon74
+list	event/lxl_event.h	/^	lxl_list_t			  list;$/;"	m	struct:lxl_event_s
+listen	core/lxl_connection.h	/^	unsigned 			listen:1;$/;"	m	struct:lxl_listening_s
+listen	core/lxl_inet.h	/^	unsigned 	listen:1;$/;"	m	struct:__anon12
+listen	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_listen_t   	  *listen;$/;"	m	struct:__anon37
+listen	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_listen_t 		  *listen;$/;"	m	struct:__anon65
+listening	core/lxl_connection.h	/^	lxl_listening_t    *listening;$/;"	m	struct:lxl_connection_s
+listening	core/lxl_cycle.h	/^	lxl_array_t 	   listening;			\/* lxl_listening_t *\/$/;"	m	struct:lxl_cycle_s
+listens	dns/lxl_dns.h	/^	lxl_array_t listens;		\/* lxl_dns_listen_t	*\/$/;"	m	struct:__anon81
+loadavg	dfs/lxl_dfs.h	/^	uint16_t	 loadavg;$/;"	m	struct:__anon24
+loadavg	dfs/tracker/lxl_dfst_idc.h	/^	uint16_t	  loadavg;$/;"	m	struct:__anon68
+log	core/lxl_cycle.h	/^	lxl_log_t		  *log;$/;"	m	struct:lxl_cycle_s
+loop_request	dfs/tracker/lxl_dfst_request.h	/^	unsigned 						 loop_request;$/;"	m	struct:lxl_dfst_request_s
+lxl_abs	core/lxl_core.h	65;"	d
+lxl_accept_disabled	event/lxl_event.c	/^lxl_int_t			lxl_accept_disabled;$/;"	v
+lxl_add_conn	event/lxl_event.h	33;"	d
+lxl_add_event	event/lxl_event.h	31;"	d
+lxl_add_timer	event/lxl_event.h	39;"	d
+lxl_addr_t	core/lxl_inet.h	/^} lxl_addr_t;$/;"	t	typeref:struct:__anon11
+lxl_align	core/lxl_palloc.h	20;"	d
+lxl_align_ptr	core/lxl_palloc.h	23;"	d
+lxl_alloc	os/unix/lxl_alloc.c	/^lxl_alloc(size_t size) $/;"	f
+lxl_alloc_buf	core/lxl_buf.h	33;"	d
+lxl_array1_clear	core/lxl_array.h	181;"	d
+lxl_array1_create	core/lxl_array.c	/^lxl_array1_create(lxl_uint_t n, size_t size)$/;"	f
+lxl_array1_data	core/lxl_array.h	187;"	d
+lxl_array1_del	core/lxl_array.h	/^lxl_array1_del(lxl_array1_t *a, void *elt, lxl_cmp_pt cmp)$/;"	f
+lxl_array1_del_index	core/lxl_array.h	/^lxl_array1_del_index(lxl_array1_t *a, lxl_uint_t i)$/;"	f
+lxl_array1_destroy	core/lxl_array.h	/^lxl_array1_destroy(lxl_array1_t *a)$/;"	f
+lxl_array1_elts	core/lxl_array.h	184;"	d
+lxl_array1_empty	core/lxl_array.h	172;"	d
+lxl_array1_find	core/lxl_array.h	/^lxl_array1_find(lxl_array1_t *a, void *elt, lxl_cmp_pt cmp)$/;"	f
+lxl_array1_full	core/lxl_array.h	175;"	d
+lxl_array1_init	core/lxl_array.h	/^lxl_array1_init(lxl_array1_t *a, lxl_uint_t n, size_t size)$/;"	f
+lxl_array1_nelts	core/lxl_array.h	178;"	d
+lxl_array1_push	core/lxl_array.h	/^lxl_array1_push(lxl_array1_t *a)$/;"	f
+lxl_array1_t	core/lxl_array.h	/^} lxl_array1_t;$/;"	t	typeref:struct:__anon15
+lxl_array_clear	core/lxl_array.h	65;"	d
+lxl_array_create	core/lxl_array.c	/^lxl_array_create(lxl_pool_t *p, lxl_uint_t n, size_t size)$/;"	f
+lxl_array_data	core/lxl_array.h	71;"	d
+lxl_array_del	core/lxl_array.h	/^lxl_array_del(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)$/;"	f
+lxl_array_elts	core/lxl_array.h	68;"	d
+lxl_array_empty	core/lxl_array.h	56;"	d
+lxl_array_find	core/lxl_array.h	/^lxl_array_find(lxl_array_t *a, void *elt, lxl_cmp_pt cmp)$/;"	f
+lxl_array_full	core/lxl_array.h	59;"	d
+lxl_array_init	core/lxl_array.h	/^lxl_array_init(lxl_array_t *a, lxl_pool_t *p, lxl_uint_t n, size_t size)$/;"	f
+lxl_array_nelts	core/lxl_array.h	62;"	d
+lxl_array_push	core/lxl_array.h	/^lxl_array_push(lxl_array_t *a)$/;"	f
+lxl_array_t	core/lxl_array.h	/^} lxl_array_t;$/;"	t	typeref:struct:__anon14
+lxl_atoi	core/lxl_string.h	/^lxl_atoi(char *line, size_t n)$/;"	f
+lxl_blocking	os/unix/lxl_socket.c	/^lxl_blocking(int fd)$/;"	f
+lxl_buf_init	core/lxl_buf.h	/^lxl_buf_init(lxl_buf_t *buf, lxl_pool_t *p, size_t size)$/;"	f
+lxl_buf_reset	core/lxl_buf.h	36;"	d
+lxl_buf_t	core/lxl_buf.h	/^} lxl_buf_t;$/;"	t	typeref:struct:__anon13
+lxl_calloc	os/unix/lxl_alloc.c	/^lxl_calloc(size_t n, size_t size) $/;"	f
+lxl_calloc_buf	core/lxl_buf.h	34;"	d
+lxl_chain_t	core/lxl_core.h	/^typedef struct lxl_chain_s				lxl_chain_t;$/;"	t	typeref:struct:lxl_chain_s
+lxl_close_accepted_connection	event/lxl_event.c	/^lxl_close_accepted_connection(lxl_connection_t *c, lxl_uint_t flags)$/;"	f	file:
+lxl_close_connection	core/lxl_connection.c	/^lxl_close_connection(lxl_connection_t *c)$/;"	f
+lxl_cmp_pt	core/lxl_config.h	/^typedef int	(*lxl_cmp_pt) (void *elt1, void *elt2);$/;"	t
+lxl_command_s	core/lxl_conf_file.h	/^struct lxl_command_s {$/;"	s
+lxl_command_t	core/lxl_core.h	/^typedef struct lxl_command_s			lxl_command_t;$/;"	t	typeref:struct:lxl_command_s
+lxl_conf_file	core/speed.c	/^static char        *lxl_conf_file;$/;"	v	file:
+lxl_conf_file_t	core/lxl_conf_file.h	/^} lxl_conf_file_t;$/;"	t	typeref:struct:__anon8
+lxl_conf_handler	core/lxl_conf_file.c	/^lxl_conf_handler(lxl_conf_t *cf, lxl_int_t last)$/;"	f	file:
+lxl_conf_init_msec_value	core/lxl_conf_file.h	134;"	d
+lxl_conf_init_ptr_value	core/lxl_conf_file.h	124;"	d
+lxl_conf_init_size_value	core/lxl_conf_file.h	139;"	d
+lxl_conf_init_uint_value	core/lxl_conf_file.h	129;"	d
+lxl_conf_init_value	core/lxl_conf_file.h	119;"	d
+lxl_conf_log_error	core/lxl_conf_file.c	/^lxl_conf_log_error(lxl_uint_t level, lxl_conf_t *cf, int err, const char *fmt, ...)$/;"	f
+lxl_conf_merge_ptr_value	core/lxl_conf_file.h	149;"	d
+lxl_conf_merge_size_value	core/lxl_conf_file.h	159;"	d
+lxl_conf_merge_uint_value	core/lxl_conf_file.h	154;"	d
+lxl_conf_merge_value	core/lxl_conf_file.h	144;"	d
+lxl_conf_parse	core/lxl_conf_file.c	/^lxl_conf_parse(lxl_conf_t *cf, lxl_str_t *filename)$/;"	f
+lxl_conf_parse_size	core/lxl_conf_file.c	/^lxl_conf_parse_size(lxl_str_t *line)$/;"	f	file:
+lxl_conf_parse_time	core/lxl_conf_file.c	/^lxl_conf_parse_time(lxl_str_t *line, lxl_uint_t is_sec)$/;"	f	file:
+lxl_conf_post_handler_pt	core/lxl_conf_file.h	/^typedef char *(*lxl_conf_post_handler_pt) (lxl_conf_t *cf, void *data, void *conf);$/;"	t
+lxl_conf_post_t	core/lxl_conf_file.h	/^} lxl_conf_post_t;$/;"	t	typeref:struct:__anon9
+lxl_conf_read_token	core/lxl_conf_file.c	/^lxl_conf_read_token(lxl_conf_t *cf)$/;"	f	file:
+lxl_conf_s	core/lxl_conf_file.h	/^struct lxl_conf_s {$/;"	s
+lxl_conf_set_flag_slot	core/lxl_conf_file.c	/^lxl_conf_set_flag_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_set_msec_slot	core/lxl_conf_file.c	/^lxl_conf_set_msec_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_set_num_slot	core/lxl_conf_file.c	/^lxl_conf_set_num_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_set_sec_slot	core/lxl_conf_file.c	/^lxl_conf_set_sec_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_set_size_slot	core/lxl_conf_file.c	/^lxl_conf_set_size_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_set_str_slot	core/lxl_conf_file.c	/^lxl_conf_set_str_slot(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f
+lxl_conf_t	core/lxl_core.h	/^typedef struct lxl_conf_s				lxl_conf_t;$/;"	t	typeref:struct:lxl_conf_s
+lxl_configure_listening_sockets	core/lxl_connection.c	/^lxl_configure_listening_sockets(lxl_cycle_t *cycle)$/;"	f
+lxl_connection_handler_pt	core/lxl_connection.h	/^typedef void (*lxl_connection_handler_pt) (lxl_connection_t *c);$/;"	t
+lxl_connection_s	core/lxl_connection.h	/^struct lxl_connection_s {$/;"	s
+lxl_connection_t	core/lxl_core.h	/^typedef struct lxl_connection_s 		lxl_connection_t;$/;"	t	typeref:struct:lxl_connection_s
+lxl_core_commands	core/speed.c	/^static lxl_command_t lxl_core_commands[] = {$/;"	v	file:
+lxl_core_conf_t	core/lxl_cycle.h	/^} lxl_core_conf_t;$/;"	t	typeref:struct:__anon17
+lxl_core_module	core/speed.c	/^lxl_module_t lxl_core_module = {$/;"	v
+lxl_core_module_create_conf	core/speed.c	/^lxl_core_module_create_conf(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_core_module_ctx	core/speed.c	/^static lxl_core_module_t lxl_core_module_ctx = {$/;"	v	file:
+lxl_core_module_init_conf	core/speed.c	/^lxl_core_module_init_conf(lxl_cycle_t *cycle, void *conf)$/;"	f	file:
+lxl_core_module_t	core/lxl_conf_file.h	/^} lxl_core_module_t;$/;"	t	typeref:struct:__anon7
+lxl_create_listening	core/lxl_connection.c	/^lxl_create_listening(lxl_conf_t *cf, void *sockaddr, socklen_t socklen, int type)$/;"	f
+lxl_create_pool	core/lxl_palloc.c	/^lxl_create_pool(size_t size)$/;"	f
+lxl_create_temp_buf	core/lxl_buf.c	/^lxl_create_temp_buf(lxl_pool_t *pool, size_t size)$/;"	f
+lxl_current_msec	core/lxl_times.c	/^volatile lxl_uint_t 	lxl_current_msec;$/;"	v
+lxl_current_sec	core/lxl_times.c	/^volatile lxl_uint_t 	lxl_current_sec;$/;"	v
+lxl_cycle	core/lxl_cycle.c	/^lxl_cycle_t 		*lxl_cycle;$/;"	v
+lxl_cycle_s	core/lxl_cycle.h	/^struct lxl_cycle_s {$/;"	s
+lxl_cycle_t	core/lxl_core.h	/^typedef struct lxl_cycle_s				lxl_cycle_t;$/;"	t	typeref:struct:lxl_cycle_s
+lxl_daemon	core/speed.c	/^lxl_daemon(void)$/;"	f	file:
+lxl_daemon	os/unix/lxl_util.c	/^lxl_daemon()$/;"	f
+lxl_del_conn	event/lxl_event.h	34;"	d
+lxl_del_event	event/lxl_event.h	32;"	d
+lxl_del_timer	event/lxl_event.h	40;"	d
+lxl_destroy_cycle_pools	core/lxl_cycle.c	/^lxl_destroy_cycle_pools(lxl_conf_t *conf)$/;"	f	file:
+lxl_destroy_pool	core/lxl_palloc.c	/^lxl_destroy_pool(lxl_pool_t *pool)$/;"	f
+lxl_dfs_fid_info_t	dfs/lxl_dfs.h	/^} lxl_dfs_fid_info_t;$/;"	t	typeref:struct:__anon25
+lxl_dfs_fid_t	dfs/lxl_dfs.h	/^} lxl_dfs_fid_t;$/;"	t	typeref:struct:__anon28
+lxl_dfs_idc_t	dfs/lxl_dfs.h	/^} lxl_dfs_idc_t;$/;"	t	typeref:struct:__anon22
+lxl_dfs_ip_port1_t	dfs/lxl_dfs.h	/^} lxl_dfs_ip_port1_t;$/;"	t	typeref:struct:__anon27
+lxl_dfs_ip_port_t	dfs/lxl_dfs.h	/^} lxl_dfs_ip_port_t;$/;"	t	typeref:struct:__anon26
+lxl_dfs_request_header_t	dfs/lxl_dfs.h	/^} lxl_dfs_request_header_t;$/;"	t	typeref:struct:__anon20
+lxl_dfs_response_header_t	dfs/lxl_dfs.h	/^} lxl_dfs_response_header_t;$/;"	t	typeref:struct:__anon21
+lxl_dfs_storage_state_t	dfs/lxl_dfs.h	/^} lxl_dfs_storage_state_t;$/;"	t	typeref:struct:__anon24
+lxl_dfs_storage_t	dfs/lxl_dfs.h	/^} lxl_dfs_storage_t;$/;"	t	typeref:struct:__anon23
+lxl_dfss_addr_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_addr_t;$/;"	t	typeref:struct:__anon31
+lxl_dfss_area_id	dfs/storage/lxl_dfss.c	/^uint16_t			lxl_dfss_area_id = 16; 	\/* 0 - 255 *\/$/;"	v
+lxl_dfss_block	dfs/storage/lxl_dfss.c	/^lxl_dfss_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfss_block_reading	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_block_reading(lxl_dfss_request_t *r)$/;"	f
+lxl_dfss_body_handler_pt	dfs/storage/lxl_dfss_request.h	/^typedef int	 (*lxl_dfss_body_handler_pt)		(lxl_dfss_request_t *r);$/;"	t
+lxl_dfss_client_body_handler_pt	dfs/storage/lxl_dfss_request.h	/^typedef void (*lxl_dfss_client_body_handler_pt) (lxl_dfss_request_t *r);$/;"	t
+lxl_dfss_close_connection	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_close_connection(lxl_connection_t *c) $/;"	f	file:
+lxl_dfss_close_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_close_request(lxl_dfss_request_t *r, lxl_int_t rc)$/;"	f	file:
+lxl_dfss_collect_fid	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_collect_fid(char *base_path)$/;"	f	file:
+lxl_dfss_collect_sync_push_fid	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_collect_sync_push_fid(char *base_path)$/;"	f	file:
+lxl_dfss_commands	dfs/storage/lxl_dfss.c	/^static lxl_command_t lxl_dfss_commands[] = {$/;"	v	file:
+lxl_dfss_conf_ctx_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_conf_ctx_t;$/;"	t	typeref:struct:__anon32
+lxl_dfss_conf_get_module_main_conf	dfs/storage/lxl_dfss_core_module.h	96;"	d
+lxl_dfss_core_commands	dfs/storage/lxl_dfss_core_module.c	/^static lxl_command_t lxl_dfss_core_commands[] = {$/;"	v	file:
+lxl_dfss_core_init	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_core_init(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_dfss_core_listen	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf) {$/;"	f	file:
+lxl_dfss_core_main_conf_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_core_main_conf_t;$/;"	t	typeref:struct:__anon37
+lxl_dfss_core_module	dfs/storage/lxl_dfss_core_module.c	/^lxl_module_t lxl_dfss_core_module = {$/;"	v
+lxl_dfss_core_module_ctx	dfs/storage/lxl_dfss_core_module.c	/^static lxl_dfss_module_t lxl_dfss_core_module_ctx = {$/;"	v	file:
+lxl_dfss_core_server	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_core_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfss_core_srv_conf_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_core_srv_conf_t;$/;"	t	typeref:struct:__anon36
+lxl_dfss_cpu_idle	dfs/storage/lxl_dfss.c	/^uint16_t			lxl_dfss_cpu_idle = 90;$/;"	v
+lxl_dfss_cpu_usage	dfs/storage/lxl_dfss.c	/^uint16_t		   	lxl_dfss_cpu_usage = 0;$/;"	v
+lxl_dfss_cpu_use	dfs/storage/lxl_dfss.c	/^lxl_dfss_cpu_use_t 	lxl_dfss_cpu_use = { 0, 0, 0, 0, 0, 0, 0, 0 };$/;"	v
+lxl_dfss_cpu_use_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_cpu_use_t;$/;"	t	typeref:struct:__anon30
+lxl_dfss_create_main_conf	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_create_main_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfss_create_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_create_request(lxl_connection_t *c) $/;"	f
+lxl_dfss_create_srv_conf	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_create_srv_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfss_dir_seed	dfs/storage/lxl_dfss.c	/^uint32_t     	   	lxl_dfss_dir_seed = 0;$/;"	v
+lxl_dfss_disk_free_mb	dfs/storage/lxl_dfss.c	/^uint32_t		   	lxl_dfss_disk_free_mb = 0;$/;"	v
+lxl_dfss_do_read_client_request_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_do_read_client_request_body(lxl_dfss_request_t *r) $/;"	f	file:
+lxl_dfss_do_read_tracker_response_body	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_do_read_tracker_response_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_do_send_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_do_send_body(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_do_send_client_response_body	dfs/storage/lxl_dfss_response_body.c	/^lxl_dfss_do_send_client_response_body(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_download_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_download_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_download_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_download_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_download_request_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_download_request_body(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_empty_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_empty_handler(lxl_event_t *ev) $/;"	f	file:
+lxl_dfss_event_handler_pt	dfs/storage/lxl_dfss_request.h	/^typedef void (*lxl_dfss_event_handler_pt) (lxl_dfss_request_t *r);$/;"	t
+lxl_dfss_fid_hash	dfs/storage/lxl_dfss.c	/^lxl_hash1_t			lxl_dfss_fid_hash;$/;"	v
+lxl_dfss_fid_phash	dfs/storage/lxl_dfss.c	/^lxl_hash_t 		lxl_dfss_fid_phash;$/;"	v
+lxl_dfss_fid_seed	dfs/storage/lxl_dfss.c	/^uint16_t			lxl_dfss_fid_seed = 0;	\/* jia suo *\/$/;"	v
+lxl_dfss_fid_value_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_fid_value_t;$/;"	t	typeref:struct:__anon29
+lxl_dfss_file_count	dfs/storage/lxl_dfss.c	/^lxl_uint_t 	 	   	lxl_dfss_file_count;$/;"	v
+lxl_dfss_finalize_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_finalize_request(lxl_dfss_request_t *r, lxl_int_t rc)$/;"	f
+lxl_dfss_free_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_free_request(lxl_dfss_request_t *r, lxl_int_t rc)$/;"	f
+lxl_dfss_get_module_main_conf	dfs/storage/lxl_dfss_core_module.h	93;"	d
+lxl_dfss_get_module_srv_conf	dfs/storage/lxl_dfss_core_module.h	94;"	d
+lxl_dfss_group_id	dfs/storage/lxl_dfss.c	/^uint16_t     	   	lxl_dfss_group_id = 1;$/;"	v
+lxl_dfss_handler_pt	dfs/storage/lxl_dfss_request.h	/^typedef int	 (*lxl_dfss_handler_pt) (lxl_dfss_request_t *r);$/;"	t
+lxl_dfss_id	dfs/storage/lxl_dfss.c	/^uint32_t     	   	lxl_dfss_id = 1;$/;"	v
+lxl_dfss_idc_id	dfs/storage/lxl_dfss.c	/^uint16_t	 		lxl_dfss_idc_id = 1;$/;"	v
+lxl_dfss_in_addr_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_in_addr_t;$/;"	t	typeref:struct:__anon34
+lxl_dfss_init_connection	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_init_connection(lxl_connection_t *c)$/;"	f
+lxl_dfss_init_main_conf	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_init_main_conf(lxl_conf_t *cf, void *conf) $/;"	f	file:
+lxl_dfss_init_srv_conf	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_init_srv_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfss_ip_port	dfs/storage/lxl_dfss.c	/^lxl_dfs_ip_port_t  	lxl_dfss_ip_port;$/;"	v
+lxl_dfss_listen_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_listen_t;$/;"	t	typeref:struct:__anon33
+lxl_dfss_loadavg5	dfs/storage/lxl_dfss.c	/^uint16_t		   	lxl_dfss_loadavg5 = 0;$/;"	v
+lxl_dfss_max_module	dfs/storage/lxl_dfss.c	/^lxl_uint_t   	   	lxl_dfss_max_module;$/;"	v
+lxl_dfss_module	dfs/storage/lxl_dfss.c	/^lxl_module_t lxl_dfss_module = {$/;"	v
+lxl_dfss_module_ctx	dfs/storage/lxl_dfss.c	/^static lxl_core_module_t lxl_dfss_module_ctx = {$/;"	v	file:
+lxl_dfss_module_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_module_t;$/;"	t	typeref:struct:__anon38
+lxl_dfss_optimize_server	dfs/storage/lxl_dfss.c	/^lxl_dfss_optimize_server(lxl_conf_t *cf, lxl_dfss_listen_t *listen)$/;"	f	file:
+lxl_dfss_parse_request	dfs/storage/lxl_dfss_parse.c	/^lxl_dfss_parse_request(lxl_dfss_request_t *r, char *data) $/;"	f
+lxl_dfss_port_t	dfs/storage/lxl_dfss_core_module.h	/^} lxl_dfss_port_t;$/;"	t	typeref:struct:__anon35
+lxl_dfss_process_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_process_request(lxl_dfss_request_t *r) $/;"	f	file:
+lxl_dfss_process_request_header	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_process_request_header(lxl_event_t *rev) $/;"	f	file:
+lxl_dfss_read_client_request_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_read_client_request_body(lxl_dfss_request_t *r, lxl_dfss_client_body_handler_pt post_handler)$/;"	f
+lxl_dfss_read_client_request_body_handler	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_read_client_request_body_handler(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_read_request_header	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_read_request_header(lxl_dfss_request_t *r) $/;"	f	file:
+lxl_dfss_read_tracker_response_body	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_read_tracker_response_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_read_tracker_response_body_handler	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_read_tracker_response_body_handler(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_report_fid_event	dfs/storage/lxl_dfss.c	/^lxl_event_t		   	lxl_dfss_report_fid_event;$/;"	v
+lxl_dfss_report_fid_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_report_fid_handler(lxl_event_t *ev)$/;"	f
+lxl_dfss_report_state_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_report_state_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_report_state_event	dfs/storage/lxl_dfss.c	/^lxl_event_t 	   	lxl_dfss_report_state_event;$/;"	v
+lxl_dfss_report_state_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_report_state_handler(lxl_event_t *ev)$/;"	f
+lxl_dfss_request_body_t	dfs/storage/lxl_dfss_request.h	/^} lxl_dfss_request_body_t;$/;"	t	typeref:struct:__anon39
+lxl_dfss_request_empty_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_request_empty_handler(lxl_dfss_request_t *r)$/;"	f
+lxl_dfss_request_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_request_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfss_request_s	dfs/storage/lxl_dfss_request.h	/^struct lxl_dfss_request_s {$/;"	s
+lxl_dfss_request_seed	dfs/storage/lxl_dfss.c	/^uint32_t     	   	lxl_dfss_request_seed = 0;$/;"	v
+lxl_dfss_request_t	dfs/storage/lxl_dfss.h	/^typedef struct lxl_dfss_request_s	lxl_dfss_request_t;$/;"	t	typeref:struct:lxl_dfss_request_s
+lxl_dfss_send_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_send_body(lxl_dfss_request_t *r, lxl_dfss_client_body_handler_pt post_handler)$/;"	f
+lxl_dfss_send_body_handler	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_send_body_handler(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_send_client_response_body	dfs/storage/lxl_dfss_response_body.c	/^lxl_dfss_send_client_response_body(lxl_dfss_request_t *r, lxl_dfss_client_body_handler_pt post_handler)$/;"	f
+lxl_dfss_send_client_response_body_handler	dfs/storage/lxl_dfss_response_body.c	/^lxl_dfss_send_client_response_body_handler(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_send_header	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_send_header(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_send_special_response	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_send_special_response(lxl_dfss_request_t *r, lxl_int_t rc)$/;"	f	file:
+lxl_dfss_server_start	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_server_start(void)$/;"	f
+lxl_dfss_storage_commands	dfs/storage/lxl_dfss_storage.c	/^static lxl_command_t  lxl_dfss_storage_commands[] = {$/;"	v	file:
+lxl_dfss_storage_connect	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_connect(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_create_conf	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_create_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfss_storage_create_request	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_create_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_do_send_request_body	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_do_send_request_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_dummy_handler	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_dummy_handler(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_finalize_request	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_finalize_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u, lxl_int_t rc)$/;"	f	file:
+lxl_dfss_storage_handler	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfss_storage_init	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_init(lxl_dfss_request_t *r)$/;"	f
+lxl_dfss_storage_init_conf	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_init_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfss_storage_init_request	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_init_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_lowat_check	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_lowat_check(lxl_conf_t *cf, void *post, void *data)$/;"	f	file:
+lxl_dfss_storage_lowat_post	dfs/storage/lxl_dfss_storage.c	/^static lxl_conf_post_t  lxl_dfss_storage_lowat_post = { lxl_dfss_storage_lowat_check };$/;"	v	file:
+lxl_dfss_storage_module	dfs/storage/lxl_dfss_storage.c	/^lxl_module_t  lxl_dfss_storage_module = {$/;"	v
+lxl_dfss_storage_module	dfs/storage/lxl_dfss_storage.c	/^lxl_module_t  lxl_dfss_storage_module;$/;"	v
+lxl_dfss_storage_module_ctx	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_module_t  lxl_dfss_storage_module_ctx = {$/;"	v
+lxl_dfss_storage_next	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_next(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u, lxl_uint_t ft_type)$/;"	f	file:
+lxl_dfss_storage_pass	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_pass(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfss_storage_process_response_header	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_process_response_header(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_send_request	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_send_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u$/;"	f	file:
+lxl_dfss_storage_send_request_body	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_send_request_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_send_request_body_handler	dfs/storage/lxl_dfss_storage.c	/^lxl_dfss_storage_send_request_body_handler(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_storage_srv_conf_t	dfs/storage/lxl_dfss_storage.c	/^} lxl_dfss_storage_srv_conf_t;$/;"	t	typeref:struct:__anon40	file:
+lxl_dfss_sync_fid	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_sync_fid(void)$/;"	f
+lxl_dfss_sync_fid_event	dfs/storage/lxl_dfss.c	/^lxl_event_t		    lxl_dfss_sync_fid_event;$/;"	v
+lxl_dfss_sync_fid_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_sync_fid_handler(lxl_event_t *ev)$/;"	f
+lxl_dfss_sync_pull	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_sync_pull(void)$/;"	f
+lxl_dfss_sync_pull_event	dfs/storage/lxl_dfss.c	/^lxl_event_t			lxl_dfss_sync_pull_event;$/;"	v
+lxl_dfss_sync_pull_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_sync_pull_handler(lxl_event_t *ev)$/;"	f
+lxl_dfss_sync_pull_list	dfs/storage/lxl_dfss.c	/^lxl_list_t			lxl_dfss_sync_pull_list;$/;"	v
+lxl_dfss_sync_push_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_sync_push_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_sync_push_event	dfs/storage/lxl_dfss.c	/^lxl_event_t			lxl_dfss_sync_push_event;$/;"	v
+lxl_dfss_sync_push_fid_part_request_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_sync_push_fid_part_request_body(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_sync_push_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_sync_push_handler(lxl_event_t *ev)$/;"	f
+lxl_dfss_sync_push_list	dfs/storage/lxl_dfss.c	/^lxl_list_t 			lxl_dfss_sync_push_list;$/;"	v
+lxl_dfss_temp_pool	dfs/storage/lxl_dfss.c	/^lxl_pool_t		   *lxl_dfss_temp_pool;$/;"	v
+lxl_dfss_terminate_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_terminate_request(lxl_dfss_request_t *r, lxl_int_t rc)$/;"	f	file:
+lxl_dfss_tracker_commands	dfs/storage/lxl_dfss_tracker.c	/^static lxl_command_t  lxl_dfss_tracker_commands[] = {$/;"	v	file:
+lxl_dfss_tracker_connect	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_connect(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_create_conf	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_create_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfss_tracker_create_request	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_create_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_tracker_dummy_handler	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_dummy_handler(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_dummy_response_body	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_dummy_response_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_finalize_request	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_finalize_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u, lxl_int_t rc)$/;"	f	file:
+lxl_dfss_tracker_handler	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfss_tracker_init	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_init(lxl_dfss_request_t *r)$/;"	f
+lxl_dfss_tracker_init_conf	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_init_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfss_tracker_init_request	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_init_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_tracker_lowat_check	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_lowat_check(lxl_conf_t *cf, void *post, void *data)$/;"	f	file:
+lxl_dfss_tracker_lowat_post	dfs/storage/lxl_dfss_tracker.c	/^static lxl_conf_post_t  lxl_dfss_tracker_lowat_post = { lxl_dfss_tracker_lowat_check };$/;"	v	file:
+lxl_dfss_tracker_module	dfs/storage/lxl_dfss_tracker.c	/^lxl_module_t  lxl_dfss_tracker_module ={$/;"	v
+lxl_dfss_tracker_module	dfs/storage/lxl_dfss_tracker.c	/^lxl_module_t  lxl_dfss_tracker_module;$/;"	v
+lxl_dfss_tracker_module_ctx	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_module_t  lxl_dfss_tracker_module_ctx = {$/;"	v
+lxl_dfss_tracker_next	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_next(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u, lxl_uint_t ft_type)$/;"	f	file:
+lxl_dfss_tracker_pass	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_pass(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfss_tracker_process_header	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_process_header(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_process_response	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_process_response(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_read_response_header	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_read_response_header(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_report_fid_response_body	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_report_fid_response_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_send_request	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_send_request(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u) $/;"	f	file:
+lxl_dfss_tracker_srv_conf_t	dfs/storage/lxl_dfss_tracker.c	/^} lxl_dfss_tracker_srv_conf_t;$/;"	t	typeref:struct:__anon44	file:
+lxl_dfss_tracker_sync_fid_handle_response	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_sync_fid_handle_response(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_tracker_sync_fid_response_body	dfs/storage/lxl_dfss_tracker.c	/^lxl_dfss_tracker_sync_fid_response_body(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f	file:
+lxl_dfss_uid	dfs/storage/lxl_dfss.c	/^char				lxl_dfss_uid[24];$/;"	v
+lxl_dfss_update_system_state	dfs/storage/lxl_dfss_core_module.c	/^lxl_dfss_update_system_state()$/;"	f
+lxl_dfss_upload_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_upload_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upload_request_body	dfs/storage/lxl_dfss_request_body.c	/^lxl_dfss_upload_request_body(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upload_sc_sync_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_upload_sc_sync_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upload_sc_sync_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_upload_sc_sync_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upload_sync_done_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_upload_sync_done_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upload_sync_handle_request	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_upload_sync_handle_request(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfss_upstream	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream(lxl_conf_t *cf, lxl_command_t *cmd, void *dummy)$/;"	f	file:
+lxl_dfss_upstream_add	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_add(lxl_conf_t *cf, lxl_url_t *u, lxl_uint_t flags)$/;"	f
+lxl_dfss_upstream_body_handler_pt	dfs/storage/lxl_dfss_upstream.h	/^typedef int  (*lxl_dfss_upstream_body_handler_pt) (lxl_dfss_request_t *r, lxl_dfss_upstream_t *u);$/;"	t
+lxl_dfss_upstream_commands	dfs/storage/lxl_dfss_upstream.c	/^static lxl_command_t  lxl_dfss_upstream_commands[] = {$/;"	v	file:
+lxl_dfss_upstream_conf_t	dfs/storage/lxl_dfss_upstream.h	/^} lxl_dfss_upstream_conf_t;$/;"	t	typeref:struct:__anon48
+lxl_dfss_upstream_connect	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_connect(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f
+lxl_dfss_upstream_create_main_conf	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_create_main_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfss_upstream_free_round_robin_peer	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_free_round_robin_peer(lxl_peer_connection_t *pc, void *data, lxl_uint_t state)$/;"	f
+lxl_dfss_upstream_get_peer	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_get_peer(lxl_dfss_upstream_rr_peer_data_t *rrp)$/;"	f	file:
+lxl_dfss_upstream_get_round_robin_peer	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_get_round_robin_peer(lxl_peer_connection_t *pc, void *data)$/;"	f
+lxl_dfss_upstream_handler_pt	dfs/storage/lxl_dfss_upstream.h	/^typedef void (*lxl_dfss_upstream_handler_pt) (lxl_dfss_request_t *r, lxl_dfss_upstream_t *u);$/;"	t
+lxl_dfss_upstream_init_main_conf	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_init_main_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfss_upstream_init_peer_pt	dfs/storage/lxl_dfss_upstream.h	/^typedef int	(*lxl_dfss_upstream_init_peer_pt) (lxl_dfss_request_t *r, lxl_dfss_upstream_srv_conf_t *us, lxl_dfss_upstream_t *u);$/;"	t
+lxl_dfss_upstream_init_pt	dfs/storage/lxl_dfss_upstream.h	/^typedef int	(*lxl_dfss_upstream_init_pt) (lxl_conf_t *conf, lxl_dfss_upstream_srv_conf_t *us);$/;"	t
+lxl_dfss_upstream_init_round_robin	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_init_round_robin(lxl_conf_t *cf, lxl_dfss_upstream_srv_conf_t *us)$/;"	f
+lxl_dfss_upstream_init_round_robin_peer	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_init_round_robin_peer(lxl_dfss_request_t *r, lxl_dfss_upstream_srv_conf_t *us, lxl_dfss_upstream_t *u)$/;"	f
+lxl_dfss_upstream_init_round_robin_storage	dfs/storage/lxl_dfss_upstream_round_robin.c	/^lxl_dfss_upstream_init_round_robin_storage(lxl_dfss_request_t *r, lxl_dfss_upstream_srv_conf_t *us)$/;"	f
+lxl_dfss_upstream_main_conf_t	dfs/storage/lxl_dfss_upstream.h	/^} lxl_dfss_upstream_main_conf_t;$/;"	t	typeref:struct:__anon45
+lxl_dfss_upstream_module	dfs/storage/lxl_dfss_upstream.c	/^lxl_module_t  lxl_dfss_upstream_module = {$/;"	v
+lxl_dfss_upstream_module_ctx	dfs/storage/lxl_dfss_upstream.c	/^static lxl_dfss_module_t  lxl_dfss_upstream_module_ctx = {$/;"	v	file:
+lxl_dfss_upstream_parse_response	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_parse_response(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u, lxl_buf_t *b)$/;"	f
+lxl_dfss_upstream_peer_t	dfs/storage/lxl_dfss_upstream.h	/^} lxl_dfss_upstream_peer_t;$/;"	t	typeref:struct:__anon46
+lxl_dfss_upstream_request_empty_handler	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_request_empty_handler(lxl_dfss_request_t *r, lxl_dfss_upstream_t *u)$/;"	f
+lxl_dfss_upstream_rr_peer_data_t	dfs/storage/lxl_dfss_upstream_round_robin.h	/^} lxl_dfss_upstream_rr_peer_data_t;$/;"	t	typeref:struct:__anon43
+lxl_dfss_upstream_rr_peer_t	dfs/storage/lxl_dfss_upstream_round_robin.h	/^} lxl_dfss_upstream_rr_peer_t;$/;"	t	typeref:struct:__anon41
+lxl_dfss_upstream_rr_peers_t	dfs/storage/lxl_dfss_upstream_round_robin.h	/^} lxl_dfss_upstream_rr_peers_t;$/;"	t	typeref:struct:__anon42
+lxl_dfss_upstream_s	dfs/storage/lxl_dfss_upstream.h	/^struct lxl_dfss_upstream_s {$/;"	s
+lxl_dfss_upstream_server	dfs/storage/lxl_dfss_upstream.c	/^lxl_dfss_upstream_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfss_upstream_server_t	dfs/storage/lxl_dfss_upstream.h	/^} lxl_dfss_upstream_server_t;$/;"	t	typeref:struct:__anon47
+lxl_dfss_upstream_srv_conf_s	dfs/storage/lxl_dfss_upstream.h	/^struct lxl_dfss_upstream_srv_conf_s {$/;"	s
+lxl_dfss_upstream_srv_conf_t	dfs/storage/lxl_dfss_upstream.h	/^typedef struct lxl_dfss_upstream_srv_conf_s lxl_dfss_upstream_srv_conf_t;$/;"	t	typeref:struct:lxl_dfss_upstream_srv_conf_s
+lxl_dfss_upstream_t	dfs/storage/lxl_dfss.h	/^typedef struct lxl_dfss_upstream_s 	lxl_dfss_upstream_t;$/;"	t	typeref:struct:lxl_dfss_upstream_s
+lxl_dfss_wait_request_handler	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_wait_request_handler(lxl_event_t *rev) $/;"	f	file:
+lxl_dfss_writer	dfs/storage/lxl_dfss_request.c	/^lxl_dfss_writer(lxl_dfss_request_t *r)$/;"	f	file:
+lxl_dfst_area_array	dfs/tracker/lxl_dfst_idc.c	/^lxl_array1_t  lxl_dfst_area_array;$/;"	v
+lxl_dfst_block	dfs/tracker/lxl_dfst.c	/^lxl_dfst_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_block_reading	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_block_reading(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_body_handler_pt	dfs/tracker/lxl_dfst_request.h	/^typedef int	 (* lxl_dfst_body_handler_pt)		 (lxl_dfst_request_t *r);$/;"	t
+lxl_dfst_client_body_handler_pt	dfs/tracker/lxl_dfst_request.h	/^typedef void (* lxl_dfst_client_body_handler_pt) (lxl_dfst_request_t *r);$/;"	t
+lxl_dfst_close_connection	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_close_connection(lxl_connection_t *c)$/;"	f	file:
+lxl_dfst_close_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_close_request(lxl_dfst_request_t *r, lxl_int_t rc)$/;"	f	file:
+lxl_dfst_commands	dfs/tracker/lxl_dfst.c	/^static lxl_command_t lxl_dfst_commands[] = {$/;"	v	file:
+lxl_dfst_conf_ctx_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_conf_ctx_t;$/;"	t	typeref:struct:__anon60
+lxl_dfst_conf_get_module_main_conf	dfs/tracker/lxl_dfst_core_module.h	72;"	d
+lxl_dfst_core_commands	dfs/tracker/lxl_dfst_core_module.c	/^static lxl_command_t lxl_dfst_core_commands[] = {$/;"	v	file:
+lxl_dfst_core_init	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_core_init(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_dfst_core_listen	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_core_main_conf_t	dfs/tracker/lxl_dfst_core_module.h	/^}lxl_dfst_core_main_conf_t;$/;"	t	typeref:struct:__anon65
+lxl_dfst_core_module	dfs/tracker/lxl_dfst_core_module.c	/^lxl_module_t lxl_dfst_core_module = {$/;"	v
+lxl_dfst_core_module_ctx	dfs/tracker/lxl_dfst_core_module.c	/^static lxl_dfst_module_t lxl_dfst_core_module_ctx = {$/;"	v	file:
+lxl_dfst_core_server	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_core_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_core_srv_conf_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_core_srv_conf_t;$/;"	t	typeref:struct:__anon64
+lxl_dfst_create_main_conf	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_create_main_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfst_create_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_create_request(lxl_connection_t *c)$/;"	f	file:
+lxl_dfst_create_srv_conf	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_create_srv_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfst_delete_handle_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_delete_handle_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_do_read_client_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_do_read_client_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_download_handle_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_download_handle_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_empty_handler	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_empty_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfst_event_handler_pt	dfs/tracker/lxl_dfst_request.h	/^typedef void (*lxl_dfst_event_handler_pt) (lxl_dfst_request_t *r);$/;"	t
+lxl_dfst_fid_hash	dfs/tracker/lxl_dfst.c	/^lxl_hash1_t	lxl_dfst_fid_hash;$/;"	v
+lxl_dfst_fid_t	dfs/tracker/lxl_dfst_idc.h	/^} lxl_dfst_fid_t;$/;"	t	typeref:struct:__anon69
+lxl_dfst_finalize_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_finalize_request(lxl_dfst_request_t *r, lxl_int_t rc)$/;"	f
+lxl_dfst_free_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_free_request(lxl_dfst_request_t *r, lxl_int_t rc)$/;"	f	file:
+lxl_dfst_get_module_main_conf	dfs/tracker/lxl_dfst_core_module.h	69;"	d
+lxl_dfst_get_module_srv_conf	dfs/tracker/lxl_dfst_core_module.h	70;"	d
+lxl_dfst_group_list	dfs/tracker/lxl_dfst.c	/^lxl_list_t  lxl_dfst_group_list;$/;"	v
+lxl_dfst_handler_pt	dfs/tracker/lxl_dfst_request.h	/^typedef void (* lxl_dfst_handler_pt)			 (lxl_dfst_request_t *r);$/;"	t
+lxl_dfst_idc_array	dfs/tracker/lxl_dfst_idc.c	/^lxl_array1_t  lxl_dfst_idc_array;$/;"	v
+lxl_dfst_idc_file	dfs/tracker/lxl_dfst_idc.c	/^lxl_file_t	  lxl_dfst_idc_file;$/;"	v
+lxl_dfst_idc_find	dfs/tracker/lxl_dfst_idc.c	/^lxl_dfst_idc_find(uint16_t idc_id)$/;"	f
+lxl_dfst_idc_list	dfs/tracker/lxl_dfst.c	/^lxl_list_t	lxl_dfst_idc_list;$/;"	v
+lxl_dfst_idc_list	dfs/tracker/lxl_dfst_idc.c	/^lxl_list_t    lxl_dfst_idc_list;$/;"	v
+lxl_dfst_idc_servers_init	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_idc_servers_init()$/;"	f	file:
+lxl_dfst_idc_t	dfs/tracker/lxl_dfst_idc.h	/^} lxl_dfst_idc_t;$/;"	t	typeref:struct:__anon67
+lxl_dfst_in_addr_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_in_addr_t;$/;"	t	typeref:struct:__anon62
+lxl_dfst_init_connection	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_init_connection(lxl_connection_t *c)$/;"	f
+lxl_dfst_init_main_conf	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_init_main_conf(lxl_conf_t *cf, void *conf) $/;"	f	file:
+lxl_dfst_init_srv_conf	dfs/tracker/lxl_dfst_core_module.c	/^lxl_dfst_init_srv_conf(lxl_conf_t *cf, void *data)$/;"	f	file:
+lxl_dfst_init_udp_connection	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_init_udp_connection(lxl_connection_t *c)$/;"	f
+lxl_dfst_listen_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_listen_t;$/;"	t	typeref:struct:__anon61
+lxl_dfst_max_module	dfs/tracker/lxl_dfst.c	/^lxl_uint_t  lxl_dfst_max_module;$/;"	v
+lxl_dfst_module	dfs/tracker/lxl_dfst.c	/^lxl_module_t lxl_dfst_module = {$/;"	v
+lxl_dfst_module_ctx	dfs/tracker/lxl_dfst.c	/^static lxl_core_module_t lxl_dfst_module_ctx = {$/;"	v	file:
+lxl_dfst_module_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_module_t;$/;"	t	typeref:struct:__anon66
+lxl_dfst_one_fid_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_one_fid_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_optimize_server	dfs/tracker/lxl_dfst.c	/^lxl_dfst_optimize_server(lxl_conf_t *cf, lxl_dfst_listen_t *listen)$/;"	f	file:
+lxl_dfst_package_header	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_package_header(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_parse_request	dfs/tracker/lxl_dfst_parse.c	/^lxl_dfst_parse_request(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_parse_udp_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_parse_udp_request(lxl_dfst_request_t *r, lxl_buf_t *b)$/;"	f	file:
+lxl_dfst_port_t	dfs/tracker/lxl_dfst_core_module.h	/^} lxl_dfst_port_t;$/;"	t	typeref:struct:__anon63
+lxl_dfst_process_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_process_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_process_request_header	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_process_request_header(lxl_event_t *rev)$/;"	f	file:
+lxl_dfst_read_client_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_read_client_request_body(lxl_dfst_request_t *r, lxl_dfst_client_body_handler_pt post_handler)$/;"	f
+lxl_dfst_read_client_request_body_handler	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_read_client_request_body_handler(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_read_request_header	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_read_request_header(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_request_body_t	dfs/tracker/lxl_dfst_request.h	/^} lxl_dfst_request_body_t;$/;"	t	typeref:struct:__anon58
+lxl_dfst_request_empty_handler	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_request_empty_handler(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_request_handler	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_request_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfst_request_s	dfs/tracker/lxl_dfst_request.h	/^struct lxl_dfst_request_s {$/;"	s
+lxl_dfst_request_seed	dfs/tracker/lxl_dfst.c	/^uint32_t	lxl_dfst_request_seed = 0;$/;"	v
+lxl_dfst_request_t	dfs/tracker/lxl_dfst.h	/^typedef struct lxl_dfst_request_s   lxl_dfst_request_t;$/;"	t	typeref:struct:lxl_dfst_request_s
+lxl_dfst_send_header	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_send_header(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_send_response	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_send_response(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_add	dfs/tracker/lxl_dfst_idc.c	/^lxl_dfst_storage_add(lxl_dfs_storage_state_t *sstate, lxl_int_t flags)$/;"	f
+lxl_dfst_storage_cmp	dfs/tracker/lxl_dfst_idc.c	/^lxl_dfst_storage_cmp(void *elt1, void *elt2)$/;"	f	file:
+lxl_dfst_storage_commands	dfs/tracker/lxl_dfst_storage.c	/^static lxl_command_t  lxl_dfst_storage_commands[] = {$/;"	v	file:
+lxl_dfst_storage_connect	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_connect(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_storage_create_conf	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_create_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfst_storage_create_request	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_create_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_del	dfs/tracker/lxl_dfst_idc.c	/^lxl_dfst_storage_del(lxl_dfs_storage_state_t *sstate, lxl_int_t flags)$/;"	f
+lxl_dfst_storage_dummy_handler	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_dummy_handler(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_storage_handler	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfst_storage_init	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_init(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_storage_init_conf	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_init_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfst_storage_init_request	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_init_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_lowat_check	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_lowat_check(lxl_conf_t *cf, void *post, void *data)$/;"	f	file:
+lxl_dfst_storage_lowat_post	dfs/tracker/lxl_dfst_storage.c	/^static lxl_conf_post_t  lxl_dfst_storage_lowat_post = { lxl_dfst_storage_lowat_check };$/;"	v	file:
+lxl_dfst_storage_module	dfs/tracker/lxl_dfst_storage.c	/^lxl_module_t  lxl_dfst_storage_module = {$/;"	v
+lxl_dfst_storage_module	dfs/tracker/lxl_dfst_storage.c	/^lxl_module_t  lxl_dfst_storage_module;$/;"	v
+lxl_dfst_storage_module_ctx	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_module_t  lxl_dfst_storage_module_ctx = {$/;"	v
+lxl_dfst_storage_next	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_next(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u, lxl_uint_t ft_type)$/;"	f	file:
+lxl_dfst_storage_pass	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_pass(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_storage_process_header	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_process_header(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_storage_report_fid_handle_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_storage_report_fid_handle_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_report_fid_handle_udp_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_storage_report_fid_handle_udp_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_report_fid_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_storage_report_fid_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_report_state_handle_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_storage_report_state_handle_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_report_state_handle_udp_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_storage_report_state_handle_udp_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_report_state_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_storage_report_state_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_send_request	dfs/tracker/lxl_dfst_storage.c	/^lxl_dfst_storage_send_request(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_storage_srv_conf_t	dfs/tracker/lxl_dfst_storage.c	/^} lxl_dfst_storage_srv_conf_t;$/;"	t	typeref:struct:__anon57	file:
+lxl_dfst_storage_sync_fid_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_storage_sync_fid_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_storage_t	dfs/tracker/lxl_dfst_idc.h	/^} lxl_dfst_storage_t;$/;"	t	typeref:struct:__anon68
+lxl_dfst_tracker_commands	dfs/tracker/lxl_dfst_tracker.c	/^static lxl_command_t  lxl_dfst_tracker_commands[] = {$/;"	v	file:
+lxl_dfst_tracker_connect	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_connect(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_create_conf	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_create_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfst_tracker_create_request	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_create_request(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_dummy_handler	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_dummy_handler(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_finalize_request	dfs/tracker/lxl_dfst_tracker.c	/^static void lxl_dfst_tracker_finalize_request(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u, lxl_int_t rc)$/;"	f	file:
+lxl_dfst_tracker_handler	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfst_tracker_init	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_init(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_tracker_init_conf	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_init_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfst_tracker_init_request	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_init_request(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_lowat_check	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_lowat_check(lxl_conf_t *cf, void *post, void *data)$/;"	f	file:
+lxl_dfst_tracker_lowat_post	dfs/tracker/lxl_dfst_tracker.c	/^static lxl_conf_post_t  lxl_dfst_tracker_lowat_post = { lxl_dfst_tracker_lowat_check };$/;"	v	file:
+lxl_dfst_tracker_module	dfs/tracker/lxl_dfst_tracker.c	/^lxl_module_t  lxl_dfst_tracker_module = {$/;"	v
+lxl_dfst_tracker_module	dfs/tracker/lxl_dfst_tracker.c	/^lxl_module_t  lxl_dfst_tracker_module;$/;"	v
+lxl_dfst_tracker_module_ctx	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_module_t  lxl_dfst_tracker_module_ctx = {$/;"	v
+lxl_dfst_tracker_next	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_next(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u, lxl_uint_t ft_type)$/;"	f	file:
+lxl_dfst_tracker_next_udp	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_next_udp(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u, lxl_uint_t ft_type)$/;"	f	file:
+lxl_dfst_tracker_pass	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_pass(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_tracker_process_header	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_process_header(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_process_udp_response_body	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_process_udp_response_body(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_process_udp_response_header	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_process_udp_response_header(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_send_request	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_send_request(lxl_dfst_request_t *r, lxl_dfst_upstream_t *u)$/;"	f	file:
+lxl_dfst_tracker_srv_conf_t	dfs/tracker/lxl_dfst_tracker.c	/^} lxl_dfst_tracker_srv_conf_t;$/;"	t	typeref:struct:__anon56	file:
+lxl_dfst_tracker_udp_handler	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_udp_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dfst_tracker_udp_init	dfs/tracker/lxl_dfst_tracker.c	/^lxl_dfst_tracker_udp_init(lxl_dfst_request_t *r)$/;"	f
+lxl_dfst_upload_handle_request	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_upload_handle_request(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_upload_request_body	dfs/tracker/lxl_dfst_request_body.c	/^lxl_dfst_upload_request_body(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_upstream	dfs/tracker/lxl_dfst_upstream.c	/^lxl_dfst_upstream(lxl_conf_t *cf, lxl_command_t *cmd, void *dummy)$/;"	f	file:
+lxl_dfst_upstream_add	dfs/tracker/lxl_dfst_upstream.c	/^lxl_dfst_upstream_add(lxl_conf_t *cf, lxl_url_t *u, lxl_uint_t flags)$/;"	f
+lxl_dfst_upstream_commands	dfs/tracker/lxl_dfst_upstream.c	/^static lxl_command_t  lxl_dfst_upstream_commands[] = {$/;"	v	file:
+lxl_dfst_upstream_conf_t	dfs/tracker/lxl_dfst_upstream.h	/^} lxl_dfst_upstream_conf_t;$/;"	t	typeref:struct:__anon52
+lxl_dfst_upstream_create_main_conf	dfs/tracker/lxl_dfst_upstream.c	/^lxl_dfst_upstream_create_main_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dfst_upstream_free_round_robin_peer	dfs/tracker/lxl_dfst_upstream_round_robin.c	/^lxl_dfst_upstream_free_round_robin_peer(lxl_peer_connection_t *pc, void *data, lxl_uint_t state)$/;"	f
+lxl_dfst_upstream_get_peer	dfs/tracker/lxl_dfst_upstream_round_robin.c	/^lxl_dfst_upstream_get_peer(lxl_dfst_upstream_rr_peer_data_t *rrp)$/;"	f	file:
+lxl_dfst_upstream_get_round_robin_peer	dfs/tracker/lxl_dfst_upstream_round_robin.c	/^lxl_dfst_upstream_get_round_robin_peer(lxl_peer_connection_t *pc, void *data)$/;"	f
+lxl_dfst_upstream_handler_pt	dfs/tracker/lxl_dfst_upstream.h	/^typedef void (*lxl_dfst_upstream_handler_pt) (lxl_dfst_request_t *r, lxl_dfst_upstream_t *u);$/;"	t
+lxl_dfst_upstream_init_main_conf	dfs/tracker/lxl_dfst_upstream.c	/^lxl_dfst_upstream_init_main_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dfst_upstream_init_peer_pt	dfs/tracker/lxl_dfst_upstream.h	/^typedef int (*lxl_dfst_upstream_init_peer_pt) (lxl_dfst_request_t *r, lxl_dfst_upstream_srv_conf_t *us, lxl_dfst_upstream_t *u);$/;"	t
+lxl_dfst_upstream_init_pt	dfs/tracker/lxl_dfst_upstream.h	/^typedef int	(*lxl_dfst_upstream_init_pt) (lxl_conf_t *conf, lxl_dfst_upstream_srv_conf_t *us);$/;"	t
+lxl_dfst_upstream_init_round_robin_peer	dfs/tracker/lxl_dfst_upstream_round_robin.c	/^lxl_dfst_upstream_init_round_robin_peer(lxl_dfst_request_t *r, lxl_dfst_upstream_srv_conf_t *us, lxl_dfst_upstream_t *u)$/;"	f
+lxl_dfst_upstream_init_round_robin_storage	dfs/tracker/lxl_dfst_upstream_round_robin.c	/^lxl_dfst_upstream_init_round_robin_storage(lxl_dfst_request_t *r, lxl_dfst_upstream_srv_conf_t *us)$/;"	f
+lxl_dfst_upstream_main_conf_t	dfs/tracker/lxl_dfst_upstream.h	/^} lxl_dfst_upstream_main_conf_t;$/;"	t	typeref:struct:__anon49
+lxl_dfst_upstream_module	dfs/tracker/lxl_dfst_upstream.c	/^lxl_module_t  lxl_dfst_upstream_module = {$/;"	v
+lxl_dfst_upstream_module_ctx	dfs/tracker/lxl_dfst_upstream.c	/^static lxl_dfst_module_t  lxl_dfst_upstream_module_ctx = {$/;"	v	file:
+lxl_dfst_upstream_peer_t	dfs/tracker/lxl_dfst_upstream.h	/^} lxl_dfst_upstream_peer_t;$/;"	t	typeref:struct:__anon50
+lxl_dfst_upstream_rr_peer_data_t	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^} lxl_dfst_upstream_rr_peer_data_t;$/;"	t	typeref:struct:__anon55
+lxl_dfst_upstream_rr_peer_t	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^} lxl_dfst_upstream_rr_peer_t;$/;"	t	typeref:struct:__anon53
+lxl_dfst_upstream_rr_peers_t	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^} lxl_dfst_upstream_rr_peers_t;$/;"	t	typeref:struct:__anon54
+lxl_dfst_upstream_s	dfs/tracker/lxl_dfst_upstream.h	/^struct lxl_dfst_upstream_s {$/;"	s
+lxl_dfst_upstream_server	dfs/tracker/lxl_dfst_upstream.c	/^lxl_dfst_upstream_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dfst_upstream_server_t	dfs/tracker/lxl_dfst_upstream.h	/^} lxl_dfst_upstream_server_t;$/;"	t	typeref:struct:__anon51
+lxl_dfst_upstream_srv_conf_s	dfs/tracker/lxl_dfst_upstream.h	/^struct lxl_dfst_upstream_srv_conf_s {$/;"	s
+lxl_dfst_upstream_srv_conf_t	dfs/tracker/lxl_dfst_upstream.h	/^typedef struct lxl_dfst_upstream_srv_conf_s lxl_dfst_upstream_srv_conf_t;$/;"	t	typeref:struct:lxl_dfst_upstream_srv_conf_s
+lxl_dfst_upstream_t	dfs/tracker/lxl_dfst.h	/^typedef struct lxl_dfst_upstream_s  lxl_dfst_upstream_t;$/;"	t	typeref:struct:lxl_dfst_upstream_s
+lxl_dfst_wait_request_handler	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_wait_request_handler(lxl_event_t *rev)$/;"	f	file:
+lxl_dfst_writer	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_writer(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_dfst_writer_udp	dfs/tracker/lxl_dfst_request.c	/^lxl_dfst_writer_udp(lxl_dfst_request_t *r)$/;"	f	file:
+lxl_disable_accept_events	event/lxl_event.c	/^lxl_disable_accept_events(lxl_cycle_t *cycle) $/;"	f	file:
+lxl_dns_block	dns/lxl_dns.c	/^lxl_dns_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dns_block_pt	dns/lxl_dns.h	/^typedef lxl_int_t (*lxl_dns_block_pt) (lxl_uint_t n);$/;"	t
+lxl_dns_close_connection	dns/lxl_dns_request.c	/^lxl_dns_close_connection(lxl_connection_t *c)$/;"	f
+lxl_dns_close_request	dns/lxl_dns_request.c	/^lxl_dns_close_request(lxl_dns_request_t *r)$/;"	f
+lxl_dns_commands	dns/lxl_dns.c	/^static lxl_command_t lxl_dns_commands[] = {$/;"	v	file:
+lxl_dns_conf_ctx_t	dns/lxl_dns.h	/^} lxl_dns_conf_ctx_t;$/;"	t	typeref:struct:__anon79
+lxl_dns_conf_get_module_main_conf	dns/lxl_dns.h	75;"	d
+lxl_dns_core_commands	dns/lxl_dns_core_module.c	/^static lxl_command_t lxl_dns_core_commands[] = {$/;"	v	file:
+lxl_dns_core_create_main_conf	dns/lxl_dns_core_module.c	/^lxl_dns_core_create_main_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dns_core_create_srv_conf	dns/lxl_dns_core_module.c	/^lxl_dns_core_create_srv_conf(lxl_conf_t *cf)$/;"	f	file:
+lxl_dns_core_init	dns/lxl_dns_core_module.c	/^lxl_dns_core_init(lxl_cycle_t *cycle)$/;"	f
+lxl_dns_core_init_main_conf	dns/lxl_dns_core_module.c	/^lxl_dns_core_init_main_conf(lxl_conf_t *cf, void *conf)$/;"	f	file:
+lxl_dns_core_listen	dns/lxl_dns_core_module.c	/^lxl_dns_core_listen(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dns_core_main_conf_t	dns/lxl_dns.h	/^} lxl_dns_core_main_conf_t;$/;"	t	typeref:struct:__anon81
+lxl_dns_core_merge_srv_conf	dns/lxl_dns_core_module.c	/^lxl_dns_core_merge_srv_conf(lxl_conf_t *cf, void *parent, void *child)$/;"	f	file:
+lxl_dns_core_module	dns/lxl_dns_core_module.c	/^lxl_module_t lxl_dns_core_module = {$/;"	v
+lxl_dns_core_module_ctx	dns/lxl_dns_core_module.c	/^static lxl_dns_module_t lxl_dns_core_module_ctx = {$/;"	v	file:
+lxl_dns_core_server	dns/lxl_dns_core_module.c	/^lxl_dns_core_server(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_dns_core_srv_conf_t	dns/lxl_dns.h	/^} lxl_dns_core_srv_conf_t;$/;"	t	typeref:struct:__anon82
+lxl_dns_create_request	dns/lxl_dns_request.c	/^lxl_dns_create_request(lxl_connection_t *c)$/;"	f	file:
+lxl_dns_data_dump	dns/lxl_dns_data.c	/^lxl_dns_data_dump(void)$/;"	f
+lxl_dns_data_dump_rr	dns/lxl_dns_data.c	/^lxl_dns_data_dump_rr(char *buffer, lxl_dns_rr_t *rr)$/;"	f	file:
+lxl_dns_data_rebuild	dns/lxl_dns_data.c	/^lxl_dns_data_rebuild(void)$/;"	f
+lxl_dns_data_rebuild_handler	dns/lxl_dns_core_module.c	/^lxl_dns_data_rebuild_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dns_domain_dot_to_label	dns/lxl_dns_parse.c	/^lxl_dns_domain_dot_to_label(char *domain, size_t len)$/;"	f
+lxl_dns_empty_handler	dns/lxl_dns_request.c	/^lxl_dns_empty_handler(lxl_event_t *ev)$/;"	f	file:
+lxl_dns_event	dns/lxl_dns.c	/^lxl_event_t 				lxl_dns_event;$/;"	v
+lxl_dns_event_handler_pt	dns/lxl_dns_request.h	/^typedef void (*lxl_dns_event_handler_pt) (lxl_dns_request_t *r);$/;"	t
+lxl_dns_finalize_request	dns/lxl_dns_request.c	/^lxl_dns_finalize_request(lxl_dns_request_t *r, lxl_uint_t rcode)$/;"	f
+lxl_dns_free_request	dns/lxl_dns_request.c	/^lxl_dns_free_request(lxl_dns_request_t *r)$/;"	f
+lxl_dns_get_rr_strtype	dns/lxl_dns_data.c	/^lxl_dns_get_rr_strtype(uint16_t type)$/;"	f
+lxl_dns_get_rr_type	dns/lxl_dns_data.c	/^lxl_dns_get_rr_type(char *type, size_t len) $/;"	f
+lxl_dns_hash	dns/lxl_dns.c	/^lxl_hash_t 					lxl_dns_hash;$/;"	v
+lxl_dns_header_t	dns/lxl_dns_request.h	/^} lxl_dns_header_t;$/;"	t	typeref:struct:__anon70
+lxl_dns_init_connection	dns/lxl_dns_request.c	/^lxl_dns_init_connection(lxl_connection_t *c)$/;"	f
+lxl_dns_ipv4cmp	dns/lxl_dns_data.c	22;"	d	file:
+lxl_dns_ipv6cmp	dns/lxl_dns_data.c	25;"	d	file:
+lxl_dns_label_to_dot	dns/lxl_dns_data.c	/^lxl_dns_label_to_dot(char *domain_label, char *domain_dot)$/;"	f
+lxl_dns_listen_t	dns/lxl_dns.h	/^} lxl_dns_listen_t;$/;"	t	typeref:struct:__anon80
+lxl_dns_load_named_root	dns/lxl_dns_core_module.c	/^lxl_dns_load_named_root(char *file)$/;"	f	file:
+lxl_dns_max_module	dns/lxl_dns.c	/^lxl_uint_t					lxl_dns_max_module;$/;"	v
+lxl_dns_module	dns/lxl_dns.c	/^lxl_module_t lxl_dns_module = {$/;"	v
+lxl_dns_module_ctx	dns/lxl_dns.c	/^static lxl_core_module_t lxl_dns_module_ctx = {$/;"	v	file:
+lxl_dns_module_t	dns/lxl_dns.h	/^} lxl_dns_module_t;$/;"	t	typeref:struct:__anon83
+lxl_dns_optimize_servers	dns/lxl_dns.c	/^lxl_dns_optimize_servers(lxl_conf_t *cf, lxl_array_t *listens, lxl_int_t tcp)$/;"	f	file:
+lxl_dns_package_answer	dns/lxl_dns_package.c	/^lxl_dns_package_answer(lxl_dns_request_t *r)$/;"	f
+lxl_dns_package_header	dns/lxl_dns_package.c	/^lxl_dns_package_header(lxl_dns_request_t *r)$/;"	f
+lxl_dns_package_name	dns/lxl_dns_package.c	/^lxl_dns_package_name(lxl_dns_request_t *r, char *name, uint16_t nlen)$/;"	f	file:
+lxl_dns_package_request	dns/lxl_dns_package.c	/^lxl_dns_package_request(lxl_dns_request_t *r)$/;"	f
+lxl_dns_package_rrset	dns/lxl_dns_package.c	/^lxl_dns_package_rrset(lxl_dns_request_t *r, lxl_dns_rrset_t *rrset, lxl_uint_t *count)$/;"	f	file:
+lxl_dns_package_soa	dns/lxl_dns_package.c	/^lxl_dns_package_soa(lxl_dns_request_t *r, lxl_dns_rrset_t *rrset)$/;"	f	file:
+lxl_dns_parse_package_to_hex	dns/lxl_dns_parse.c	/^lxl_dns_parse_package_to_hex(char *data, size_t size)$/;"	f
+lxl_dns_parse_request	dns/lxl_dns_parse.c	/^lxl_dns_parse_request(lxl_dns_request_t *r, char *data)$/;"	f
+lxl_dns_parse_root_rr	dns/lxl_dns_core_module.c	/^lxl_dns_parse_root_rr(lxl_int_t argc, char (*argv)[64], lxl_uint_t line, void *args)$/;"	f	file:
+lxl_dns_pool	dns/lxl_dns.c	/^lxl_pool_t                 *lxl_dns_pool;$/;"	v
+lxl_dns_pool	dns/lxl_dns_core_module.c	/^lxl_pool_t 	   			   *lxl_dns_pool;$/;"	v
+lxl_dns_process_request	dns/lxl_dns_request.c	/^lxl_dns_process_request(lxl_dns_request_t *r)$/;"	f	file:
+lxl_dns_process_request_line	dns/lxl_dns_request.c	/^lxl_dns_process_request_line(lxl_event_t *rev)$/;"	f	file:
+lxl_dns_question_part_t	dns/lxl_dns_request.h	/^} lxl_dns_question_part_t ;$/;"	t	typeref:struct:__anon71
+lxl_dns_rdata_create	dns/lxl_dns_data.c	/^lxl_dns_rdata_create(char *data, size_t len, uint16_t type)$/;"	f
+lxl_dns_rdata_find	dns/lxl_dns_data.c	/^lxl_dns_rdata_find(lxl_list_t *head, char *rdata, uint16_t rdlength)$/;"	f
+lxl_dns_rdata_t	dns/lxl_dns_data.h	/^} lxl_dns_rdata_t;$/;"	t	typeref:struct:__anon74
+lxl_dns_rdata_typefind	dns/lxl_dns_data.c	/^lxl_dns_rdata_typefind(lxl_list_t *head, char *rdata, uint16_t rdlength, uint16_t type)$/;"	f
+lxl_dns_request_s	dns/lxl_dns_request.h	/^struct lxl_dns_request_s {$/;"	s
+lxl_dns_request_t	dns/lxl_dns.h	/^typedef struct lxl_dns_request_s	lxl_dns_request_t;$/;"	t	typeref:struct:lxl_dns_request_s
+lxl_dns_root_zone	dns/lxl_dns.c	/^lxl_dns_zone_t             *lxl_dns_root_zone;$/;"	v
+lxl_dns_root_zone	dns/lxl_dns_core_module.c	/^lxl_dns_zone_t 			   *lxl_dns_root_zone;$/;"	v
+lxl_dns_rr_add	dns/lxl_dns_data.c	/^lxl_dns_rr_add(lxl_pool_t *pool, lxl_dns_zone_t *zone, lxl_dns_rr_t *rr)$/;"	f
+lxl_dns_rr_part_t	dns/lxl_dns_request.h	/^} lxl_dns_rr_part_t;$/;"	t	typeref:struct:__anon72
+lxl_dns_rr_t	dns/lxl_dns_data.h	/^} lxl_dns_rr_t;$/;"	t	typeref:struct:__anon75
+lxl_dns_rrset_dnsfind	dns/lxl_dns_data.c	/^lxl_dns_rrset_dnsfind(lxl_list_t *head, char *name, uint16_t nlen, uint16_t type)$/;"	f
+lxl_dns_rrset_find	dns/lxl_dns_data.c	/^lxl_dns_rrset_find(lxl_list_t *head, char *name, uint16_t nlen, uint16_t type, uint16_t flags)$/;"	f
+lxl_dns_rrset_soafind	dns/lxl_dns_data.c	/^lxl_dns_rrset_soafind(lxl_list_t *head)$/;"	f
+lxl_dns_rrset_t	dns/lxl_dns_data.h	/^} lxl_dns_rrset_t;$/;"	t	typeref:struct:__anon77
+lxl_dns_rrset_typefind	dns/lxl_dns_data.c	/^lxl_dns_rrset_typefind(lxl_list_t *head, uint16_t type)$/;"	f
+lxl_dns_soa_t	dns/lxl_dns_data.h	/^} lxl_dns_soa_t;$/;"	t	typeref:struct:__anon76
+lxl_dns_upstream_finalize_request	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_finalize_request(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_uint_t rcode)$/;"	f	file:
+lxl_dns_upstream_handler	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_handler(lxl_event_t *rev)$/;"	f	file:
+lxl_dns_upstream_handler_pt	dns/lxl_dns_upstream.h	/^typedef void (*lxl_dns_upstream_handler_pt) (lxl_dns_request_t *r, lxl_dns_upstream_t *up);$/;"	t
+lxl_dns_upstream_init	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_init(lxl_dns_request_t *r, char *qname, lxl_uint_t qlen) $/;"	f
+lxl_dns_upstream_init_request	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_init_request(lxl_dns_request_t *r)$/;"	f
+lxl_dns_upstream_next	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_next(lxl_dns_request_t *r, lxl_dns_upstream_t *u)$/;"	f
+lxl_dns_upstream_parse_name	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_parse_name(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len)$/;"	f	file:
+lxl_dns_upstream_parse_rdata	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_parse_rdata(lxl_dns_upstream_t *u, char *data, char *buffer, size_t size, size_t *len)$/;"	f	file:
+lxl_dns_upstream_process_response	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_process_response(lxl_dns_request_t *r, lxl_dns_upstream_t *u) $/;"	f	file:
+lxl_dns_upstream_question_t	dns/lxl_dns_upstream.h	/^} lxl_dns_upstream_question_t;$/;"	t	typeref:struct:__anon73
+lxl_dns_upstream_resolver_author	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_resolver_author(lxl_dns_request_t *r, lxl_dns_upstream_t *u)$/;"	f
+lxl_dns_upstream_resolver_author2	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_resolver_author2(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)$/;"	f	file:
+lxl_dns_upstream_resolver_author_ip	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_resolver_author_ip(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone, lxl_dns_rrset_t *ns_rrset, uint16_t flags) $/;"	f	file:
+lxl_dns_upstream_resolver_author_ip2	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_resolver_author_ip2(lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)$/;"	f	file:
+lxl_dns_upstream_resolver_rrset	dns/lxl_dns_upstream.c	/^lxl_dns_upstream_resolver_rrset(lxl_dns_request_t *r, lxl_dns_upstream_t *u, lxl_dns_zone_t *zone)$/;"	f	file:
+lxl_dns_upstream_s	dns/lxl_dns_upstream.h	/^struct lxl_dns_upstream_s {$/;"	s
+lxl_dns_upstream_t	dns/lxl_dns.h	/^typedef struct lxl_dns_upstream_s	lxl_dns_upstream_t;$/;"	t	typeref:struct:lxl_dns_upstream_s
+lxl_dns_wait_request_handler	dns/lxl_dns_request.c	/^lxl_dns_wait_request_handler(lxl_event_t *rev)$/;"	f	file:
+lxl_dns_writer_udp	dns/lxl_dns_request.c	/^lxl_dns_writer_udp(lxl_dns_request_t *r)$/;"	f	file:
+lxl_dns_zone_add	dns/lxl_dns_data.h	140;"	d
+lxl_dns_zone_addfind	dns/lxl_dns_data.c	/^lxl_dns_zone_addfind(char *zname, uint16_t zlen)$/;"	f
+lxl_dns_zone_del	dns/lxl_dns_data.h	144;"	d
+lxl_dns_zone_find	dns/lxl_dns_data.h	137;"	d
+lxl_dns_zone_t	dns/lxl_dns_data.h	/^} lxl_dns_zone_t;$/;"	t	typeref:struct:__anon78
+lxl_dns_zone_update	dns/lxl_dns_data.c	/^lxl_dns_zone_update(lxl_dns_zone_t *zone)$/;"	f
+lxl_done_events	event/lxl_event.h	37;"	d
+lxl_enable_accept_events	event/lxl_event.c	/^lxl_enable_accept_events(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_epoll_add_connection	event/lxl_epoll_module.c	/^lxl_epoll_add_connection(lxl_connection_t *c)$/;"	f	file:
+lxl_epoll_add_event	event/lxl_epoll_module.c	/^lxl_epoll_add_event(lxl_event_t *ev, uint32_t event, lxl_uint_t flags)$/;"	f	file:
+lxl_epoll_commands	event/lxl_epoll_module.c	/^static lxl_command_t lxl_epoll_commands[] = {$/;"	v	file:
+lxl_epoll_conf_t	event/lxl_epoll_module.c	/^} lxl_epoll_conf_t;$/;"	t	typeref:struct:__anon87	file:
+lxl_epoll_create_conf	event/lxl_epoll_module.c	/^lxl_epoll_create_conf(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_epoll_del_connection	event/lxl_epoll_module.c	/^lxl_epoll_del_connection(lxl_connection_t *c, lxl_uint_t flags)$/;"	f	file:
+lxl_epoll_del_event	event/lxl_epoll_module.c	/^lxl_epoll_del_event(lxl_event_t *ev, uint32_t event)$/;"	f	file:
+lxl_epoll_done	event/lxl_epoll_module.c	/^lxl_epoll_done()$/;"	f	file:
+lxl_epoll_init	event/lxl_epoll_module.c	/^lxl_epoll_init(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_epoll_init_conf	event/lxl_epoll_module.c	/^lxl_epoll_init_conf(lxl_cycle_t *cycle, void *conf)$/;"	f	file:
+lxl_epoll_module	event/lxl_epoll_module.c	/^lxl_module_t lxl_epoll_module = {$/;"	v
+lxl_epoll_module_ctx	event/lxl_epoll_module.c	/^lxl_event_module_t lxl_epoll_module_ctx = {$/;"	v
+lxl_epoll_process_events	event/lxl_epoll_module.c	/^lxl_epoll_process_events(lxl_uint_t timer)$/;"	f	file:
+lxl_errlog_commands	core/lxl_log.c	/^static lxl_command_t lxl_errlog_commands[] = {$/;"	v	file:
+lxl_errlog_module	core/lxl_log.c	/^lxl_module_t lxl_errlog_module = {$/;"	v
+lxl_errlog_module_create_conf	core/lxl_log.c	/^lxl_errlog_module_create_conf(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_errlog_module_ctx	core/lxl_log.c	/^static lxl_core_module_t lxl_errlog_module_ctx = {$/;"	v	file:
+lxl_errlog_module_init_conf	core/lxl_log.c	/^lxl_errlog_module_init_conf(lxl_cycle_t *cycle, void *conf)$/;"	f
+lxl_error_log	core/lxl_log.c	/^lxl_error_log(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_event_accept	event/lxl_event.c	/^lxl_event_accept(lxl_event_t *ev)$/;"	f
+lxl_event_accept_udp	event/lxl_event.c	/^lxl_event_accept_udp(lxl_event_t *ev)$/;"	f
+lxl_event_actions	event/lxl_event.c	/^lxl_event_actions_t lxl_event_actions;$/;"	v
+lxl_event_actions_t	event/lxl_event.h	/^} lxl_event_actions_t;$/;"	t	typeref:struct:__anon84
+lxl_event_add_timer	event/lxl_event_timer.h	/^lxl_event_add_timer(lxl_event_t *ev, lxl_uint_t timer)$/;"	f
+lxl_event_conf_t	event/lxl_event.h	/^} lxl_event_conf_t;$/;"	t	typeref:struct:__anon85
+lxl_event_connect_peer	event/lxl_event_connect.c	/^lxl_event_connect_peer(lxl_peer_connection_t *pc)$/;"	f
+lxl_event_connections	event/lxl_event.c	/^lxl_event_connections(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_event_core_commands	event/lxl_event.c	/^static lxl_command_t lxl_event_core_commands[] = {$/;"	v	file:
+lxl_event_core_create_conf	event/lxl_event.c	/^lxl_event_core_create_conf(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_event_core_init_conf	event/lxl_event.c	/^lxl_event_core_init_conf(lxl_cycle_t *cycle, void *conf)$/;"	f	file:
+lxl_event_core_module	event/lxl_event.c	/^lxl_module_t lxl_event_core_module = {$/;"	v
+lxl_event_core_module_ctx	event/lxl_event.c	/^lxl_event_module_t lxl_event_core_module_ctx = {$/;"	v
+lxl_event_del_timer	event/lxl_event_timer.h	/^lxl_event_del_timer(lxl_event_t *ev)$/;"	f
+lxl_event_expire_timers	event/lxl_event_timer.c	/^lxl_event_expire_timers(void)$/;"	f
+lxl_event_find_timer	event/lxl_event_timer.c	/^lxl_event_find_timer(void) $/;"	f
+lxl_event_flags	event/lxl_event.c	/^lxl_uint_t 			lxl_event_flags = LXL_USE_CLEAR_EVENT;$/;"	v
+lxl_event_free_peer_pt	event/lxl_event_connect.h	/^typedef void (*lxl_event_free_peer_pt) (lxl_peer_connection_t *pc, void *data, lxl_uint_t state);$/;"	t
+lxl_event_get_conf	event/lxl_event.h	108;"	d
+lxl_event_get_peer	event/lxl_event_connect.c	/^lxl_event_get_peer(lxl_peer_connection_t *pc, void *data)$/;"	f
+lxl_event_get_peer_pt	event/lxl_event_connect.h	/^typedef int	(*lxl_event_get_peer_pt) (lxl_peer_connection_t *pc, void *data);$/;"	t
+lxl_event_handler_pt	event/lxl_event.h	/^typedef void (*lxl_event_handler_pt) (lxl_event_t *ev);$/;"	t
+lxl_event_ident	event/lxl_event.h	42;"	d
+lxl_event_init_conf	event/lxl_event.c	/^lxl_event_init_conf(lxl_cycle_t *cycle, void *conf)$/;"	f	file:
+lxl_event_max_module	event/lxl_event.c	/^lxl_uint_t			lxl_event_max_module;$/;"	v
+lxl_event_module_init	event/lxl_event.c	/^lxl_event_module_init(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_event_module_t	event/lxl_event.h	/^} lxl_event_module_t;$/;"	t	typeref:struct:__anon86
+lxl_event_process_init	event/lxl_event.c	/^lxl_event_process_init(lxl_cycle_t *cycle)$/;"	f
+lxl_event_s	event/lxl_event.h	/^struct lxl_event_s {$/;"	s
+lxl_event_t	core/lxl_core.h	/^typedef struct lxl_event_s 				lxl_event_t;$/;"	t	typeref:struct:lxl_event_s
+lxl_event_timer_init	event/lxl_event_timer.h	26;"	d
+lxl_event_timer_rbtree	event/lxl_event_timer.c	/^lxl_rbtree_t 		lxl_event_timer_rbtree;$/;"	v
+lxl_event_timer_sentinel	event/lxl_event_timer.c	/^lxl_rbtree_node_t	lxl_event_timer_sentinel;$/;"	v
+lxl_event_udp_connect_peer	event/lxl_event_connect.c	/^lxl_event_udp_connect_peer(lxl_peer_connection_t *pc)$/;"	f
+lxl_event_use	event/lxl_event.c	/^lxl_event_use(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_events_block	event/lxl_event.c	/^lxl_events_block(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_events_commands	event/lxl_event.c	/^static lxl_command_t lxl_events_commands[] = {$/;"	v	file:
+lxl_events_module	event/lxl_event.c	/^lxl_module_t lxl_events_module = {$/;"	v
+lxl_events_module_ctx	event/lxl_event.c	/^static lxl_core_module_t lxl_events_module_ctx = {$/;"	v	file:
+lxl_fd_info	os/unix/lxl_files.h	31;"	d
+lxl_fd_info_n	os/unix/lxl_files.h	32;"	d
+lxl_file_info	os/unix/lxl_files.h	28;"	d
+lxl_file_info_n	os/unix/lxl_files.h	29;"	d
+lxl_file_s	core/lxl_file.h	/^struct lxl_file_s {$/;"	s
+lxl_file_separator	os/unix/lxl_files.h	37;"	d
+lxl_file_size	os/unix/lxl_files.h	35;"	d
+lxl_file_t	core/lxl_core.h	/^typedef struct lxl_file_s				lxl_file_t;$/;"	t	typeref:struct:lxl_file_s
+lxl_flag_t	core/lxl_config.h	/^typedef char				lxl_flag_t;$/;"	t
+lxl_free	os/unix/lxl_alloc.h	85;"	d
+lxl_free_connection	core/lxl_connection.h	92;"	d
+lxl_get_conf	core/lxl_conf_file.h	117;"	d
+lxl_get_connection	core/lxl_connection.c	/^lxl_get_connection(int fd)$/;"	f
+lxl_get_full_name	core/lxl_file.c	/^lxl_get_full_name(lxl_pool_t *pool, lxl_str_t *prefix, lxl_str_t *name)$/;"	f
+lxl_get_options	core/speed.c	/^lxl_get_options(int argc, char *argv[])$/;"	f	file:
+lxl_handle_read_event	event/lxl_event.c	/^lxl_handle_read_event(lxl_event_t *rev)$/;"	f
+lxl_handle_write_event	event/lxl_event.c	/^lxl_handle_write_event(lxl_event_t *wev, size_t lowat)$/;"	f
+lxl_hash	core/lxl_dns_hash.h	47;"	d
+lxl_hash	core/lxl_hash.h	63;"	d
+lxl_hash1_add	core/lxl_hash.c	/^lxl_hash1_add(lxl_hash1_t *hash, char *name, size_t len, void *value)$/;"	f
+lxl_hash1_addfind	core/lxl_hash.c	/^lxl_hash1_addfind(lxl_hash1_t *hash, char *name, size_t len)$/;"	f
+lxl_hash1_del	core/lxl_hash.c	/^lxl_hash1_del(lxl_hash1_t *hash, char *name, size_t len)$/;"	f
+lxl_hash1_find	core/lxl_hash.c	/^lxl_hash1_find(lxl_hash1_t *hash, char *name, size_t len)$/;"	f
+lxl_hash1_init	core/lxl_hash.c	/^lxl_hash1_init(lxl_hash1_t *hash, lxl_uint_t nelts, lxl_hash_key_pt key)$/;"	f
+lxl_hash1_t	core/lxl_hash.h	/^} lxl_hash1_t;$/;"	t	typeref:struct:__anon5
+lxl_hash_add	core/lxl_dns_hash.c	/^lxl_hash_add(lxl_hash_t *hash, char *name, size_t len, void *value)$/;"	f
+lxl_hash_add	core/lxl_hash.c	/^lxl_hash_add(lxl_hash_t *hash, char *name, size_t len, void *value)$/;"	f
+lxl_hash_addfind	core/lxl_dns_hash.c	/^lxl_hash_addfind(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_addfind	core/lxl_hash.c	/^lxl_hash_addfind(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_del	core/lxl_dns_hash.c	/^lxl_hash_del(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_del	core/lxl_hash.c	/^lxl_hash_del(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_elt_s	core/lxl_dns_hash.h	/^struct lxl_hash_elt_s {$/;"	s
+lxl_hash_elt_s	core/lxl_hash.h	/^struct lxl_hash_elt_s {$/;"	s
+lxl_hash_elt_t	core/lxl_dns_hash.h	/^typedef struct lxl_hash_elt_s lxl_hash_elt_t;$/;"	t	typeref:struct:lxl_hash_elt_s
+lxl_hash_elt_t	core/lxl_hash.h	/^typedef struct lxl_hash_elt_s lxl_hash_elt_t;$/;"	t	typeref:struct:lxl_hash_elt_s
+lxl_hash_find	core/lxl_dns_hash.c	/^lxl_hash_find(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_find	core/lxl_hash.c	/^lxl_hash_find(lxl_hash_t *hash, char *name, size_t len)$/;"	f
+lxl_hash_init	core/lxl_dns_hash.c	/^lxl_hash_init(lxl_hash_t *hash, lxl_pool_t *pool, lxl_uint_t nelts, lxl_hash_key_pt key)$/;"	f
+lxl_hash_init	core/lxl_hash.c	/^lxl_hash_init(lxl_hash_t *hash, lxl_pool_t *pool, lxl_uint_t nelts, lxl_hash_key_pt key)$/;"	f
+lxl_hash_key	core/lxl_dns_hash.h	/^lxl_hash_key(u_char *data, size_t len) $/;"	f
+lxl_hash_key	core/lxl_hash.h	/^lxl_hash_key(u_char *data, size_t len) $/;"	f
+lxl_hash_key_lc	core/lxl_dns_hash.h	/^lxl_hash_key_lc(u_char *data, size_t len) $/;"	f
+lxl_hash_key_lc	core/lxl_hash.h	/^lxl_hash_key_lc(u_char *data, size_t len) $/;"	f
+lxl_hash_key_pt	core/lxl_dns_hash.h	/^typedef lxl_uint_t (*lxl_hash_key_pt) (u_char *data, size_t len); $/;"	t
+lxl_hash_key_pt	core/lxl_hash.h	/^typedef lxl_uint_t (*lxl_hash_key_pt) (u_char *data, size_t len); $/;"	t
+lxl_hash_keyvalue_t	core/lxl_dns_hash.h	/^} lxl_hash_keyvalue_t;$/;"	t	typeref:struct:__anon19
+lxl_hash_keyvalue_t	core/lxl_hash.h	/^} lxl_hash_keyvalue_t;$/;"	t	typeref:struct:__anon6
+lxl_hash_t	core/lxl_dns_hash.h	/^} lxl_hash_t;$/;"	t	typeref:struct:__anon18
+lxl_hash_t	core/lxl_hash.h	/^} lxl_hash_t;$/;"	t	typeref:struct:__anon4
+lxl_hextoi	core/lxl_string.h	/^lxl_hextoi(char *line, size_t n)$/;"	f
+lxl_inet_addr	core/lxl_inet.c	/^lxl_inet_addr(char *text, size_t len) $/;"	f
+lxl_init_cycle	core/lxl_cycle.c	/^lxl_init_cycle(lxl_cycle_t *old_cycle)$/;"	f
+lxl_init_events	event/lxl_event.h	36;"	d
+lxl_init_signals	os/unix/lxl_process.c	/^lxl_init_signals(void) $/;"	f
+lxl_int_t	core/lxl_config.h	/^typedef long				lxl_int_t;$/;"	t
+lxl_is_filename	os/unix/lxl_util.c	/^lxl_is_filename(char *filename)$/;"	f
+lxl_is_obs_pathname	os/unix/lxl_util.c	/^lxl_is_obs_pathname(char *pathname)$/;"	f
+lxl_is_obspath	os/unix/lxl_files.h	39;"	d
+lxl_is_path	os/unix/lxl_files.h	40;"	d
+lxl_is_slash	os/unix/lxl_files.h	38;"	d
+lxl_list_add_head	core/lxl_list.h	48;"	d
+lxl_list_add_tail	core/lxl_list.h	54;"	d
+lxl_list_data	core/lxl_list.h	77;"	d
+lxl_list_del	core/lxl_list.h	60;"	d
+lxl_list_empty	core/lxl_list.h	24;"	d
+lxl_list_head	core/lxl_list.h	28;"	d
+lxl_list_headmerge	core/lxl_list.h	71;"	d
+lxl_list_init	core/lxl_list.h	22;"	d
+lxl_list_last	core/lxl_list.h	30;"	d
+lxl_list_merge	core/lxl_list.h	65;"	d
+lxl_list_next	core/lxl_list.h	32;"	d
+lxl_list_prev	core/lxl_list.h	34;"	d
+lxl_list_s	core/lxl_list.h	/^struct lxl_list_s {$/;"	s
+lxl_list_sentinel	core/lxl_list.h	26;"	d
+lxl_list_t	core/lxl_list.h	/^typedef struct lxl_list_s lxl_list_t;$/;"	t	typeref:struct:lxl_list_s
+lxl_listening_s	core/lxl_connection.h	/^typedef struct lxl_listening_s {$/;"	s
+lxl_listening_t	core/lxl_connection.h	/^} lxl_listening_t;$/;"	t	typeref:struct:lxl_listening_s
+lxl_log	core/lxl_log.c	/^lxl_log_t 			lxl_log;	$/;"	v
+lxl_log_cache_sec	core/lxl_log.c	/^static 	lxl_uint_t  lxl_log_cache_sec;$/;"	v	file:
+lxl_log_cache_tm	core/lxl_log.c	/^static struct tm	lxl_log_cache_tm;$/;"	v	typeref:struct:tm	file:
+lxl_log_conf_t	core/lxl_log.h	/^} lxl_log_conf_t;$/;"	t	typeref:struct:__anon10
+lxl_log_core	core/lxl_log.c	/^void lxl_log_core(lxl_uint_t loglevel, int err, const char *format, ...)$/;"	f
+lxl_log_core_flush	core/lxl_log.c	/^void lxl_log_core_flush(lxl_uint_t loglevel, int err, const char *format, ...)$/;"	f
+lxl_log_debug	core/lxl_log.h	79;"	d
+lxl_log_destroy	core/lxl_log.h	71;"	d
+lxl_log_err_levels	core/lxl_log.c	/^const char 			lxl_log_err_levels[][6] = {"emerg", "alert", "error", "warn ", "info ", "debug"};$/;"	v
+lxl_log_error	core/lxl_log.h	73;"	d
+lxl_log_error1	core/lxl_log.h	76;"	d
+lxl_log_get_debug_level	core/lxl_log.c	/^lxl_log_get_debug_level(char *debug_level)$/;"	f	file:
+lxl_log_get_error_level	core/lxl_log.c	/^lxl_log_get_error_level(char *error_level)$/;"	f	file:
+lxl_log_get_flush_flag	core/lxl_log.c	/^lxl_log_get_flush_flag(char *flush)$/;"	f	file:
+lxl_log_init	core/lxl_log.c	/^lxl_log_init(lxl_uint_t error_level, lxl_uint_t debug_level, lxl_uint_t flush, char *prefix)$/;"	f
+lxl_log_s	core/lxl_log.h	/^struct lxl_log_s {$/;"	s
+lxl_log_set_log	core/lxl_log.c	/^lxl_log_set_log(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_log_stderr	core/lxl_log.c	/^lxl_log_stderr(int err, const char *fmt, ...)$/;"	f
+lxl_log_t	core/lxl_core.h	/^typedef struct lxl_log_s 				lxl_log_t;$/;"	t	typeref:struct:lxl_log_s
+lxl_log_time	core/lxl_log.c	/^static char         lxl_log_time[LXL_MAX_TIME_STR];$/;"	v	file:
+lxl_log_tm	core/lxl_log.c	/^static struct tm	lxl_log_tm;$/;"	v	typeref:struct:tm	file:
+lxl_log_write	core/lxl_log.c	/^lxl_log_write(size_t size)$/;"	f	file:
+lxl_master_process_cycle	os/unix/lxl_process.c	/^lxl_master_process_cycle(lxl_cycle_t *cycle)$/;"	f
+lxl_max	core/lxl_core.h	66;"	d
+lxl_max_module	core/speed.c	/^lxl_uint_t lxl_max_module;$/;"	v
+lxl_memalign	os/unix/lxl_alloc.c	/^lxl_memalign(size_t alignment, size_t size)$/;"	f
+lxl_memcpy	core/lxl_log.c	37;"	d	file:
+lxl_memcpy	core/lxl_string.h	168;"	d
+lxl_min	core/lxl_core.h	67;"	d
+lxl_mkdir	os/unix/lxl_files.c	/^lxl_mkdir(char *dir)$/;"	f
+lxl_mkdir	os/unix/lxl_util.c	/^lxl_mkdir(char *dir)$/;"	f
+lxl_module_s	core/lxl_conf_file.h	/^struct lxl_module_s {$/;"	s
+lxl_module_t	core/lxl_core.h	/^typedef struct lxl_module_s				lxl_module_t;$/;"	t	typeref:struct:lxl_module_s
+lxl_modules	core/speed.c	/^lxl_module_t *lxl_modules[] = {$/;"	v
+lxl_msec_t	core/lxl_config.h	/^typedef lxl_uint_t			lxl_msec_t;$/;"	t
+lxl_msleep	core/lxl_times.h	15;"	d
+lxl_ncpu	os/unix/lxl_os.c	/^lxl_int_t lxl_ncpu;$/;"	v
+lxl_nonblocking	os/unix/lxl_socket.c	/^lxl_nonblocking(int fd){$/;"	f
+lxl_nonblocking_n	os/unix/lxl_socket.h	19;"	d
+lxl_null_command	core/lxl_conf_file.h	71;"	d
+lxl_null_string	core/lxl_string.h	21;"	d
+lxl_open_listening_sockets	core/lxl_connection.c	/^lxl_open_listening_sockets(lxl_cycle_t *cycle)$/;"	f
+lxl_os_init	os/unix/lxl_os.c	/^lxl_os_init()$/;"	f
+lxl_palloc	core/lxl_palloc.c	/^lxl_palloc(lxl_pool_t *pool, size_t size)$/;"	f
+lxl_palloc_block	core/lxl_palloc.c	/^lxl_palloc_block(lxl_pool_t *pool, size_t size)$/;"	f	file:
+lxl_palloc_large	core/lxl_palloc.c	/^lxl_palloc_large(lxl_pool_t *pool, size_t size)$/;"	f	file:
+lxl_parse_inet_url	core/lxl_inet.c	/^lxl_parse_inet_url(lxl_pool_t *pool, lxl_url_t *u)$/;"	f	file:
+lxl_parse_url	core/lxl_inet.c	/^lxl_parse_url(lxl_pool_t *pool, lxl_url_t *u)$/;"	f
+lxl_pcalloc	core/lxl_palloc.c	/^lxl_pcalloc(lxl_pool_t *pool, size_t size)$/;"	f
+lxl_peer_connection_s	event/lxl_event_connect.h	/^struct lxl_peer_connection_s {$/;"	s
+lxl_peer_connection_t	event/lxl_event_connect.h	/^typedef struct lxl_peer_connection_s    lxl_peer_connection_t;$/;"	t	typeref:struct:lxl_peer_connection_s
+lxl_pfree	core/lxl_palloc.c	/^lxl_pfree(lxl_pool_t *pool, void *p)$/;"	f
+lxl_pid	os/unix/lxl_process.h	/^pid_t lxl_pid;$/;"	v
+lxl_pmemalign	core/lxl_palloc.c	/^lxl_pmemalign(lxl_pool_t *pool, size_t size, size_t alignment)$/;"	f
+lxl_pnalloc	core/lxl_palloc.c	/^lxl_pnalloc(lxl_pool_t *pool, size_t size)$/;"	f
+lxl_pool_cleanup_add	core/lxl_palloc.c	/^lxl_pool_cleanup_add(lxl_pool_t *p, size_t size)$/;"	f
+lxl_pool_cleanup_pt	core/lxl_palloc.h	/^typedef void (*lxl_pool_cleanup_pt) (void *data);$/;"	t
+lxl_pool_cleanup_s	core/lxl_palloc.h	/^struct lxl_pool_cleanup_s {$/;"	s
+lxl_pool_cleanup_t	core/lxl_palloc.h	/^typedef struct lxl_pool_cleanup_s lxl_pool_cleanup_t;$/;"	t	typeref:struct:lxl_pool_cleanup_s
+lxl_pool_data_t	core/lxl_palloc.h	/^} lxl_pool_data_t;$/;"	t	typeref:struct:__anon3
+lxl_pool_large_s	core/lxl_palloc.h	/^struct lxl_pool_large_s {$/;"	s
+lxl_pool_large_t	core/lxl_palloc.h	/^typedef struct lxl_pool_large_s lxl_pool_large_t;$/;"	t	typeref:struct:lxl_pool_large_s
+lxl_pool_s	core/lxl_palloc.h	/^struct lxl_pool_s {$/;"	s
+lxl_pool_t	core/lxl_core.h	/^typedef struct lxl_pool_s   			lxl_pool_t;$/;"	t	typeref:struct:lxl_pool_s
+lxl_posted_event_list	event/lxl_event.c	/^lxl_list_t			lxl_posted_event_list;$/;"	v
+lxl_prefix	core/speed.c	/^static char    	   *lxl_prefix;$/;"	v	file:
+lxl_process	os/unix/lxl_process.c	/^lxl_uint_t lxl_process;$/;"	v
+lxl_process_events	event/lxl_event.h	35;"	d
+lxl_process_events_and_timers	event/lxl_event.c	/^lxl_process_events_and_timers(lxl_cycle_t *cycle)$/;"	f
+lxl_process_get_status	os/unix/lxl_process.c	/^lxl_process_get_status(void)$/;"	f	file:
+lxl_process_options	core/speed.c	/^lxl_process_options(lxl_cycle_t *cycle)$/;"	f	file:
+lxl_queue_clear	core/lxl_queue.h	/^lxl_queue_clear(lxl_queue_t *q)$/;"	f
+lxl_queue_create	core/lxl_queue.c	/^lxl_queue_create(lxl_pool_t *p, lxl_uint_t n, size_t size)$/;"	f
+lxl_queue_empty	core/lxl_queue.h	55;"	d
+lxl_queue_full	core/lxl_queue.h	56;"	d
+lxl_queue_in	core/lxl_queue.c	/^lxl_queue_in(lxl_queue_t *q)$/;"	f
+lxl_queue_init	core/lxl_queue.h	/^lxl_queue_init(lxl_queue_t *q, lxl_pool_t *p, lxl_uint_t n, size_t size)$/;"	f
+lxl_queue_out	core/lxl_queue.h	/^lxl_queue_out(lxl_queue_t *q)$/;"	f
+lxl_queue_t	core/lxl_queue.h	/^} lxl_queue_t;$/;"	t	typeref:struct:__anon16
+lxl_rbt_black	core/lxl_rbtree.h	51;"	d
+lxl_rbt_copy_color	core/lxl_rbtree.h	54;"	d
+lxl_rbt_is_black	core/lxl_rbtree.h	53;"	d
+lxl_rbt_is_red	core/lxl_rbtree.h	52;"	d
+lxl_rbt_red	core/lxl_rbtree.h	50;"	d
+lxl_rbtree_delete	core/lxl_rbtree.c	/^lxl_rbtree_delete(lxl_rbtree_t *tree, lxl_rbtree_node_t *node)$/;"	f
+lxl_rbtree_init	core/lxl_rbtree.h	38;"	d
+lxl_rbtree_insert	core/lxl_rbtree.c	/^lxl_rbtree_insert(lxl_rbtree_t *tree, lxl_rbtree_node_t *node)$/;"	f
+lxl_rbtree_insert_pt	core/lxl_rbtree.h	/^typedef void (*lxl_rbtree_insert_pt) (lxl_rbtree_node_t *root, lxl_rbtree_node_t *node, lxl_rbtree_node_t *sentinel);$/;"	t
+lxl_rbtree_insert_value	core/lxl_rbtree.c	/^lxl_rbtree_insert_value(lxl_rbtree_node_t *temp, lxl_rbtree_node_t *node, lxl_rbtree_node_t *sentinel)$/;"	f
+lxl_rbtree_key_t	core/lxl_rbtree.h	/^typedef lxl_uint_t  lxl_rbtree_key_t;$/;"	t
+lxl_rbtree_left_rotate	core/lxl_rbtree.c	/^lxl_rbtree_left_rotate(lxl_rbtree_node_t **root, lxl_rbtree_node_t *sentinel, lxl_rbtree_node_t *node)$/;"	f	file:
+lxl_rbtree_max	core/lxl_rbtree.h	/^lxl_rbtree_max(lxl_rbtree_node_t *node, lxl_rbtree_node_t *sentinel)$/;"	f
+lxl_rbtree_min	core/lxl_rbtree.h	/^lxl_rbtree_min(lxl_rbtree_node_t *node, lxl_rbtree_node_t *sentinel)$/;"	f
+lxl_rbtree_node_s	core/lxl_rbtree.h	/^struct lxl_rbtree_node_s {$/;"	s
+lxl_rbtree_node_t	core/lxl_rbtree.h	/^typedef struct lxl_rbtree_node_s  lxl_rbtree_node_t;$/;"	t	typeref:struct:lxl_rbtree_node_s
+lxl_rbtree_order_in	event/lxl_event_timer.c	/^lxl_rbtree_order_in(lxl_rbtree_t *tree)$/;"	f
+lxl_rbtree_order_layer	event/lxl_event_timer.c	/^lxl_rbtree_order_layer(lxl_rbtree_t *tree)$/;"	f
+lxl_rbtree_right_rotate	core/lxl_rbtree.c	/^lxl_rbtree_right_rotate(lxl_rbtree_node_t **root, lxl_rbtree_node_t *sentinel, lxl_rbtree_node_t *node)$/;"	f	file:
+lxl_rbtree_t	core/lxl_rbtree.h	/^} lxl_rbtree_t;$/;"	t	typeref:struct:__anon1
+lxl_read_file	os/unix/lxl_files.c	/^lxl_read_file(lxl_file_t *file, char *buf, size_t size, off_t offset)$/;"	f
+lxl_read_file1	os/unix/lxl_files.c	/^lxl_read_file1(lxl_file_t *file, char *buf, size_t size)$/;"	f
+lxl_read_file_n	os/unix/lxl_files.h	22;"	d
+lxl_readn	os/unix/lxl_socket.c	/^lxl_readn(int fd, char *buf, size_t size)$/;"	f
+lxl_recv	os/unix/lxl_socket.c	/^lxl_recv(lxl_connection_t *c, char *buf, size_t size)$/;"	f
+lxl_recv_pt	core/lxl_connection.h	/^typedef ssize_t (*lxl_recv_pt)	(lxl_connection_t *c, char *buf, size_t len);$/;"	t
+lxl_recvfrom	os/unix/lxl_socket.c	/^lxl_recvfrom(lxl_connection_t *c, char *buf, size_t size)$/;"	f
+lxl_recvfrom_peer	os/unix/lxl_socket.c	/^lxl_recvfrom_peer(lxl_connection_t *c, char *buf, size_t size)$/;"	f
+lxl_reset_pool	core/lxl_palloc.c	/^lxl_reset_pool(lxl_pool_t *pool)$/;"	f
+lxl_send	os/unix/lxl_socket.c	/^lxl_send(lxl_connection_t *c, char *buf, size_t size) $/;"	f
+lxl_send_lowat	event/lxl_event.c	/^lxl_send_lowat(lxl_connection_t *c, size_t lowat)$/;"	f	file:
+lxl_send_pt	core/lxl_connection.h	/^typedef ssize_t (*lxl_send_pt)	(lxl_connection_t *c, char *buf, size_t len);$/;"	t
+lxl_sendto	os/unix/lxl_socket.c	/^lxl_sendto(lxl_connection_t *c, char *buf, size_t size) $/;"	f
+lxl_set_worker_process	core/speed.c	/^lxl_set_worker_process(lxl_conf_t *cf, lxl_command_t *cmd, void *conf)$/;"	f	file:
+lxl_setr_core	os/unix/lxl_util.c	/^lxl_setr_core(void)$/;"	f
+lxl_setr_nofile	os/unix/lxl_util.c	/^lxl_setr_nofile(size_t rlim)$/;"	f
+lxl_show_help	core/speed.c	/^static lxl_uint_t 	lxl_show_help;$/;"	v	file:
+lxl_show_version	core/speed.c	/^static lxl_uint_t 	lxl_show_version;$/;"	v	file:
+lxl_signal_handler	os/unix/lxl_process.c	/^lxl_signal_handler(int signo)$/;"	f
+lxl_signal_t	os/unix/lxl_process.c	/^} lxl_signal_t;$/;"	t	typeref:struct:__anon88	file:
+lxl_sleep	core/lxl_times.h	14;"	d
+lxl_slist_add	core/lxl_slist.h	31;"	d
+lxl_slist_add_head	core/lxl_slist.h	35;"	d
+lxl_slist_data	core/lxl_slist.h	42;"	d
+lxl_slist_del	core/lxl_slist.h	39;"	d
+lxl_slist_empty	core/lxl_slist.h	23;"	d
+lxl_slist_head	core/lxl_slist.h	27;"	d
+lxl_slist_init	core/lxl_slist.h	21;"	d
+lxl_slist_next	core/lxl_slist.h	29;"	d
+lxl_slist_s	core/lxl_slist.h	/^struct lxl_slist_s {$/;"	s
+lxl_slist_sentinel	core/lxl_slist.h	25;"	d
+lxl_slist_t	core/lxl_slist.h	/^typedef struct lxl_slist_s lxl_slist_t;$/;"	t	typeref:struct:lxl_slist_s
+lxl_stack_data	core/lxl_stack.h	29;"	d
+lxl_stack_empty	core/lxl_stack.h	23;"	d
+lxl_stack_init	core/lxl_stack.h	21;"	d
+lxl_stack_pop	core/lxl_stack.h	/^lxl_stack_pop(lxl_stack_t *h)$/;"	f
+lxl_stack_push	core/lxl_stack.h	25;"	d
+lxl_stack_s	core/lxl_stack.h	/^struct lxl_stack_s {$/;"	s
+lxl_stack_t	core/lxl_stack.h	/^typedef struct lxl_stack_s lxl_stack_t;$/;"	t	typeref:struct:lxl_stack_s
+lxl_stack_top	core/lxl_stack.h	/^lxl_stack_top(lxl_stack_t *h)$/;"	f
+lxl_start_worker_process	os/unix/lxl_process.c	/^lxl_start_worker_process(lxl_cycle_t *cycle, lxl_int_t n)$/;"	f	file:
+lxl_str16cmp	core/lxl_string.h	50;"	d
+lxl_str4cmp	core/lxl_string.h	47;"	d
+lxl_str_memcpy	core/lxl_string.h	/^lxl_str_memcpy(lxl_str_t *d, char *s, size_t n)$/;"	f
+lxl_str_null	core/lxl_string.h	23;"	d
+lxl_str_set	core/lxl_string.h	22;"	d
+lxl_str_t	core/lxl_string.h	/^} lxl_str_t;$/;"	t	typeref:struct:__anon2
+lxl_strerror_init	core/lxl_log.c	/^lxl_strerror_init(void)$/;"	f
+lxl_string	core/lxl_string.h	20;"	d
+lxl_strlower	core/lxl_string.h	27;"	d
+lxl_strncasecmp	core/lxl_string.h	/^lxl_strncasecmp(char *s1, char *s2, size_t n)$/;"	f
+lxl_strncmp	core/lxl_string.h	/^lxl_strncmp(char *s1, char *s2, size_t n)$/;"	f
+lxl_strtrim	core/lxl_string.c	/^lxl_strtrim(char *buf, char *cset)$/;"	f
+lxl_strupper	core/lxl_string.h	37;"	d
+lxl_sys_errlist	core/lxl_log.c	/^static char 	  **lxl_sys_errlist;$/;"	v	file:
+lxl_sys_nerr	core/lxl_log.c	/^static lxl_uint_t  	lxl_sys_nerr;$/;"	v	file:
+lxl_tcp_connect	os/unix/lxl_socket.c	/^lxl_tcp_connect(char *ip, uint16_t port, lxl_int_t nb)$/;"	f
+lxl_tcp_listen	os/unix/lxl_socket.c	/^lxl_tcp_listen(char *ip, uint16_t port, lxl_int_t nb)$/;"	f
+lxl_tcp_socket	os/unix/lxl_socket.c	/^lxl_tcp_socket(void)$/;"	f
+lxl_time	core/lxl_times.h	21;"	d
+lxl_time_init	core/lxl_times.c	/^lxl_time_init(void)$/;"	f
+lxl_time_update	core/lxl_times.c	/^lxl_time_update()$/;"	f
+lxl_tolower	core/lxl_string.h	24;"	d
+lxl_toupper	core/lxl_string.h	25;"	d
+lxl_udp_listen	os/unix/lxl_socket.c	/^lxl_udp_listen(char *ip, uint16_t port, lxl_int_t nb)$/;"	f
+lxl_udp_socket	os/unix/lxl_socket.c	/^lxl_udp_socket(void)$/;"	f
+lxl_uint_t	core/lxl_config.h	/^typedef unsigned long		lxl_uint_t;$/;"	t
+lxl_unix_connect	os/unix/lxl_socket.c	/^lxl_unix_connect(char *path, int nb)$/;"	f
+lxl_unix_listen	os/unix/lxl_socket.c	/^lxl_unix_listen(char *path)$/;"	f
+lxl_unknown_error	core/lxl_log.c	/^static char 	   *lxl_unknown_error = "Unknown error";$/;"	v	file:
+lxl_url_t	core/lxl_inet.h	/^} lxl_url_t;$/;"	t	typeref:struct:__anon12
+lxl_use_accept_mutex	event/lxl_event.c	/^lxl_uint_t			lxl_use_accept_mutex;$/;"	v
+lxl_worker_process_cycle	os/unix/lxl_process.c	/^lxl_worker_process_cycle(lxl_cycle_t *cycle, lxl_int_t worker)$/;"	f	file:
+lxl_worker_process_init	os/unix/lxl_process.c	/^lxl_worker_process_init(lxl_cycle_t *cycle, lxl_int_t worker)$/;"	f	file:
+lxl_write_file	os/unix/lxl_files.c	/^lxl_write_file(lxl_file_t *file, char *buf, size_t size)$/;"	f
+lxl_write_file_n	os/unix/lxl_files.h	26;"	d
+lxl_write_file_offset	os/unix/lxl_files.c	/^lxl_write_file_offset(lxl_file_t *file, char *buf, size_t size, off_t offset)$/;"	f
+lxl_writen	os/unix/lxl_socket.c	/^lxl_writen(int fd, char *buf, size_t size)$/;"	f
+main	core/speed.c	/^int main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs1.c	/^main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_client.c	/^main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_client_download.c	/^main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_client_upload.c	/^main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_read.c	/^int main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_tracker.c	/^main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfs_write1.c	/^int main(int argc, char *argv[])$/;"	f
+main	dfs/test/dfss_read1.c	/^int main(int argc, char *argv[])$/;"	f
+main	event/lxl_event_timer.c	/^int main(int argc, char *argv[])$/;"	f
+main_conf	dfs/storage/lxl_dfss_core_module.h	/^	void					 **main_conf;$/;"	m	struct:__anon32
+main_conf	dfs/storage/lxl_dfss_request.h	/^	void				      **main_conf;$/;"	m	struct:lxl_dfss_request_s
+main_conf	dfs/tracker/lxl_dfst_core_module.h	/^	void	**main_conf;$/;"	m	struct:__anon60
+main_conf	dfs/tracker/lxl_dfst_request.h	/^	void				     	   **main_conf;$/;"	m	struct:lxl_dfst_request_s
+main_conf	dns/lxl_dns.h	/^	void 		**main_conf;$/;"	m	struct:__anon79
+max	core/lxl_palloc.h	/^	unsigned max;$/;"	m	struct:lxl_pool_s
+max_fails	dfs/storage/lxl_dfss_upstream.h	/^	lxl_uint_t  max_fails;$/;"	m	struct:__anon47
+max_fails	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t		  max_fails;$/;"	m	struct:__anon41
+max_fails	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_uint_t	max_fails;$/;"	m	struct:__anon51
+max_fails	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t 		  max_fails;$/;"	m	struct:__anon53
+merge_srv_conf	dns/lxl_dns.h	/^	char	*(*merge_srv_conf)		(lxl_conf_t *cf, void *parent, void *child);$/;"	m	struct:__anon83
+mlen	dns/lxl_dns_data.h	/^	uint16_t 		mlen;$/;"	m	struct:__anon76
+mname	dns/lxl_dns_data.h	/^	char 			*mname;$/;"	m	struct:__anon76
+module_type	core/lxl_conf_file.h	/^	lxl_uint_t 		 	module_type;$/;"	m	struct:lxl_conf_s
+nalloc	core/lxl_array.h	/^	lxl_uint_t 	 nalloc;$/;"	m	struct:__anon14
+nalloc	core/lxl_array.h	/^	lxl_uint_t 	 nalloc;$/;"	m	struct:__anon15
+nalloc	core/lxl_queue.h	/^	lxl_uint_t nalloc;$/;"	m	struct:__anon16
+name	core/lxl_conf_file.h	/^	char 	   	       *name;$/;"	m	struct:lxl_conf_s
+name	core/lxl_conf_file.h	/^	lxl_str_t 	name;$/;"	m	struct:__anon7
+name	core/lxl_conf_file.h	/^	lxl_str_t 	name;$/;"	m	struct:lxl_command_s
+name	core/lxl_dns_hash.h	/^	char *name;$/;"	m	struct:__anon19
+name	core/lxl_dns_hash.h	/^	char name[0];$/;"	m	struct:lxl_hash_elt_s
+name	core/lxl_file.h	/^	lxl_str_t 	 name;$/;"	m	struct:lxl_file_s
+name	core/lxl_hash.h	/^	char 			  name[0];$/;"	m	struct:lxl_hash_elt_s
+name	core/lxl_hash.h	/^	char  			 *name;$/;"	m	struct:__anon6
+name	core/lxl_inet.h	/^	char			     name[24]; 	\/* 255.255.255.255:65535 *\/$/;"	m	struct:__anon11
+name	dfs/storage/lxl_dfss_core_module.h	/^	lxl_str_t	name;$/;"	m	struct:__anon29
+name	dfs/storage/lxl_dfss_upstream.h	/^	char 	   *name;$/;"	m	struct:__anon47
+name	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	char			 *name;$/;"	m	struct:__anon41
+name	dfs/tracker/lxl_dfst_upstream.h	/^	char	   *name;$/;"	m	struct:__anon51
+name	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	char 			 *name;$/;"	m	struct:__anon53
+name	dns/lxl_dns.h	/^	lxl_str_t name;$/;"	m	struct:__anon83
+name	dns/lxl_dns_data.h	/^	char			name[0];$/;"	m	struct:__anon76
+name	dns/lxl_dns_data.h	/^	char	 		*name;$/;"	m	struct:__anon75
+name	dns/lxl_dns_data.h	/^	char 			name[0];$/;"	m	struct:__anon77
+name	event/lxl_event.h	/^	char 	  *name;$/;"	m	struct:__anon85
+name	event/lxl_event.h	/^	lxl_str_t 		*name;$/;"	m	struct:__anon86
+name	event/lxl_event_connect.h	/^	char 				   *name;$/;"	m	struct:lxl_peer_connection_s
+name	os/unix/lxl_process.c	/^	char   *name;$/;"	m	struct:__anon88	file:
+named_root_file	dns/lxl_dns.h	/^	lxl_str_t	named_root_file;$/;"	m	struct:__anon81
+nelts	core/lxl_array.h	/^	lxl_uint_t 	 nelts;$/;"	m	struct:__anon14
+nelts	core/lxl_array.h	/^	lxl_uint_t 	 nelts;$/;"	m	struct:__anon15
+nelts	core/lxl_dns_hash.h	/^	lxl_uint_t 		nelts;	$/;"	m	struct:__anon18
+nelts	core/lxl_hash.h	/^	lxl_uint_t 		  nelts;$/;"	m	struct:__anon4
+nelts	core/lxl_hash.h	/^	lxl_uint_t 		  nelts;$/;"	m	struct:__anon5
+nevents	event/lxl_epoll_module.c	/^static lxl_uint_t 	nevents;$/;"	v	file:
+new_request	dfs/storage/lxl_dfss_request.h	/^	unsigned 					new_request:1;$/;"	m	struct:lxl_dfss_request_s
+next	core/lxl_dns_hash.h	/^	lxl_hash_elt_t *next;  $/;"	m	struct:lxl_hash_elt_s
+next	core/lxl_hash.h	/^	lxl_hash_elt_t  *next;  $/;"	m	struct:lxl_hash_elt_s
+next	core/lxl_list.h	/^	lxl_list_t *next;$/;"	m	struct:lxl_list_s
+next	core/lxl_palloc.h	/^	lxl_pool_cleanup_t *next;$/;"	m	struct:lxl_pool_cleanup_s
+next	core/lxl_palloc.h	/^	lxl_pool_large_t *next;$/;"	m	struct:lxl_pool_large_s
+next	core/lxl_palloc.h	/^	lxl_pool_t *next;$/;"	m	struct:__anon3
+next	core/lxl_slist.h	/^	lxl_slist_t *next;$/;"	m	struct:lxl_slist_s
+next	core/lxl_stack.h	/^	lxl_stack_t *next;$/;"	m	struct:lxl_stack_s
+nlen	dns/lxl_dns_data.h	/^	uint16_t 		nlen;$/;"	m	struct:__anon75
+nlen	dns/lxl_dns_data.h	/^	uint16_t 		nlen;$/;"	m	struct:__anon76
+nlen	dns/lxl_dns_data.h	/^	uint16_t 		nlen;$/;"	m	struct:__anon77
+no_port	core/lxl_inet.h	/^	unsigned 	no_port:1;$/;"	m	struct:__anon12
+no_port	dfs/storage/lxl_dfss_upstream.h	/^	lxl_uint_t 		          no_port;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+no_port	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_uint_t				  no_port;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+no_resolve	core/lxl_inet.h	/^	unsigned 	no_resolve:1;$/;"	m	struct:__anon12
+nonblocking	core/lxl_connection.h	/^	unsigned 			nonblocking:1;$/;"	m	struct:lxl_listening_s
+ns_rrset	dns/lxl_dns_upstream.h	/^	lxl_dns_rrset_t 	   *ns_rrset;$/;"	m	struct:lxl_dns_upstream_s
+nscount	dns/lxl_dns_request.h	/^	uint16_t 					nscount;$/;"	m	struct:lxl_dns_request_s
+nscount	dns/lxl_dns_request.h	/^	uint16_t nscount;$/;"	m	struct:__anon70
+number	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t 					 number;$/;"	m	struct:__anon42
+number	dfs/tracker/lxl_dfst_request.h	/^	lxl_uint_t						 number;$/;"	m	struct:lxl_dfst_request_s
+number	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t					 number;$/;"	m	struct:__anon54
+offset	core/lxl_conf_file.h	/^	lxl_uint_t 	offset;$/;"	m	struct:lxl_command_s
+offset	core/lxl_file.h	/^	off_t 		 offset;$/;"	m	struct:lxl_file_s
+onebuf	dfs/storage/lxl_dfss_request.h	/^	unsigned 					onebuf:1;$/;"	m	struct:lxl_dfss_request_s
+out	dfs/storage/lxl_dfss_request.h	/^	lxl_buf_t 				   *out;$/;"	m	struct:lxl_dfss_request_s
+out	dfs/tracker/lxl_dfst_request.h	/^	lxl_buf_t				  		*out;$/;"	m	struct:lxl_dfst_request_s
+parent	core/lxl_rbtree.h	/^	lxl_rbtree_node_t *parent;$/;"	m	struct:lxl_rbtree_node_s
+peer	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_peer_t  peer;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+peer	dfs/storage/lxl_dfss_upstream.h	/^	lxl_peer_connection_t 		  	   peer;$/;"	m	struct:lxl_dfss_upstream_s
+peer	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_dfss_upstream_rr_peer_t  peer[1];$/;"	m	struct:__anon42
+peer	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_peer_t  peer;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+peer	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_peer_connection_t		  peer;$/;"	m	struct:lxl_dfst_upstream_s
+peer	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_dfst_upstream_rr_peer_t  peer[1];$/;"	m	struct:__anon54
+peer	dns/lxl_dns_upstream.h	/^	lxl_peer_connection_t 	   peer;$/;"	m	struct:lxl_dns_upstream_s
+peers	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_dfss_upstream_rr_peers_t  *peers;$/;"	m	struct:__anon43
+peers	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_dfst_upstream_rr_peers_t  *peers;$/;"	m	struct:__anon55
+pool	core/lxl_array.h	/^	lxl_pool_t  *pool;$/;"	m	struct:__anon14
+pool	core/lxl_conf_file.h	/^	lxl_pool_t 	       *pool;$/;"	m	struct:lxl_conf_s
+pool	core/lxl_connection.h	/^	lxl_pool_t 		   *pool;$/;"	m	struct:lxl_connection_s
+pool	core/lxl_cycle.h	/^	lxl_pool_t 		  *pool;$/;"	m	struct:lxl_cycle_s
+pool	core/lxl_dns_hash.h	/^	lxl_pool_t     *pool;$/;"	m	struct:__anon18
+pool	core/lxl_hash.h	/^	lxl_pool_t       *pool;$/;"	m	struct:__anon4
+pool	core/lxl_queue.h	/^	lxl_pool_t *pool;$/;"	m	struct:__anon16
+pool	dfs/storage/lxl_dfss_request.h	/^	lxl_pool_t 				   *pool;$/;"	m	struct:lxl_dfss_request_s
+pool	dfs/tracker/lxl_dfst_request.h	/^	lxl_pool_t				  		*pool;$/;"	m	struct:lxl_dfst_request_s
+pool	dns/lxl_dns_request.h	/^	lxl_pool_t 					*pool;$/;"	m	struct:lxl_dns_request_s
+pool_size	core/lxl_connection.h	/^	size_t 				pool_size;	\/* 1024 dns *\/$/;"	m	struct:lxl_listening_s
+port	core/lxl_inet.h	/^	in_port_t	port;$/;"	m	struct:__anon12
+port	dfs/lxl_dfs.h	/^	uint16_t	 port;$/;"	m	struct:__anon25
+port	dfs/lxl_dfs.h	/^	uint16_t	 port;$/;"	m	struct:__anon26
+port	dfs/lxl_dfs.h	/^	uint16_t	 port;$/;"	m	struct:__anon27
+port	dfs/lxl_dfs.h	/^	uint16_t 	 port;$/;"	m	struct:__anon24
+port	dfs/lxl_dfs.h	/^	uint16_t     port;$/;"	m	struct:__anon23
+port	dfs/storage/lxl_dfss_upstream.h	/^	in_port_t 				  port;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+port	dfs/tracker/lxl_dfst_idc.h	/^	uint16_t	  port;$/;"	m	struct:__anon68
+port	dfs/tracker/lxl_dfst_upstream.h	/^	in_port_t				  port;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+pos	core/lxl_buf.h	/^	char 	   *pos;$/;"	m	struct:__anon13
+pos	dns/lxl_dns_request.h	/^	char						*pos;$/;"	m	struct:lxl_dns_request_s
+post	core/lxl_conf_file.h	/^	void 	   *post;$/;"	m	struct:lxl_command_s
+post_handler	core/lxl_conf_file.h	/^	lxl_conf_post_handler_pt post_handler;$/;"	m	struct:__anon9
+post_handler	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_client_body_handler_pt  post_handler;$/;"	m	struct:__anon39
+post_handler	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_client_body_handler_pt  post_handler;$/;"	m	struct:__anon58
+prefix	core/lxl_cycle.h	/^	lxl_str_t		   prefix;$/;"	m	struct:lxl_cycle_s
+prev	core/lxl_list.h	/^	lxl_list_t *prev;$/;"	m	struct:lxl_list_s
+priority	core/lxl_cycle.h	/^	lxl_int_t 		  priority;$/;"	m	struct:__anon17
+process_events	event/lxl_event.h	/^	int 	(*process_events) (lxl_uint_t timer);$/;"	m	struct:__anon84
+qclass	dns/lxl_dns_request.h	/^	uint16_t qclass;$/;"	m	struct:__anon71
+qclen	dns/lxl_dns_upstream.h	/^	lxl_uint_t 				qclen;$/;"	m	struct:lxl_dns_upstream_s
+qcname	dns/lxl_dns_upstream.h	/^	char 				   *qcname;$/;"	m	struct:lxl_dns_upstream_s
+qdcount	dns/lxl_dns_request.h	/^	uint16_t qdcount;$/;"	m	struct:__anon70
+qlen	dns/lxl_dns_request.h	/^	uint16_t 					qlen;$/;"	m	struct:lxl_dns_request_s
+qlen	dns/lxl_dns_upstream.h	/^	lxl_uint_t 					qlen;$/;"	m	struct:__anon73
+qlen	dns/lxl_dns_upstream.h	/^	lxl_uint_t 				qlen;$/;"	m	struct:lxl_dns_upstream_s
+qname	dns/lxl_dns_request.h	/^	char 						*qname;$/;"	m	struct:lxl_dns_request_s
+qname	dns/lxl_dns_upstream.h	/^	char 					   *qname;$/;"	m	struct:__anon73
+qname	dns/lxl_dns_upstream.h	/^	char 				   *qname;$/;"	m	struct:lxl_dns_upstream_s
+qname_flags	dns/lxl_dns_upstream.h	/^	lxl_uint_t 					qname_flags;$/;"	m	struct:__anon73
+qname_flags	dns/lxl_dns_upstream.h	/^	lxl_uint_t 				qname_flags;	\/* cname ns *\/$/;"	m	struct:lxl_dns_upstream_s
+qtype	dfs/lxl_dfs.h	/^	uint16_t	 qtype;$/;"	m	struct:__anon20
+qtype	dns/lxl_dns_request.h	/^	uint16_t qtype;$/;"	m	struct:__anon71
+question_part	dns/lxl_dns_request.h	/^	lxl_dns_question_part_t  	*question_part;$/;"	m	struct:lxl_dns_request_s
+question_part	dns/lxl_dns_upstream.h	/^	lxl_dns_question_part_t 	question_part;$/;"	m	struct:__anon73
+question_part	dns/lxl_dns_upstream.h	/^	lxl_dns_question_part_t question_part;$/;"	m	struct:lxl_dns_upstream_s
+question_stack	dns/lxl_dns_upstream.h	/^	lxl_stack_t 			question_stack;$/;"	m	struct:lxl_dns_upstream_s
+rcode	dfs/lxl_dfs.h	/^	uint16_t 	 rcode;$/;"	m	struct:__anon21
+rcode	dns/lxl_dns_request.h	/^	uint16_t 					rcode;$/;"	m	struct:lxl_dns_request_s
+rcvbuf	core/lxl_connection.h	/^	int 				rcvbuf;$/;"	m	struct:lxl_listening_s
+rcvbuf	event/lxl_event_connect.h	/^	int 			  		rcvbuf;$/;"	m	struct:lxl_peer_connection_s
+rdata	dns/lxl_dns_data.h	/^	char 	 		*rdata;$/;"	m	struct:__anon75
+rdata	dns/lxl_dns_data.h	/^	char 	 		rdata[0];$/;"	m	struct:__anon74
+rdata_list	dns/lxl_dns_data.h	/^	lxl_list_t 		rdata_list;$/;"	m	struct:__anon77
+rdlength	dns/lxl_dns_data.h	/^	uint16_t 		rdlength;$/;"	m	struct:__anon74
+rdlength	dns/lxl_dns_data.h	/^	uint16_t 		rdlength;$/;"	m	struct:__anon75
+rdlength	dns/lxl_dns_request.h	/^	uint16_t rdlength;$/;"	m	struct:__anon72
+read	core/lxl_connection.h	/^	lxl_event_t 	   *read;$/;"	m	struct:lxl_connection_s
+read_event_handler	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_event_handler_pt	read_event_handler;$/;"	m	struct:lxl_dfss_request_s
+read_event_handler	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_handler_pt  	   read_event_handler;$/;"	m	struct:lxl_dfss_upstream_s
+read_event_handler	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_event_handler_pt  		 read_event_handler;$/;"	m	struct:lxl_dfst_request_s
+read_event_handler	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_handler_pt  read_event_handler;$/;"	m	struct:lxl_dfst_upstream_s
+read_event_handler	dns/lxl_dns_request.h	/^	lxl_dns_event_handler_pt 	read_event_handler;$/;"	m	struct:lxl_dns_request_s
+read_event_handler	dns/lxl_dns_upstream.h	/^	lxl_dns_upstream_handler_pt	read_event_handler;$/;"	m	struct:lxl_dns_upstream_s
+read_events	core/lxl_cycle.h	/^	lxl_event_t 	  *read_events;$/;"	m	struct:lxl_cycle_s
+read_timeout	dfs/storage/lxl_dfss_upstream.h	/^	lxl_msec_t					   read_timeout;$/;"	m	struct:__anon48
+read_timeout	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_msec_t					   read_timeout;$/;"	m	struct:__anon52
+ready	event/lxl_event.h	/^	unsigned 			  ready:1;$/;"	m	struct:lxl_event_s
+rear	core/lxl_queue.h	/^	lxl_uint_t rear;$/;"	m	struct:__anon16
+recv	core/lxl_connection.h	/^	lxl_recv_pt 		recv;$/;"	m	struct:lxl_connection_s
+request_body_in_onebuf	dfs/storage/lxl_dfss_request.h	/^	unsigned					request_body_in_onebuf:1;$/;"	m	struct:lxl_dfss_request_s
+request_buf	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_buf_t					 *request_buf;$/;"	m	struct:lxl_dfst_upstream_s
+request_header	dfs/storage/lxl_dfss_request.h	/^	lxl_dfs_request_header_t 	request_header;$/;"	m	struct:lxl_dfss_request_s
+request_header	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfs_request_header_t 	  	   request_header;$/;"	m	struct:lxl_dfss_upstream_s
+request_header	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfs_request_header_t   		 request_header;$/;"	m	struct:lxl_dfst_request_s
+request_header	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfs_request_header_t	  request_header;$/;"	m	struct:lxl_dfst_upstream_s
+request_n	dns/lxl_dns_request.h	/^	uint16_t					request_n;$/;"	m	struct:lxl_dns_request_s
+request_n	dns/lxl_dns_upstream.h	/^	size_t 					request_n;$/;"	m	struct:lxl_dns_upstream_s
+request_send	dfs/storage/lxl_dfss_upstream.h	/^	unsigned 						   request_send:1;$/;"	m	struct:lxl_dfss_upstream_s
+response_buf	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_buf_t					 *response_buf;$/;"	m	struct:lxl_dfst_upstream_s
+response_header	dfs/storage/lxl_dfss_request.h	/^	lxl_dfs_response_header_t	response_header;$/;"	m	struct:lxl_dfss_request_s
+response_header	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfs_response_header_t     	   response_header;$/;"	m	struct:lxl_dfss_upstream_s
+response_header	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfs_response_header_t  		 response_header;$/;"	m	struct:lxl_dfst_request_s
+response_header	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfs_response_header_t	  response_header;$/;"	m	struct:lxl_dfst_upstream_s
+response_n	dns/lxl_dns_upstream.h	/^	size_t  				response_n;$/;"	m	struct:lxl_dns_upstream_s
+rest	dfs/storage/lxl_dfss_request.h	/^	off_t 		 					 rest;$/;"	m	struct:__anon39
+rest	dfs/storage/lxl_dfss_upstream.h	/^	off_t						  	   rest;$/;"	m	struct:lxl_dfss_upstream_s
+rest	dfs/tracker/lxl_dfst_request.h	/^	off_t  							 rest;$/;"	m	struct:__anon58
+rid	dfs/storage/lxl_dfss_request.h	/^	char 					 	rid[24];$/;"	m	struct:lxl_dfss_request_s
+rid	dfs/tracker/lxl_dfst_request.h	/^	char 							 rid[24];$/;"	m	struct:lxl_dfst_request_s
+rid	dns/lxl_dns_request.h	/^	char 						rid[16];$/;"	m	struct:lxl_dns_request_s
+right	core/lxl_rbtree.h	/^	lxl_rbtree_node_t *right;$/;"	m	struct:lxl_rbtree_node_s
+rlen	dns/lxl_dns_data.h	/^	uint16_t 		rlen;$/;"	m	struct:__anon76
+rlimit_nofile	core/lxl_cycle.h	/^	lxl_int_t		  rlimit_nofile;$/;"	m	struct:__anon17
+rname	dns/lxl_dns_data.h	/^	char 			*rname;$/;"	m	struct:__anon76
+root	core/lxl_rbtree.h	/^	lxl_rbtree_node_t *root;$/;"	m	struct:__anon1
+rrset_list	dns/lxl_dns_data.h	/^	lxl_list_t 		rrset_list;$/;"	m	struct:__anon78
+send	core/lxl_connection.h	/^	lxl_send_pt 		send;$/;"	m	struct:lxl_connection_s
+send_lowat	dfs/storage/lxl_dfss_upstream.h	/^	size_t						   send_lowat;$/;"	m	struct:__anon48
+send_lowat	dfs/tracker/lxl_dfst_upstream.h	/^	size_t						   send_lowat;$/;"	m	struct:__anon52
+send_timeout	dfs/storage/lxl_dfss_upstream.h	/^	lxl_msec_t					   send_timeout;$/;"	m	struct:__anon48
+send_timeout	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_msec_t					   send_timeout;$/;"	m	struct:__anon52
+sendfile	core/lxl_connection.h	/^	unsigned 			sendfile:1;$/;"	m	struct:lxl_connection_s
+sentinel	core/lxl_rbtree.h	/^	lxl_rbtree_node_t *sentinel;$/;"	m	struct:__anon1
+server	dfs/storage/lxl_dfss_core_module.h	/^	lxl_dfss_core_srv_conf_t  *server;$/;"	m	struct:__anon37
+server	dfs/tracker/lxl_dfst_core_module.h	/^	lxl_dfst_core_srv_conf_t  *server;$/;"	m	struct:__anon65
+servers	core/lxl_connection.h	/^	void 			   *servers;		\/* lxl_dfss_port_t *\/$/;"	m	struct:lxl_listening_s
+servers	dfs/storage/lxl_dfss_upstream.h	/^	lxl_array_t			 	 *servers;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+servers	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_array_t			 *servers;		\/* lxl_dfst_upstream_server_t *\/$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+servers	dns/lxl_dns.h	/^	lxl_array_t	servers;		\/* lxl_dns_core_srv_conf_t *\/$/;"	m	struct:__anon81
+set	core/lxl_conf_file.h	/^	char 	   *(*set)(lxl_conf_t *cf, lxl_command_t *cmd, void *conf);$/;"	m	struct:lxl_command_s
+signals	os/unix/lxl_process.c	/^lxl_signal_t signals[] = {$/;"	v
+signame	os/unix/lxl_process.c	/^	char   *signame;$/;"	m	struct:__anon88	file:
+signo	os/unix/lxl_process.c	/^	int		signo;$/;"	m	struct:__anon88	file:
+single	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	unsigned 					 single:1;$/;"	m	struct:__anon42
+single	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	unsigned					 single:1;$/;"	m	struct:__anon54
+size	core/lxl_array.h	/^	size_t 		 size;$/;"	m	struct:__anon14
+size	core/lxl_array.h	/^	size_t 		 size;$/;"	m	struct:__anon15
+size	core/lxl_queue.h	/^	size_t	   size;$/;"	m	struct:__anon16
+size	dfs/storage/lxl_dfss_core_module.h	/^	size_t		size;$/;"	m	struct:__anon29
+sndbuf	core/lxl_connection.h	/^	int 				sndbuf;$/;"	m	struct:lxl_listening_s
+sndlowat	core/lxl_connection.h	/^	unsigned			sndlowat:1;$/;"	m	struct:lxl_connection_s
+soa_flags	dns/lxl_dns_data.h	/^	uint16_t		soa_flags;$/;"	m	struct:__anon75
+soa_flags	dns/lxl_dns_data.h	/^	uint16_t		soa_flags;$/;"	m	struct:__anon77
+soa_nlen	dns/lxl_dns_data.h	/^	uint16_t 		soa_nlen;$/;"	m	struct:__anon75
+soa_nlen	dns/lxl_dns_data.h	/^	uint16_t 		soa_nlen;$/;"	m	struct:__anon77
+soa_part	dns/lxl_dns_data.h	/^	char 			soa_part[20];$/;"	m	struct:__anon76
+sockaddr	core/lxl_connection.h	/^	struct sockaddr     sockaddr;$/;"	m	struct:lxl_connection_s	typeref:struct:lxl_connection_s::sockaddr
+sockaddr	core/lxl_connection.h	/^	struct sockaddr    *sockaddr;$/;"	m	struct:lxl_listening_s	typeref:struct:lxl_listening_s::sockaddr
+sockaddr	core/lxl_inet.h	/^	char		sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon12
+sockaddr	core/lxl_inet.h	/^	struct sockaddr		*sockaddr;$/;"	m	struct:__anon11	typeref:struct:__anon11::sockaddr
+sockaddr	dfs/storage/lxl_dfss_core_module.h	/^	char 				   	   sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon33
+sockaddr	dfs/storage/lxl_dfss_upstream.h	/^	char		sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon47
+sockaddr	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	struct sockaddr  *sockaddr;$/;"	m	struct:__anon41	typeref:struct:__anon41::sockaddr
+sockaddr	dfs/tracker/lxl_dfst_core_module.h	/^	char				  sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon61
+sockaddr	dfs/tracker/lxl_dfst_upstream.h	/^	char 		sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon51
+sockaddr	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	struct sockaddr  *sockaddr;$/;"	m	struct:__anon53	typeref:struct:__anon53::sockaddr
+sockaddr	dns/lxl_dns.h	/^	char 				sockaddr[LXL_SOCKADDRLEN];$/;"	m	struct:__anon80
+sockaddr	event/lxl_event_connect.h	/^	struct sockaddr	 	   *sockaddr;$/;"	m	struct:lxl_peer_connection_s	typeref:struct:lxl_peer_connection_s::sockaddr
+socklen	core/lxl_connection.h	/^	socklen_t			socklen;$/;"	m	struct:lxl_listening_s
+socklen	core/lxl_connection.h	/^	socklen_t 			socklen;$/;"	m	struct:lxl_connection_s
+socklen	core/lxl_inet.h	/^	socklen_t			 socklen;$/;"	m	struct:__anon11
+socklen	core/lxl_inet.h	/^	socklen_t	socklen;$/;"	m	struct:__anon12
+socklen	dfs/storage/lxl_dfss_core_module.h	/^	socklen_t             	   socklen;$/;"	m	struct:__anon33
+socklen	dfs/storage/lxl_dfss_upstream.h	/^	socklen_t	socklen;$/;"	m	struct:__anon47
+socklen	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	socklen_t		  socklen;$/;"	m	struct:__anon41
+socklen	dfs/tracker/lxl_dfst_core_module.h	/^	socklen_t			  socklen;$/;"	m	struct:__anon61
+socklen	dfs/tracker/lxl_dfst_upstream.h	/^	socklen_t	socklen;$/;"	m	struct:__anon51
+socklen	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	socklen_t		  socklen;$/;"	m	struct:__anon53
+socklen	dns/lxl_dns.h	/^	socklen_t			socklen;$/;"	m	struct:__anon80
+socklen	event/lxl_event_connect.h	/^	socklen_t 		  		socklen;$/;"	m	struct:lxl_peer_connection_s
+srv_conf	dfs/storage/lxl_dfss_core_module.h	/^	void					 **srv_conf;$/;"	m	struct:__anon32
+srv_conf	dfs/storage/lxl_dfss_request.h	/^	void			          **srv_conf;$/;"	m	struct:lxl_dfss_request_s
+srv_conf	dfs/storage/lxl_dfss_upstream.h	/^	void 	  				**srv_conf;$/;"	m	struct:lxl_dfss_upstream_srv_conf_s
+srv_conf	dfs/tracker/lxl_dfst_core_module.h	/^	void 	**srv_conf;$/;"	m	struct:__anon60
+srv_conf	dfs/tracker/lxl_dfst_request.h	/^	void				     	   **srv_conf;$/;"	m	struct:lxl_dfst_request_s
+srv_conf	dfs/tracker/lxl_dfst_upstream.h	/^	void					**srv_conf;$/;"	m	struct:lxl_dfst_upstream_srv_conf_s
+srv_conf	dns/lxl_dns.h	/^	void 		**srv_conf;	$/;"	m	struct:__anon79
+stack	dns/lxl_dns_upstream.h	/^	lxl_stack_t 				stack;$/;"	m	struct:__anon73
+start	core/lxl_buf.h	/^	char 	   *start;$/;"	m	struct:__anon13
+state	dfs/tracker/lxl_dfst_idc.h	/^	uint16_t      state;$/;"	m	struct:__anon68
+storage	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_upstream_t 	   *storage;$/;"	m	struct:lxl_dfss_request_s
+storage	dfs/tracker/lxl_dfst_request.h	/^		lxl_dfs_storage_t			 storage;$/;"	m	union:lxl_dfst_request_s::__anon59
+storage	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_upstream_t		  	    *storage;$/;"	m	struct:lxl_dfst_request_s
+storage_array	dfs/storage/lxl_dfss_request.h	/^	lxl_array_t 			    storage_array;	\/* lxl_dfs_addr_t *\/$/;"	m	struct:lxl_dfss_request_s
+storage_array	dfs/tracker/lxl_dfst_request.h	/^	lxl_array_t				   	 storage_array;$/;"	m	struct:lxl_dfst_request_s
+storage_state	dfs/tracker/lxl_dfst_request.h	/^		lxl_dfs_storage_state_t	   	 storage_state;$/;"	m	union:lxl_dfst_request_s::__anon59
+storages	dfs/tracker/lxl_dfst_idc.h	/^	lxl_array1_t  storages;			\/* lxl_dfs_ip_port1_t ===> lxl_dfs_storage_t *\/$/;"	m	struct:__anon69
+storages	dfs/tracker/lxl_dfst_idc.h	/^	lxl_array1_t  storages;		\/* lxl_dfst_storage_t *\/$/;"	m	struct:__anon67
+storages	dfs/tracker/lxl_dfst_request.h	/^	lxl_array_t				   	 storages;		\/* lxl_dfs_ip_port_t *\/$/;"	m	struct:lxl_dfst_request_s
+sync	dfs/storage/lxl_dfss_request.h	/^	unsigned 					sync:1;$/;"	m	struct:lxl_dfss_request_s
+sys_offset	core/lxl_file.h	/^	off_t 		 sys_offset;$/;"	m	struct:lxl_file_s
+tc	dns/lxl_dns_request.h	/^	uint16_t 					tc;$/;"	m	struct:lxl_dns_request_s
+tcp	dns/lxl_dns.h	/^	lxl_int_t	tcp;$/;"	m	struct:__anon81
+temp_pool	core/lxl_conf_file.h	/^	lxl_pool_t         *temp_pool;$/;"	m	struct:lxl_conf_s
+timedout	core/lxl_connection.h	/^	unsigned 			timedout:1;$/;"	m	struct:lxl_connection_s
+timedout	event/lxl_event.h	/^	unsigned 		 	  timedout:1;$/;"	m	struct:lxl_event_s
+timer	event/lxl_event.h	/^	lxl_rbtree_node_t 	  timer;$/;"	m	struct:lxl_event_s
+timer_set	event/lxl_event.h	/^	unsigned 			  timer_set:1;$/;"	m	struct:lxl_event_s
+total	dfs/storage/lxl_dfss_core_module.h	/^	int 					   total;$/;"	m	struct:__anon30
+tracker	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_upstream_t 	   *tracker;$/;"	m	struct:lxl_dfss_request_s
+tracker	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_upstream_t				*tracker;$/;"	m	struct:lxl_dfst_request_s
+tries	dfs/storage/lxl_dfss_upstream_round_robin.h	/^	lxl_uint_t 					   tries;$/;"	m	struct:__anon43
+tries	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_uint_t					  tries;$/;"	m	struct:lxl_dfst_upstream_s
+tries	dfs/tracker/lxl_dfst_upstream_round_robin.h	/^	lxl_uint_t					   tries;$/;"	m	struct:__anon55
+tries	event/lxl_event_connect.h	/^	lxl_uint_t 		  		tries;$/;"	m	struct:lxl_peer_connection_s
+ttl	dns/lxl_dns_data.h	/^	uint32_t 		ttl;			\/* host byte order *\/$/;"	m	struct:__anon77
+ttl	dns/lxl_dns_data.h	/^	uint32_t 		ttl;$/;"	m	struct:__anon75
+ttl	dns/lxl_dns_data.h	/^	uint32_t 		ttl;$/;"	m	struct:__anon76
+ttl	dns/lxl_dns_request.h	/^	uint32_t ttl;$/;"	m	struct:__anon72
+type	core/lxl_conf_file.h	/^	lxl_uint_t		type;$/;"	m	struct:lxl_module_s
+type	core/lxl_conf_file.h	/^	lxl_uint_t	type;$/;"	m	struct:lxl_command_s
+type	core/lxl_connection.h	/^	int 				type;$/;"	m	struct:lxl_listening_s
+type	dns/lxl_dns_data.h	/^	uint16_t 		type;			\/* network byte order *\/$/;"	m	struct:__anon77
+type	dns/lxl_dns_data.h	/^	uint16_t 		type;$/;"	m	struct:__anon75
+type	dns/lxl_dns_request.h	/^	uint16_t type;$/;"	m	struct:__anon72
+u	dfs/tracker/lxl_dfst_request.h	/^	} u;$/;"	m	struct:lxl_dfst_request_s	typeref:union:lxl_dfst_request_s::__anon59
+udp	core/lxl_connection.h	/^	unsigned			udp:1;$/;"	m	struct:lxl_connection_s
+update_flags	dns/lxl_dns_data.h	/^	uint16_t 		update_flags;$/;"	m	struct:__anon74
+update_flags	dns/lxl_dns_data.h	/^	uint16_t 		update_flags;$/;"	m	struct:__anon75
+update_flags	dns/lxl_dns_data.h	/^	uint16_t 		update_flags;$/;"	m	struct:__anon77
+update_sec	dns/lxl_dns_data.h	/^	lxl_uint_t 		update_sec;$/;"	m	struct:__anon78
+upstream	dfs/storage/lxl_dfss_storage.c	/^	lxl_dfss_upstream_conf_t  upstream;$/;"	m	struct:__anon40	file:
+upstream	dfs/storage/lxl_dfss_tracker.c	/^	lxl_dfss_upstream_conf_t  upstream;$/;"	m	struct:__anon44	file:
+upstream	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_srv_conf_t  *upstream;$/;"	m	struct:__anon48
+upstream	dfs/tracker/lxl_dfst_storage.c	/^	lxl_dfst_upstream_conf_t  upstream;$/;"	m	struct:__anon57	file:
+upstream	dfs/tracker/lxl_dfst_tracker.c	/^	lxl_dfst_upstream_conf_t  upstream;$/;"	m	struct:__anon56	file:
+upstream	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_srv_conf_t  *upstream;$/;"	m	struct:__anon52
+upstream	dns/lxl_dns_request.h	/^	lxl_dns_upstream_t			*upstream;$/;"	m	struct:lxl_dns_request_s
+upstreams	dfs/storage/lxl_dfss_upstream.h	/^	lxl_array_t	 upstreams;		\/* lxl_dfss_upstream_srv_conf_t *\/$/;"	m	struct:__anon45
+upstreams	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_array_t	 upstreams;$/;"	m	struct:__anon49
+url	core/lxl_inet.h	/^	lxl_str_t 	url;$/;"	m	struct:__anon12
+use	event/lxl_event.h	/^	lxl_uint_t use;$/;"	m	struct:__anon85
+use	event/lxl_event.h	/^	unsigned 			  use:1;		\/* dfs timer use *\/$/;"	m	struct:lxl_event_s
+use1	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use1;$/;"	m	struct:__anon30
+use2	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use2;$/;"	m	struct:__anon30
+use3	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use3;$/;"	m	struct:__anon30
+use4	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use4;$/;"	m	struct:__anon30
+use5	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use5;$/;"	m	struct:__anon30
+use6	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use6;$/;"	m	struct:__anon30
+use7	dfs/storage/lxl_dfss_core_module.h	/^	int  					   use7;$/;"	m	struct:__anon30
+use_flush	core/lxl_log.h	/^	lxl_uint_t	use_flush;$/;"	m	struct:lxl_log_s
+use_flush	core/lxl_log.h	/^	lxl_uint_t  use_flush;$/;"	m	struct:__anon10
+use_stderr	core/lxl_log.h	/^	lxl_uint_t  use_stderr;$/;"	m	struct:__anon10
+use_stderr	core/lxl_log.h	/^	lxl_uint_t  use_stderr;$/;"	m	struct:lxl_log_s
+username	core/lxl_cycle.h	/^	char 	   		*username;$/;"	m	struct:__anon17
+value	core/lxl_dns_hash.h	/^	void *value;		\/* sizeof(lxl_*_t) <= 8 *\/$/;"	m	struct:lxl_hash_elt_s
+value	core/lxl_dns_hash.h	/^	void *value;$/;"	m	struct:__anon19
+value	core/lxl_hash.h	/^	void 		     *value;	\/* sizeof(lxl_*_t) <= 8 *\/$/;"	m	struct:lxl_hash_elt_s
+value	core/lxl_hash.h	/^	void  			 *value;$/;"	m	struct:__anon6
+wildcard	core/lxl_inet.h	/^	unsigned 	wildcard:1;$/;"	m	struct:__anon12
+wildcard	dfs/storage/lxl_dfss_core_module.h	/^	unsigned 			  	   wildcard:1;$/;"	m	struct:__anon33
+wildcard	dfs/tracker/lxl_dfst_core_module.h	/^	unsigned 			  wildcard:1;$/;"	m	struct:__anon61
+wildcard	dns/lxl_dns.h	/^	unsigned 			wildcard:1;$/;"	m	struct:__anon80
+worker_process	core/lxl_cycle.h	/^	lxl_int_t		   worker_process;$/;"	m	struct:lxl_cycle_s
+worker_process	core/lxl_cycle.h	/^	lxl_int_t 		  worker_process;$/;"	m	struct:__anon17
+working_directory	core/lxl_cycle.h	/^	lxl_str_t		 working_directory;$/;"	m	struct:__anon17
+write	core/lxl_connection.h	/^    lxl_event_t 	   *write;$/;"	m	struct:lxl_connection_s
+write	event/lxl_event.h	/^	unsigned 			  write:1;$/;"	m	struct:lxl_event_s
+write_event_handler	dfs/storage/lxl_dfss_request.h	/^	lxl_dfss_event_handler_pt	write_event_handler;$/;"	m	struct:lxl_dfss_request_s
+write_event_handler	dfs/storage/lxl_dfss_upstream.h	/^	lxl_dfss_upstream_handler_pt  	   write_event_handler;$/;"	m	struct:lxl_dfss_upstream_s
+write_event_handler	dfs/tracker/lxl_dfst_request.h	/^	lxl_dfst_event_handler_pt  		 write_event_handler;$/;"	m	struct:lxl_dfst_request_s
+write_event_handler	dfs/tracker/lxl_dfst_upstream.h	/^	lxl_dfst_upstream_handler_pt  write_event_handler;$/;"	m	struct:lxl_dfst_upstream_s
+write_event_handler	dns/lxl_dns_request.h	/^	lxl_dns_event_handler_pt 	write_event_handler;$/;"	m	struct:lxl_dns_request_s
+write_event_handler	dns/lxl_dns_upstream.h	/^	lxl_dns_upstream_handler_pt write_event_handler;$/;"	m	struct:lxl_dns_upstream_s
+write_events	core/lxl_cycle.h	/^	lxl_event_t 	  *write_events;$/;"	m	struct:lxl_cycle_s
+zone_hash_bucket_size	dns/lxl_dns.h	/^	lxl_uint_t	zone_hash_bucket_size;$/;"	m	struct:__anon81

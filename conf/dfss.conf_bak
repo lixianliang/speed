@@ -1,0 +1,27 @@
+
+worker_process	1;
+
+error_log	logs/error.log info debug_all flush;
+
+events {
+	use	epoll;
+	worker_connections	1024;
+}
+
+dfs_storage {
+#	group_id	1;
+#	storage_id	1;
+
+	server {
+		listen 127.0.0.1:1304;
+		tracker_pass tracker;
+		storage_pass storage;
+	}
+
+	upstream tracker {
+		server 127.0.0.1:1305;
+		server 127.0.0.1:1306;
+		server 127.0.0.1:1307;
+	}
+
+}

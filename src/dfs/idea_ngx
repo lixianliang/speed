@@ -1,0 +1,22 @@
+
+
+1. 将连接的读事件的处理函数设置为ngx_http_process_request_line函数，这个函数用来解析请求行，将请求的read_event_handler设置为ngx_http_block_reading函数，这个函数实际上什么都不做（当然在事件模型设置为水平触发时，唯一做的事情就是将事件从事件模型监听列表中删除，防止该事件一直被触发），后面会说到这里为什么会将read_event_handler设置为此函数；
+
+ngx_http_read_discarded_request_body()函数非常简单，它循环的从链接中读取数据并丢弃，直到读完接收缓冲区的所有数据，如果请求体已经被读完了，该函数会设置读事件的处理函数为ngx_http_block_reading，这个函数仅仅删除水平触发的读事件，防止同一事件不断被触发。
+
+上面有个read_event_handler的设置，ngx_http_block_reading函数主要是移除read事件。这样做的目的是，是为了在处理当前的request时间内，暂时停止处理新的请求，因为同一连接内会有有多个所谓的pipeline请求。而什么时间来继续处理新请求，由程序来控制，需要的时候再处理(如在keepalive相关处理)
+
+// ngx_http_empty_handler基本上是个空操作，除了打印一些信息之外，其他什么也没做。   
+  
+// 这样设计的意图在于，在处理请求的read事件阶段，没有需要write的动作，   
+  
+// 如果确实得到了write事件，那么就忽略它了。   
+  
+都是在write上面
+c->write->handler= ngx_http_empty_handler;
+write_event_handler = ngx_http_request_empty_handler  只有一个用在read上
+
+read
+r->read_event_handler = ngx_http_block_reading;
+
+ngx_http_read_discarded_request_body  ==> 会调用 ngx_http_blocking_reading

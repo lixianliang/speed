@@ -1,0 +1,259 @@
+
+CC = gcc
+#CFLAGS = -g3 -Wall -DLXL_DEBUG
+CFLAGS = -g -Wall -DLXL_DFST -DLXL_DEBUG
+
+ALL_INCS = -I src/core -I src/event -I src/os/unix -I src/dfs -I src/dfs/stroage
+
+CORE_INCS = -I src/core -I src/event -I src/os/unix
+
+CORE_DEPS = src/core/lxl_log.h \
+		src/core/lxl_palloc.h \
+		src/core/lxl_buf.h \
+		src/core/lxl_file.h \
+		src/core/lxl_inet.h \
+		src/core/lxl_hash.h \
+		src/core/lxl_list.h \
+		src/core/lxl_slist.h \
+		src/core/lxl_array.h \
+		src/core/lxl_queue.h \
+		src/core/lxl_stack.h \
+		src/core/lxl_rbtree.h \
+		src/core/lxl_string.h \
+		src/core/lxl_times.h \
+		src/core/lxl_cycle.h \
+		src/core/lxl_conf_file.h \
+		src/core/lxl_connection.h \
+		src/event/lxl_event.h \
+		src/event/lxl_event_connect.h \
+		src/event/lxl_event_timer.h \
+		src/os/unix/lxl_os.h \
+		src/os/unix/lxl_alloc.h \
+		src/os/unix/lxl_files.h \
+		src/os/unix/lxl_socket.h \
+		src/os/unix/lxl_process.h \
+
+DFST_INCS = -I src/dfs -I src/dfs/tracker
+
+DFST_DEPS = src/dfs/lxl_dfs.h \
+			src/dfs/tracker/lxl_dfst.h \
+			src/dfs/tracker/lxl_dfst_core_module.h \
+			src/dfs/tracker/lxl_dfst_request.h \
+			src/dfs/tracker/lxl_dfst_data.h \
+			src/dfs/tracker/lxl_dfst_upstream.h \
+			src/dfs/tracker/lxl_dfst_upstream_round_robin.h 
+
+
+SPEED_SRC = src/core/speed.c \
+			src/core/lxl_log.c \
+			src/core/lxl_palloc.c \
+			src/core/lxl_buf.c \
+			src/core/lxl_file.c \
+			src/core/lxl_inet.c \
+			src/core/lxl_hash.c \
+			src/core/lxl_array.c \
+			src/core/lxl_queue.c \
+			src/core/lxl_rbtree.c \
+			src/core/lxl_times.c \
+			src/core/lxl_string.c \
+			src/core/lxl_cycle.c \
+			src/core/lxl_conf_file.c \
+			src/core/lxl_connection.c \
+			src/event/lxl_event.c \
+			src/event/lxl_event_connect.c \
+			src/event/lxl_event_timer.c \
+			src/event/lxl_epoll_module.c \
+			src/os/unix/lxl_os.c \
+			src/os/unix/lxl_alloc.c \
+			src/os/unix/lxl_files.c	\
+			src/os/unix/lxl_socket.c \
+			src/os/unix/lxl_process.c \
+			src/dfs/tracker/lxl_dfst.c \
+			src/dfs/tracker/lxl_dfst_core_module.c \
+			src/dfs/tracker/lxl_dfst_request.c \
+			src/dfs/tracker/lxl_dfst_request_body.c \
+			src/dfs/tracker/lxl_dfst_parse.c \
+			src/dfs/tracker/lxl_dfst_data.c \
+			src/dfs/tracker/lxl_dfst_upstream.c \
+			src/dfs/tracker/lxl_dfst_tracker.c \
+			src/dfs/tracker/lxl_dfst_storage.c \
+			src/dfs/tracker/lxl_dfst_upstream_round_robin.c 
+
+all: objs/dfst
+
+objs/dfst: objs/src/core/speed.o \
+	objs/src/core/lxl_log.o \
+	objs/src/core/lxl_palloc.o \
+	objs/src/core/lxl_buf.o \
+	objs/src/core/lxl_file.o \
+	objs/src/core/lxl_inet.o \
+	objs/src/core/lxl_times.o \
+	objs/src/core/lxl_string.o \
+	objs/src/core/lxl_hash.o \
+	objs/src/core/lxl_array.o \
+	objs/src/core/lxl_queue.o \
+	objs/src/core/lxl_rbtree.o \
+	objs/src/core/lxl_cycle.o \
+	objs/src/core/lxl_conf_file.o \
+	objs/src/core/lxl_connection.o \
+	objs/src/event/lxl_event.o \
+	objs/src/event/lxl_event_connect.o \
+	objs/src/event/lxl_event_timer.o \
+	objs/src/event/lxl_epoll_module.o \
+	objs/src/os/unix/lxl_os.o \
+	objs/src/os/unix/lxl_alloc.o \
+	objs/src/os/unix/lxl_files.o \
+	objs/src/os/unix/lxl_socket.o \
+	objs/src/os/unix/lxl_process.o \
+	objs/src/dfs/tracker/lxl_dfst.o \
+	objs/src/dfs/tracker/lxl_dfst_core_module.o \
+	objs/src/dfs/tracker/lxl_dfst_request.o \
+	objs/src/dfs/tracker/lxl_dfst_request_body.o \
+	objs/src/dfs/tracker/lxl_dfst_parse.o \
+	objs/src/dfs/tracker/lxl_dfst_data.o \
+	objs/src/dfs/tracker/lxl_dfst_upstream.o \
+	objs/src/dfs/tracker/lxl_dfst_tracker.o \
+	objs/src/dfs/tracker/lxl_dfst_storage.o \
+	objs/src/dfs/tracker/lxl_dfst_upstream_round_robin.o
+
+	$(CC) -o objs/dfst \
+	objs/src/core/speed.o \
+	objs/src/core/lxl_log.o \
+	objs/src/core/lxl_palloc.o \
+	objs/src/core/lxl_buf.o \
+	objs/src/core/lxl_file.o \
+	objs/src/core/lxl_inet.o \
+	objs/src/core/lxl_times.o \
+	objs/src/core/lxl_string.o \
+	objs/src/core/lxl_hash.o \
+	objs/src/core/lxl_array.o \
+	objs/src/core/lxl_queue.o \
+	objs/src/core/lxl_rbtree.o \
+	objs/src/core/lxl_cycle.o \
+	objs/src/core/lxl_conf_file.o \
+	objs/src/core/lxl_connection.o \
+	objs/src/event/lxl_event.o \
+	objs/src/event/lxl_event_connect.o \
+	objs/src/event/lxl_event_timer.o \
+	objs/src/event/lxl_epoll_module.o \
+	objs/src/os/unix/lxl_os.o \
+	objs/src/os/unix/lxl_alloc.o \
+	objs/src/os/unix/lxl_files.o \
+	objs/src/os/unix/lxl_socket.o \
+	objs/src/os/unix/lxl_process.o \
+	objs/src/dfs/tracker/lxl_dfst.o \
+	objs/src/dfs/tracker/lxl_dfst_core_module.o \
+	objs/src/dfs/tracker/lxl_dfst_request.o \
+	objs/src/dfs/tracker/lxl_dfst_request_body.o \
+	objs/src/dfs/tracker/lxl_dfst_parse.o \
+	objs/src/dfs/tracker/lxl_dfst_data.o \
+	objs/src/dfs/tracker/lxl_dfst_upstream.o \
+	objs/src/dfs/tracker/lxl_dfst_tracker.o \
+	objs/src/dfs/tracker/lxl_dfst_storage.o \
+	objs/src/dfs/tracker/lxl_dfst_upstream_round_robin.o
+
+
+objs/src/core/speed.o: $(CORE_DEPS) src/core/speed.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/speed.o src/core/speed.c
+
+objs/src/core/lxl_log.o: $(CORE_DEPS) src/core/lxl_log.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_log.o src/core/lxl_log.c
+
+objs/src/core/lxl_palloc.o: $(CORE_DEPS) src/core/lxl_palloc.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_palloc.o src/core/lxl_palloc.c
+
+objs/src/core/lxl_buf.o: $(CORE_DEPS) src/core/lxl_buf.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_buf.o src/core/lxl_buf.c
+
+objs/src/core/lxl_file.o: $(CORE_DEPS) src/core/lxl_file.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_file.o src/core/lxl_file.c
+
+objs/src/core/lxl_inet.o: $(CORE_DEPS) src/core/lxl_inet.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_inet.o src/core/lxl_inet.c
+
+objs/src/core/lxl_times.o: $(CORE_DEPS) src/core/lxl_times.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_times.o src/core/lxl_times.c
+
+objs/src/core/lxl_string.o: $(CORE_DEPS) src/core/lxl_string.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_string.o src/core/lxl_string.c
+
+objs/src/core/lxl_hash.o: $(CORE_DEPS) src/core/lxl_hash.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_hash.o src/core/lxl_hash.c
+
+objs/src/core/lxl_array.o: $(CORE_DEPS) src/core/lxl_array.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_array.o src/core/lxl_array.c
+
+objs/src/core/lxl_queue.o: $(CORE_DEPS) src/core/lxl_queue.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_queue.o src/core/lxl_queue.c
+
+objs/src/core/lxl_rbtree.o: $(CORE_DEPS) src/core/lxl_rbtree.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_rbtree.o src/core/lxl_rbtree.c
+
+objs/src/core/lxl_cycle.o: $(CORE_DEPS) src/core/lxl_cycle.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_cycle.o src/core/lxl_cycle.c
+
+objs/src/core/lxl_conf_file.o: $(CORE_DEPS) src/core/lxl_conf_file.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_conf_file.o src/core/lxl_conf_file.c
+
+objs/src/core/lxl_connection.o: $(CORE_DEPS) src/core/lxl_connection.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/core/lxl_connection.o src/core/lxl_connection.c
+
+objs/src/event/lxl_event.o: $(CORE_DEPS) src/event/lxl_event.c 
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/event/lxl_event.o src/event/lxl_event.c
+
+objs/src/event/lxl_event_connect.o: $(CORE_DEPS) src/event/lxl_event_connect.c 
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/event/lxl_event_connect.o src/event/lxl_event_connect.c
+
+objs/src/event/lxl_event_timer.o: $(CORE_DEPS) src/event/lxl_event_timer.c 
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/event/lxl_event_timer.o src/event/lxl_event_timer.c
+
+objs/src/event/lxl_epoll_module.o: $(CORE_DEPS) src/event/lxl_epoll_module.c 
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/event/lxl_epoll_module.o src/event/lxl_epoll_module.c
+
+objs/src/os/unix/lxl_os.o: $(CORE_DEPS) src/os/unix/lxl_os.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/os/unix/lxl_os.o src/os/unix/lxl_os.c
+
+objs/src/os/unix/lxl_alloc.o: $(CORE_DEPS) src/os/unix/lxl_alloc.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/os/unix/lxl_alloc.o src/os/unix/lxl_alloc.c
+
+objs/src/os/unix/lxl_files.o: $(CORE_DEPS) src/os/unix/lxl_files.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/os/unix/lxl_files.o src/os/unix/lxl_files.c
+
+objs/src/os/unix/lxl_socket.o: $(CORE_DEPS) src/os/unix/lxl_socket.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/os/unix/lxl_socket.o src/os/unix/lxl_socket.c
+
+objs/src/os/unix/lxl_process.o: $(CORE_DEPS) src/os/unix/lxl_process.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) -o objs/src/os/unix/lxl_process.o src/os/unix/lxl_process.c
+
+objs/src/dfs/tracker/lxl_dfst.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst.o src/dfs/tracker/lxl_dfst.c
+
+objs/src/dfs/tracker/lxl_dfst_core_module.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_core_module.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_core_module.o src/dfs/tracker/lxl_dfst_core_module.c
+
+objs/src/dfs/tracker/lxl_dfst_request.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_request.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_request.o src/dfs/tracker/lxl_dfst_request.c
+
+objs/src/dfs/tracker/lxl_dfst_request_body.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_request_body.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_request_body.o src/dfs/tracker/lxl_dfst_request_body.c
+
+objs/src/dfs/tracker/lxl_dfst_parse.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_parse.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_parse.o src/dfs/tracker/lxl_dfst_parse.c
+
+objs/src/dfs/tracker/lxl_dfst_data.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_data.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_data.o src/dfs/tracker/lxl_dfst_data.c
+
+objs/src/dfs/tracker/lxl_dfst_upstream.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_upstream.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_upstream.o src/dfs/tracker/lxl_dfst_upstream.c
+
+objs/src/dfs/tracker/lxl_dfst_tracker.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_tracker.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_tracker.o src/dfs/tracker/lxl_dfst_tracker.c
+
+objs/src/dfs/tracker/lxl_dfst_storage.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_storage.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_storage.o src/dfs/tracker/lxl_dfst_storage.c
+
+objs/src/dfs/tracker/lxl_dfst_upstream_round_robin.o: $(CORE_DEPS) $(DFST_DEPS) src/dfs/tracker/lxl_dfst_upstream_round_robin.c
+	$(CC) -c $(CFLAGS) $(CORE_INCS) $(DFST_INCS) -o objs/src/dfs/tracker/lxl_dfst_upstream_round_robin.o src/dfs/tracker/lxl_dfst_upstream_round_robin.c
+
+clean: 
+	rm -rf dfst objs/src;

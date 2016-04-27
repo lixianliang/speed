@@ -1,0 +1,3 @@
+
+lxl_slist_t  del(prev, n)
+lxl_slist_t  适合无删除的操作

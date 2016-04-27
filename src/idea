@@ -1,0 +1,45 @@
+
+socks === 只需要一个server就可以了
+
+===
+rid ===> 将数字转换字符 再压缩fid长度
+
+postfix id 348D1341C4  D52B03447F 也都是16进制 == 5字节
+
+一个服务需要两个server  如smtp imap pop 需要两个端口 === ssl端口
+
+dig s3.amazon.com aws.amazon.com ec2.amazon.com 只有一个ip  不知道dns解析会不会区域智能dns
+
+nginx 初始化 upstream server
+uscf->peer.init(r, uscf)
+ngx_http_upstream_init_round_robin
+
+
+storage upstream peer 自己控制
+[lxl@mail-test4 ~/opencode/nginx-master/src/mail]$grep "peer.get" -R *                                      
+ngx_mail_auth_http_module.c:    ctx->peer.get = ngx_event_get_peer;
+
+/将写事件处理函数置为dummy的话，表明在读完相应之前，不允许
+  //接着写了
+  u->write_event_handler = ngx_http_upstream_dummy_handler
+
+
+ngx_pnalloc 都是用在 str.data上
+
+=== 11.24
+可以考虑只支持 struct sockaddr_in or struct sockaddr_in6
+用宏定义来区分
+
+typedef struct sockaddr_in		lxl_sockaddr_t 
+typedef struct sockaddr_in6		lxl_sockaddr_t   == 不行 只有完全转到ipv6 
+
+ngx_addr_t  这个可以考虑添加
+
+=== 11.27
+处理client 断开  === upstream还在处理的情况
+
+=== 11.28
+
+fork 时候没process 取一个id号区分 uint8_t  (0 - 255)
+
+grep -r -l "kkkk" ./ |xargs sed -i 's/kkkk/lxl/g'  替换

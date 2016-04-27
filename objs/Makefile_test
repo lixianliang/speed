@@ -1,0 +1,50 @@
+
+CC = gcc
+#CFLAGS = -g3 -Wall -DLXL_DEBUG
+CFLAGS = -g3 -Wall
+
+ALL_INCS = -I src/core -I src/event -I src/os/unix -I src/dns
+
+CORE_INCS = -I src/core -I src/event -I src/os/unix
+
+test: lxl_phash_test
+
+LOG_SRC 	= src/core/lxl_log.c  src/core/lxl_times.c
+ARRAY_SRC 	= src/core/lxl_array.c src/core/lxl_log.c	src/core/lxl_palloc.c
+LIST_SRC	= src/core/lxl_log.c 
+SLIST_SRC	= src/core/lxl_log.c 
+QUEUE_SRC 	= src/core/lxl_queue.c src/core/lxl_log.c 	src/core/lxl_palloc.c
+STACK_SRC 	= src/core/lxl_log.c src/core/lxl_palloc.c	src/core/lxl_stack.c
+STRING_SRC 	= src/core/lxl_log.c src/core/lxl_string.c
+HASH_SRC 	= src/core/lxl_log.c src/core/lxl_palloc.c 	src/core/lxl_hash.c
+PHASH_SRC 	= src/core/lxl_log.c src/core/lxl_palloc.c 	src/core/lxl_times.c src/core/lxl_conf_file.c src/core/lxl_phash.c
+
+lxl_log_test: test/core/lxl_log_test.c $(LOG_SRC)
+	$(CC) $(CFLAGS) $(ALL_INCS) $(LOG_SRC) $< -o objs/test/core/$@
+
+lxl_array_test: test/core/lxl_array_test.c $(ARRAY_SRC)
+	 $(CC) $(CFLAGS) $(ALL_INCS) $(ARRAY_SRC) $< -o objs/test/core/$@
+
+lxl_list_test: test/core/lxl_list_test.c $(LIST_ARC)
+	$(CC) $(CFLAGS) $(ALL_INCS) $(LIST_SRC) $< -o objs/test/core/$@
+
+lxl_slist_test: test/core/lxl_slist_test.c $(SLIST_ARC)
+	$(CC) $(CFLAGS) $(ALL_INCS) $(SLIST_SRC) $< -o objs/test/core/$@
+
+lxl_queue_test: test/core/lxl_queue_test.c $(QUEUE_SRC)
+	 $(CC) $(CFLAGS) $(ALL_INCS) $(QUEUE_SRC) $< -o objs/test/core/$@
+
+lxl_stack_test: test/core/lxl_stack_test.c $(STACK_SRC)
+	 $(CC) $(CFLAGS) $(ALL_INCS) $(STACK_SRC) $< -o objs/test/core/$@
+
+lxl_string_test: test/core/lxl_string_test.c $(STRING_SRC)
+	 $(CC) $(CFLAGS) $(ALL_INCS) $(STRING_SRC) $< -o objs/test/core/$@
+
+lxl_hash_test: test/core/lxl_hash_test.c $(HASH_SRC)
+	$(CC) $(CFLAGS) $(ALL_INCS) $(HASH_SRC) $< -o  objs/test/core/$@
+
+lxl_phash_test: test/core/lxl_phash_test.c $(PHASH_SRC)
+	$(CC) $(CFLAGS) $(ALL_INCS) $(PHASH_SRC) $< -o  objs/test/core/$@
+
+clean: 
+	rm -rf objs/test;
